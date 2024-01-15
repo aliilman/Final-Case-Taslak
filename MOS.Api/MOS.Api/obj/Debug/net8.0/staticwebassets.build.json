@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "1JW+lJwN7P2dcbqQgOyN+OLXCwZW32SaBNMGj6ThPvY=",
+  "Source": "MOS.Api",
+  "BasePath": "_content/MOS.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,12 @@
+C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Base\bin\Debug\net8.0\MOS.Base.deps.json
+C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Base\bin\Debug\net8.0\MOS.Base.dll
+C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Base\bin\Debug\net8.0\MOS.Base.pdb
+C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Base\obj\Debug\net8.0\MOS.Base.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Base\obj\Debug\net8.0\MOS.Base.AssemblyInfoInputs.cache
+C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Base\obj\Debug\net8.0\MOS.Base.AssemblyInfo.cs
+C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Base\obj\Debug\net8.0\MOS.Base.csproj.CoreCompileInputs.cache
+C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Base\obj\Debug\net8.0\MOS.Base.sourcelink.json
+C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Base\obj\Debug\net8.0\MOS.Base.dll
+C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Base\obj\Debug\net8.0\refint\MOS.Base.dll
+C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Base\obj\Debug\net8.0\MOS.Base.pdb
+C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Base\obj\Debug\net8.0\ref\MOS.Base.dll

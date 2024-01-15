@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MOS.Schema/1.0.0": {
+        "dependencies": {
+          "MOS.Base": "1.0.0"
+        },
+        "runtime": {
+          "MOS.Schema.dll": {}
+        }
+      },
+      "MOS.Base/1.0.0": {
+        "runtime": {
+          "MOS.Base.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MOS.Schema/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MOS.Base/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
