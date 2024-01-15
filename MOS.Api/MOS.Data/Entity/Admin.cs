@@ -19,7 +19,7 @@ namespace MOS.Data.Entity
     {
         public void Configure(EntityTypeBuilder<Admin> builder)
         {
-            builder.Property(x => x.UserId).ValueGeneratedNever();
+            builder.Property(x => x.UserId).ValueGeneratedNever();//patladı
             
             builder.Property(x => x.AdminNumber).IsRequired(true);
 

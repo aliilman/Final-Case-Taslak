@@ -22,7 +22,7 @@ public class PersonalConfiguration : IEntityTypeConfiguration<Personal>
 {
     public void Configure(EntityTypeBuilder<Personal> builder)
     {
-        builder.Property(x => x.UserId).ValueGeneratedNever();
+        builder.Property(x => x.UserId).ValueGeneratedNever();//patladı
 
         builder.Property(x => x.UserId).IsRequired(true);
         builder.Property(x => x.UserName).IsRequired(true);
