@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MOS.Data\MOS.Data.csproj" />
+    <ProjectReference Include="..\MOS.Schema\MOS.Schema.csproj" />
+  </ItemGroup>
+
+</Project>
