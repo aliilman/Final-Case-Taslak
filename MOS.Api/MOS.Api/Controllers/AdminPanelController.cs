@@ -49,29 +49,35 @@ namespace MOS.Api.Controllers
         [HttpGet("GetExpenseParameter")]
         public async Task<ApiResponse<List<ExpenseResponse>>> GetExpenseParameter(
             [FromQuery] string? ExpenseName,
-            [FromQuery] string? ApprovalStatus)
+            [FromQuery] string? ApprovalStatus,
+            [FromQuery] string? Min,
+            [FromQuery] string? Max)
         {
-            var operation = new GetExpenseByParameterQuery(ExpenseName,int.Parse(ApprovalStatus));
+            var operation = new GetExpenseByParameterQuery(
+                ExpenseName: ExpenseName,
+                ApprovalStatus: int.Parse(ApprovalStatus),
+                Min: int.Parse(Min),
+                Max: int.Parse(Max));
             var result = await mediator.Send(operation);
             return result;
         }
 
         [HttpPost("ApproveById/{id}")]
-        public async Task<ApiResponse> ApproveById(int id,[FromBody] AdminExpenceRequest request)
+        public async Task<ApiResponse> ApproveById(int id, [FromBody] AdminExpenseRequest request)
         {
             string AdminNumber = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
 
-            var operation = new ApproveByIdCommand(AdminNumber:int.Parse(AdminNumber),id,request);
+            var operation = new ApproveByIdCommand(AdminNumber: int.Parse(AdminNumber), ExpenseId: id, request);
             var result = await mediator.Send(operation);
             return result;
         }
 
         [HttpPost("RejectedById/{id}")]
-        public async Task<ApiResponse> RejectedById(int id,[FromBody] AdminExpenceRequest request)
+        public async Task<ApiResponse> RejectedById(int id, [FromBody] AdminExpenseRequest request)
         {
             string AdminNumber = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
 
-            var operation = new RejectedByIdCommand(AdminNumber:int.Parse(AdminNumber),id,request);
+            var operation = new RejectedByIdCommand(AdminNumber: int.Parse(AdminNumber), id, request);
             var result = await mediator.Send(operation);
             return result;
         }

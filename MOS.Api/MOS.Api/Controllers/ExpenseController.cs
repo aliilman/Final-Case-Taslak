@@ -29,7 +29,7 @@ public class ExpenseController : Controller
     //create, update, delate, getbyid,  getallExpense(kedine ait), getparameter(kedindeait),
     //onaylananları getir// beklemede olanları getir // onaylanmayanları getir
 
-    [HttpGet("GetAllExpense")]
+    [HttpGet("GetAllOwnExpense")]
     public async Task<ApiResponse<List<ExpenseResponse>>> GetAllExpense()
     {
         string id = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
@@ -38,7 +38,7 @@ public class ExpenseController : Controller
         return result;
     }
 
-    [HttpGet("GetExpenseById/{id}")]
+    [HttpGet("GetOwnExpenseById/{id}")]
     public async Task<ApiResponse<ExpenseResponse>> GetExpenseById(int id)
     {
         string PersonalNumber = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
@@ -47,7 +47,7 @@ public class ExpenseController : Controller
         return result;
     }
 
-    [HttpGet("GetExpenseParameter")]
+    [HttpGet("GetOwnExpenseParameter")]
     public async Task<ApiResponse<List<ExpenseResponse>>> GetExpenseParameter(
         [FromQuery] string? Name,
         [FromQuery] string? ApprovalStatus)

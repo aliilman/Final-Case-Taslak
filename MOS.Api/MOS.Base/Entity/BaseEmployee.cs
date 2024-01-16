@@ -7,7 +7,7 @@ namespace MOS.Base.Entity
 {
     public abstract class BaseEmployee
     {
-        public int UserId { get; set; } // silinecek
+       // public int UserId { get; set; } // silinecek
         public string UserName { get; set; }
         public string Password { get; set; }
         public string FirstName { get; set; }

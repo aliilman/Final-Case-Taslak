@@ -31,7 +31,7 @@ public class MosDbContext : DbContext
         modelBuilder.Entity<Admin>().HasData(
             new Admin() 
             { 
-                UserId = 1, AdminNumber = 1,
+                AdminNumber = 1,
                 FirstName = "Ali", LastName = "İlman",
                 Email = "ali.ilman@akbank.com", Password = "Admin",
                 UserName = "aliilman"
@@ -39,7 +39,7 @@ public class MosDbContext : DbContext
         modelBuilder.Entity<Admin>().HasData(
             new Admin() 
             {
-                UserId = 2, AdminNumber = 2,
+                AdminNumber = 2,
                 FirstName = "Veli", LastName = "liman",
                 Email = "veli.liman@akbank.com", Password = "Admin",
                 UserName = "veliliman"
@@ -48,7 +48,6 @@ public class MosDbContext : DbContext
         modelBuilder.Entity<Personal>().HasData(
             new Personal()
             {
-                UserId = 3,
                 PersonalNumber = 1,
                 FirstName = "Ferdi",
                 LastName = "Kadi",
@@ -60,7 +59,6 @@ public class MosDbContext : DbContext
         modelBuilder.Entity<Personal>().HasData(
             new Personal()
             {
-                UserId = 4,
                 PersonalNumber = 2,
                 FirstName = "Arda",
                 LastName = "Gul",
@@ -72,7 +70,6 @@ public class MosDbContext : DbContext
         modelBuilder.Entity<Personal>().HasData(
             new Personal()
             {
-                UserId = 5,
                 PersonalNumber = 3,
                 FirstName = "Sebastian",
                 LastName = "simanski",
@@ -84,7 +81,6 @@ public class MosDbContext : DbContext
         modelBuilder.Entity<Personal>().HasData(
             new Personal()
             {
-                UserId = 6,
                 PersonalNumber = 4,
                 FirstName = "Edin",
                 LastName = "Ceko",

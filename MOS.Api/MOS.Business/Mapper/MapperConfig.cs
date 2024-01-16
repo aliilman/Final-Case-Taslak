@@ -20,8 +20,12 @@ public class MapperConfig : Profile
         CreateMap<PersonalExpenseRequest, Expense>();
         CreateMap<Expense, ExpenseResponse>();
 
-        // CreateMap<AddressRequest, Address>();
-        // CreateMap<Address, AddressResponse>()
+        CreateMap<PaymentRequest, Payment>();
+        CreateMap<Payment, PaymentResponse>();
+
+
+        // CreateMap<PaymentRequest, Payment>();
+        // CreateMap<Payment, PaymentResponse>()
         //     .ForMember(dest => dest.CustomerName,
         //         src => src.MapFrom(x => x.Customer.FirstName + " " + x.Customer.LastName));
 

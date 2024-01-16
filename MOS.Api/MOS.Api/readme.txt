@@ -2,13 +2,13 @@
 
 1- migration olusturma 
 Dbcontext in oldugu projede
-    dotnet ef migrations add Users -s ../Vb.Api/ 
+    dotnet ef migrations add **** -s ../MOS.Api/ 
 
 
 2- migration degisikliklerini db ye gecme yansitma guncelle migrate etme
 Olusan migrationlarin calistirilmasi 
 sln dizininde 
-    dotnet ef database update --project "./Vb.Data" --startup-project "./Vb.Api"
+    dotnet ef database update --project "./MOS.Data" --startup-project "./MOS.Api"
 
 
 

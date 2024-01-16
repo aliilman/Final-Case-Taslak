@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MOS.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class first : Migration
+    public partial class initialcrate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,12 +23,11 @@ namespace MOS.Data.Migrations
                 {
                     AdminNumber = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    UserName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -43,12 +42,11 @@ namespace MOS.Data.Migrations
                     PersonalNumber = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IBAN = table.Column<string>(type: "nvarchar(34)", maxLength: 34, nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    UserName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -63,14 +61,16 @@ namespace MOS.Data.Migrations
                     ExpenseId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PersonalNumber = table.Column<int>(type: "int", nullable: false),
+                    ExpenseName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    ExpenseCategory = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     ApprovalStatus = table.Column<int>(type: "int", nullable: false),
                     ExpenseCreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ExpenseAmount = table.Column<decimal>(type: "decimal(18,4)", precision: 18, scale: 4, nullable: false),
-                    ExpenseDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    InvoiceImageFilePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Location = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ExpenseDescription = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    InvoiceImageFilePath = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    Location = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true),
                     DeciderAdminNumber = table.Column<int>(type: "int", nullable: true),
-                    AdminNumber = table.Column<int>(type: "int", nullable: false),
+                    AdminNumber = table.Column<int>(type: "int", nullable: true),
                     DecisionDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DecisionDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -82,8 +82,7 @@ namespace MOS.Data.Migrations
                         column: x => x.AdminNumber,
                         principalSchema: "dbo",
                         principalTable: "Admin",
-                        principalColumn: "AdminNumber",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "AdminNumber");
                     table.ForeignKey(
                         name: "FK_Expense_Personal_PersonalNumber",
                         column: x => x.PersonalNumber,
@@ -103,8 +102,8 @@ namespace MOS.Data.Migrations
                     ExpenseId = table.Column<int>(type: "int", nullable: false),
                     IBAN = table.Column<string>(type: "nvarchar(34)", maxLength: 34, nullable: false),
                     PaymentAmount = table.Column<decimal>(type: "decimal(18,4)", precision: 18, scale: 4, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PaymentType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    PaymentType = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     ExpenseDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -122,23 +121,23 @@ namespace MOS.Data.Migrations
             migrationBuilder.InsertData(
                 schema: "dbo",
                 table: "Admin",
-                columns: new[] { "AdminNumber", "Email", "FirstName", "LastName", "Password", "UserId", "UserName" },
+                columns: new[] { "AdminNumber", "Email", "FirstName", "LastName", "Password", "UserName" },
                 values: new object[,]
                 {
-                    { 1, "ali.ilman@akbank.com", "Ali", "İlman", "Admin", 1, "aliilman" },
-                    { 2, "veli.liman@akbank.com", "Veli", "liman", "Admin", 2, "veliliman" }
+                    { 1, "ali.ilman@akbank.com", "Ali", "İlman", "Admin", "aliilman" },
+                    { 2, "veli.liman@akbank.com", "Veli", "liman", "Admin", "veliliman" }
                 });
 
             migrationBuilder.InsertData(
                 schema: "dbo",
                 table: "Personal",
-                columns: new[] { "PersonalNumber", "Email", "FirstName", "IBAN", "LastName", "Password", "UserId", "UserName" },
+                columns: new[] { "PersonalNumber", "Email", "FirstName", "IBAN", "LastName", "Password", "UserName" },
                 values: new object[,]
                 {
-                    { 1, "ferdi.kadi@akbank.com", "Ferdi", "12345678981234456798", "Kadi", "personal", 3, "ferdikadi" },
-                    { 2, "Arda.gul@akbank.com", "Arda", "56412345678981234456798", "Gul", "personal", 4, "ardagul" },
-                    { 3, "sebastian.simanski@akbank.com", "Sebastian", "1233456789856451234456798", "simanski", "personal", 5, "sebastiansimanski" },
-                    { 4, "edin.ceko@akbank.com", "Edin", "12345678981541654234456798", "Ceko", "personal", 6, "edinceko" }
+                    { 1, "ferdi.kadi@akbank.com", "Ferdi", "12345678981234456798", "Kadi", "personal", "ferdikadi" },
+                    { 2, "Arda.gul@akbank.com", "Arda", "56412345678981234456798", "Gul", "personal", "ardagul" },
+                    { 3, "sebastian.simanski@akbank.com", "Sebastian", "1233456789856451234456798", "simanski", "personal", "sebastiansimanski" },
+                    { 4, "edin.ceko@akbank.com", "Edin", "12345678981541654234456798", "Ceko", "personal", "edinceko" }
                 });
 
             migrationBuilder.CreateIndex(

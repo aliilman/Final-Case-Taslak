@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MOS.Data.Migrations
 {
     [DbContext(typeof(MosDbContext))]
-    [Migration("20240115135619_first")]
-    partial class first
+    [Migration("20240116144748_initialcrate")]
+    partial class initialcrate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,24 +34,26 @@ namespace MOS.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminNumber"));
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("AdminNumber");
 
@@ -68,7 +70,6 @@ namespace MOS.Data.Migrations
                             FirstName = "Ali",
                             LastName = "İlman",
                             Password = "Admin",
-                            UserId = 1,
                             UserName = "aliilman"
                         },
                         new
@@ -78,7 +79,6 @@ namespace MOS.Data.Migrations
                             FirstName = "Veli",
                             LastName = "liman",
                             Password = "Admin",
-                            UserId = 2,
                             UserName = "veliliman"
                         });
                 });
@@ -91,7 +91,7 @@ namespace MOS.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ExpenseId"));
 
-                    b.Property<int>("AdminNumber")
+                    b.Property<int?>("AdminNumber")
                         .HasColumnType("int");
 
                     b.Property<int>("ApprovalStatus")
@@ -110,19 +110,32 @@ namespace MOS.Data.Migrations
                         .HasPrecision(18, 4)
                         .HasColumnType("decimal(18,4)");
 
+                    b.Property<string>("ExpenseCategory")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<DateTime>("ExpenseCreateDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ExpenseDescription")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("ExpenseName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("InvoiceImageFilePath")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<string>("Location")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<int>("PersonalNumber")
                         .HasColumnType("int");
@@ -149,7 +162,8 @@ namespace MOS.Data.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<DateTime>("ExpenseDate")
                         .HasColumnType("datetime2");
@@ -168,7 +182,8 @@ namespace MOS.Data.Migrations
 
                     b.Property<string>("PaymentType")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("PaymentId");
 
@@ -190,10 +205,12 @@ namespace MOS.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PersonalNumber"));
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("IBAN")
                         .IsRequired()
@@ -201,18 +218,18 @@ namespace MOS.Data.Migrations
                         .HasColumnType("nvarchar(34)");
 
                     b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("PersonalNumber");
 
@@ -230,7 +247,6 @@ namespace MOS.Data.Migrations
                             IBAN = "12345678981234456798",
                             LastName = "Kadi",
                             Password = "personal",
-                            UserId = 3,
                             UserName = "ferdikadi"
                         },
                         new
@@ -241,7 +257,6 @@ namespace MOS.Data.Migrations
                             IBAN = "56412345678981234456798",
                             LastName = "Gul",
                             Password = "personal",
-                            UserId = 4,
                             UserName = "ardagul"
                         },
                         new
@@ -252,7 +267,6 @@ namespace MOS.Data.Migrations
                             IBAN = "1233456789856451234456798",
                             LastName = "simanski",
                             Password = "personal",
-                            UserId = 5,
                             UserName = "sebastiansimanski"
                         },
                         new
@@ -263,7 +277,6 @@ namespace MOS.Data.Migrations
                             IBAN = "12345678981541654234456798",
                             LastName = "Ceko",
                             Password = "personal",
-                            UserId = 6,
                             UserName = "edinceko"
                         });
                 });
@@ -272,9 +285,7 @@ namespace MOS.Data.Migrations
                 {
                     b.HasOne("MOS.Data.Entity.Admin", "Admin")
                         .WithMany()
-                        .HasForeignKey("AdminNumber")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AdminNumber");
 
                     b.HasOne("MOS.Data.Entity.Personal", "Personal")
                         .WithMany("Expense")

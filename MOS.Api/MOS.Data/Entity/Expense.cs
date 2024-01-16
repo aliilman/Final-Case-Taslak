@@ -17,9 +17,8 @@ namespace MOS.Data.Entity
         public int PersonalNumber { get; set; }
         public virtual Personal Personal { get; set; }
 
-        //public string ExpenseName { get; set; }
-        //public string ExpenseCategory { get; set; }
-
+        public string ExpenseName { get; set; }
+        public string ExpenseCategory { get; set; }
         public ApprovalStatus ApprovalStatus { get; set; }
         public DateTime ExpenseCreateDate { get; set; } // harcama zamanı
         public decimal ExpenseAmount { get; set; } //tutar
@@ -28,7 +27,7 @@ namespace MOS.Data.Entity
         public string? Location { get; set; }
 
         public int? DeciderAdminNumber { get; set; }=null;
-        public virtual Admin Admin { get; set; }
+        public virtual Admin? Admin { get; set; }
         public string? DecisionDescription { get; set; }
         public DateTime? DecisionDate { get; set; }
 
@@ -42,17 +41,17 @@ namespace MOS.Data.Entity
             builder.Property(x => x.ExpenseId).ValueGeneratedOnAdd();
 
             builder.Property(x => x.ExpenseId).IsRequired(true);
-           // builder.Property(x => x.ExpenseName).IsRequired(true);
-           // builder.Property(x => x.ExpenseCategory).IsRequired(true);
+            builder.Property(x => x.ExpenseName).IsRequired(true).HasMaxLength(50);
+            builder.Property(x => x.ExpenseCategory).IsRequired(true).HasMaxLength(50);
             
             builder.Property(x => x.PersonalNumber).IsRequired(true);
             builder.Property(x => x.ApprovalStatus).IsRequired(true);
             builder.Property(x => x.ExpenseCreateDate).IsRequired(true);
             builder.Property(x => x.ExpenseAmount).IsRequired(true).HasPrecision(18, 4);
-            builder.Property(x => x.ExpenseDescription).IsRequired(true);
-            builder.Property(x => x.InvoiceImageFilePath).IsRequired(true);
+            builder.Property(x => x.ExpenseDescription).IsRequired(true).HasMaxLength(100);
+            builder.Property(x => x.InvoiceImageFilePath).IsRequired(true).HasMaxLength(150);
 
-            builder.Property(x => x.Location).IsRequired(false);
+            builder.Property(x => x.Location).IsRequired(false).HasMaxLength(150);
 
             builder.Property(x => x.DeciderAdminNumber).IsRequired(false);
             builder.Property(x => x.DecisionDescription).IsRequired(false);

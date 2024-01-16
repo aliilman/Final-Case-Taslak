@@ -36,17 +36,13 @@ namespace MOS.Data.Entity
             builder.Property(x => x.IBAN).IsRequired(true).HasMaxLength(34);
 
             builder.Property(x => x.PaymentAmount).IsRequired(true).HasPrecision(18, 4);
-            builder.Property(x => x.Description).IsRequired(true);
-            builder.Property(x => x.PaymentType).IsRequired(true);
+            builder.Property(x => x.Description).IsRequired(true).HasMaxLength(200);
+            builder.Property(x => x.PaymentType).IsRequired(true).HasMaxLength(30);
             builder.Property(x => x.ExpenseDate).IsRequired(true);
 
             builder.HasIndex(x => x.PaymentId).IsUnique(true);
             builder.HasIndex(x => x.ExpenseId).IsUnique(true);
             builder.HasKey(x => x.PaymentId);
-
-
-
-            
 
         }
     }

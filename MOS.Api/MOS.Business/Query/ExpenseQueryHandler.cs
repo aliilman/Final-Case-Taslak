@@ -120,6 +120,13 @@ public class ExpenseQueryHandler :
         if (request.ApprovalStatus!=null)
             predicate.And(x => ((int)x.ApprovalStatus) == request.ApprovalStatus);
 
+        if (request.Min != null)
+            predicate.And(x => x.ExpenseAmount > request.Min);
+
+        if (request.Max != null)
+            predicate.And(x => x.ExpenseAmount < request.Max);
+
+
         var list = await dbContext.Set<Expense>()
             .Where(predicate).ToListAsync(cancellationToken);
 

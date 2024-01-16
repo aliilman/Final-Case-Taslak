@@ -125,7 +125,7 @@ namespace MOS.Business.Command
                 PaymentType = "EFT",
                 ExpenseDate = DateTime.Now
             };
-
+            await dbContext.SaveChangesAsync(cancellationToken);
             return new ApiResponse();
         }
 
@@ -143,6 +143,7 @@ namespace MOS.Business.Command
             fromdb.DecisionDescription = $"Harcamanız Reddedilmiştir. Açıkama: {request.Model.DecisionDescription}";
             fromdb.DecisionDate = DateTime.Now;
 
+            await dbContext.SaveChangesAsync(cancellationToken);
             return new ApiResponse();
         }
     }
