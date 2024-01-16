@@ -64,9 +64,9 @@ namespace MOS.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PersonalNumber = table.Column<int>(type: "int", nullable: false),
                     ApprovalStatus = table.Column<int>(type: "int", nullable: false),
-                    ExpenceCreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ExpenceAmount = table.Column<decimal>(type: "decimal(18,4)", precision: 18, scale: 4, nullable: false),
-                    ExpenceDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ExpenseCreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ExpenseAmount = table.Column<decimal>(type: "decimal(18,4)", precision: 18, scale: 4, nullable: false),
+                    ExpenseDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     InvoiceImageFilePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Location = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DeciderAdminNumber = table.Column<int>(type: "int", nullable: true),
@@ -105,7 +105,7 @@ namespace MOS.Data.Migrations
                     PaymentAmount = table.Column<decimal>(type: "decimal(18,4)", precision: 18, scale: 4, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PaymentType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ExpenceDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    ExpenseDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

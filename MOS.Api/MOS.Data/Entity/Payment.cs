@@ -21,7 +21,7 @@ namespace MOS.Data.Entity
         public string Description { get; set; }
         public string PaymentType { get; set; }
 
-        public DateTime ExpenceDate { get; set; }
+        public DateTime ExpenseDate { get; set; }
 
     }
 
@@ -38,7 +38,7 @@ namespace MOS.Data.Entity
             builder.Property(x => x.PaymentAmount).IsRequired(true).HasPrecision(18, 4);
             builder.Property(x => x.Description).IsRequired(true);
             builder.Property(x => x.PaymentType).IsRequired(true);
-            builder.Property(x => x.ExpenceDate).IsRequired(true);
+            builder.Property(x => x.ExpenseDate).IsRequired(true);
 
             builder.HasIndex(x => x.PaymentId).IsUnique(true);
             builder.HasIndex(x => x.ExpenseId).IsUnique(true);

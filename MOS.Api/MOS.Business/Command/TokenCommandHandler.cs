@@ -81,6 +81,7 @@ public class TokenCommandHandler :
             Role = role,
             Token = token,
             ExpireDate = DateTime.Now.AddDays(jwtConfig.AccessTokenExpiration)
+            
         });
     }
 

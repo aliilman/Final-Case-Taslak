@@ -106,14 +106,14 @@ namespace MOS.Data.Migrations
                     b.Property<string>("DecisionDescription")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("ExpenceAmount")
+                    b.Property<decimal>("ExpenseAmount")
                         .HasPrecision(18, 4)
                         .HasColumnType("decimal(18,4)");
 
-                    b.Property<DateTime>("ExpenceCreateDate")
+                    b.Property<DateTime>("ExpenseCreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ExpenceDescription")
+                    b.Property<string>("ExpenseDescription")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -151,7 +151,7 @@ namespace MOS.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("ExpenceDate")
+                    b.Property<DateTime>("ExpenseDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("ExpenseId")

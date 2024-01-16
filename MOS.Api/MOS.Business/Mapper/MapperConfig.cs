@@ -10,12 +10,15 @@ public class MapperConfig : Profile
 {
     public MapperConfig()
     {
-    
+
         CreateMap<PersonalRequest, Personal>();
         CreateMap<Personal, PersonalResponse>();
 
-         CreateMap<AdminRequest, Admin>();
+        CreateMap<AdminRequest, Admin>();
         CreateMap<Admin, AdminResponse>();
+
+        CreateMap<PersonalExpenseRequest, Expense>();
+        CreateMap<Expense, ExpenseResponse>();
 
         // CreateMap<AddressRequest, Address>();
         // CreateMap<Address, AddressResponse>()

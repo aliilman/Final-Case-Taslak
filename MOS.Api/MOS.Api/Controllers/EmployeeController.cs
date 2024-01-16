@@ -16,7 +16,7 @@ using MOS.Schema;
 namespace MOS.Api.Controllers;
 
 [Route("[controller]")]
-[Authorize(Roles = "admin")]
+[Authorize(Roles = "Admin")]
 public class EmployeeController : Controller
 {
     private readonly IMediator mediator;

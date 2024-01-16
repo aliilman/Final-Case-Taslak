@@ -17,10 +17,13 @@ namespace MOS.Data.Entity
         public int PersonalNumber { get; set; }
         public virtual Personal Personal { get; set; }
 
+        //public string ExpenseName { get; set; }
+        //public string ExpenseCategory { get; set; }
+
         public ApprovalStatus ApprovalStatus { get; set; }
-        public DateTime ExpenceCreateDate { get; set; } // harcama zamanı
-        public decimal ExpenceAmount { get; set; } //tutar
-        public string ExpenceDescription { get; set; } // harcama Açıklaması
+        public DateTime ExpenseCreateDate { get; set; } // harcama zamanı
+        public decimal ExpenseAmount { get; set; } //tutar
+        public string ExpenseDescription { get; set; } // harcama Açıklaması
         public string InvoiceImageFilePath { get; set; } //fiş veya fatura resmi yüklenmiş kabul edildi
         public string? Location { get; set; }
 
@@ -39,11 +42,14 @@ namespace MOS.Data.Entity
             builder.Property(x => x.ExpenseId).ValueGeneratedOnAdd();
 
             builder.Property(x => x.ExpenseId).IsRequired(true);
+           // builder.Property(x => x.ExpenseName).IsRequired(true);
+           // builder.Property(x => x.ExpenseCategory).IsRequired(true);
+            
             builder.Property(x => x.PersonalNumber).IsRequired(true);
             builder.Property(x => x.ApprovalStatus).IsRequired(true);
-            builder.Property(x => x.ExpenceCreateDate).IsRequired(true);
-            builder.Property(x => x.ExpenceAmount).IsRequired(true).HasPrecision(18, 4);
-            builder.Property(x => x.ExpenceDescription).IsRequired(true);
+            builder.Property(x => x.ExpenseCreateDate).IsRequired(true);
+            builder.Property(x => x.ExpenseAmount).IsRequired(true).HasPrecision(18, 4);
+            builder.Property(x => x.ExpenseDescription).IsRequired(true);
             builder.Property(x => x.InvoiceImageFilePath).IsRequired(true);
 
             builder.Property(x => x.Location).IsRequired(false);
