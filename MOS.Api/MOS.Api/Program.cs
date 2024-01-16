@@ -17,6 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+
 builder.Services.AddControllers();
 
 //Add support to logging with SERILOG
@@ -53,6 +54,9 @@ builder.Services.AddSwaggerGen(c =>
 //Meditor
 //builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateExpenseCommand).GetTypeInfo().Assembly));
+
+//FluentValidation
+
 
 //DB 
 builder.Services.AddDbContext<MosDbContext>(options =>

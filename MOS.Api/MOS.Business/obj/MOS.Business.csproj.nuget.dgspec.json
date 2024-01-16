@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Business\\MOS.Business.csproj": {}
+    "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Business\\MOS.Business.csproj": {}
   },
   "projects": {
     "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Base\\MOS.Base.csproj": {
@@ -60,14 +60,14 @@
         }
       }
     },
-    "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Business\\MOS.Business.csproj": {
+    "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Business\\MOS.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Business\\MOS.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Business\\MOS.Business.csproj",
         "projectName": "MOS.Business",
-        "projectPath": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Business\\MOS.Business.csproj",
+        "projectPath": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Business\\MOS.Business.csproj",
         "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Business\\obj\\",
+        "outputPath": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -107,6 +107,14 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.9.0, )"
             },
             "LinqKit": {
               "target": "Package",
