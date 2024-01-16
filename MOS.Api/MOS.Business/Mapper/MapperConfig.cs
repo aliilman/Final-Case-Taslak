@@ -1,6 +1,8 @@
 
 
 using AutoMapper;
+using MOS.Data.Entity;
+using MOS.Schema;
 
 namespace Vb.Business.Mapper;
 
@@ -8,8 +10,12 @@ public class MapperConfig : Profile
 {
     public MapperConfig()
     {
-        // CreateMap<CustomerRequest, Customer>();
-        // CreateMap<Customer, CustomerResponse>();
+    
+        CreateMap<PersonalRequest, Personal>();
+        CreateMap<Personal, PersonalResponse>();
+
+         CreateMap<AdminRequest, Admin>();
+        CreateMap<Admin, AdminResponse>();
 
         // CreateMap<AddressRequest, Address>();
         // CreateMap<Address, AddressResponse>()

@@ -10,7 +10,7 @@ using MOS.Base.Entity;
 namespace MOS.Data.Entity
 {
     [Table("Admin", Schema = "dbo")]
-    public class Admin : BaseUser
+    public class Admin : BaseEmployee
     {
         public int AdminNumber { get; set; }
 

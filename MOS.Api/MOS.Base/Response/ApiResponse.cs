@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace Vb.Base.Response;
+namespace MOS.Base.Response;
 
 public class ApiResponse
 {

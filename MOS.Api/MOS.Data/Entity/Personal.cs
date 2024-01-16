@@ -10,7 +10,7 @@ using MOS.Base.Entity;
 namespace MOS.Data.Entity;
 
 [Table("Personal", Schema = "dbo")]
-public class Personal : BaseUser
+public class Personal : BaseEmployee
 {
     public int PersonalNumber { get; set; }
     public string IBAN { get; set; }

@@ -6,11 +6,12 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using MOS.Base.Response;
 using MOS.Base.Token;
 using MOS.Data;
 using MOS.Data.Entity;
 using MOS.Schema;
-using Vb.Base.Response;
+
 using Vb.Business.Cqrs;
 
 namespace Vb.Business.Command;
@@ -77,7 +78,7 @@ public class TokenCommandHandler :
 
         return new ApiResponse<TokenResponse>(new TokenResponse()
         {
-            Email = Email,
+            Role = role,
             Token = token,
             ExpireDate = DateTime.Now.AddDays(jwtConfig.AccessTokenExpiration)
         });

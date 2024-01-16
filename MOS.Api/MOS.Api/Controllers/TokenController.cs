@@ -1,11 +1,12 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MOS.Base.Response;
 using MOS.Schema;
-using Vb.Base.Response;
+
 using Vb.Business.Cqrs;
 
 
-namespace VbApi.Controllers;
+namespace MOS.Api.Controllers;
 
 
 [Route("api/[controller]")]
