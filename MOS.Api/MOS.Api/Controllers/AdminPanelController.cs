@@ -25,9 +25,20 @@ namespace MOS.Api.Controllers
             this.mediator = mediator;
         }
 
+
         //admin
         //getallExpense //getparameter //getbyid
         //Onaylabyid // reddetbyid
+
+        [HttpGet("MyProfile")]
+        public async Task<ApiResponse<AdminResponse>> MyProfile()
+        {
+            string id = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
+
+            var operation = new GetAdminByIdQuery(int.Parse(id));
+            var result = await mediator.Send(operation);
+            return result;
+        }
 
 
         [HttpGet("GetAllExpense")]

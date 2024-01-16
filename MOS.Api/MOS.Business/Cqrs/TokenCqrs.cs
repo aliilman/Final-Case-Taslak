@@ -4,7 +4,7 @@ using MOS.Schema;
 
 
 
-namespace Vb.Business.Cqrs;
+namespace Mos.Business.Cqrs;
 
 public record CreateTokenCommand(TokenRequest Model) : IRequest<ApiResponse<TokenResponse>>;
 

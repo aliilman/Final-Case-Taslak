@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MOS.Base.Response;
 using MOS.Schema;
 
-using Vb.Business.Cqrs;
+using Mos.Business.Cqrs;
 
 
 namespace MOS.Api.Controllers;

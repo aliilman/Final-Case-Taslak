@@ -25,25 +25,7 @@ public class EmployeeController : Controller
     {
         this.mediator = mediator;
     }
-    // [HttpGet("MyProfile")]
-    // [Authorize]
-    // public async Task<ApiResponse<AdminResponse>> MyProfile()
-    // {
-    //     string id = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
-    //     string role = (User.Identity as ClaimsIdentity).RoleClaimType;
-    //     if (role == "Admin")
-    //     {
-    //         var operation = new GetAdminByIdQuery(int.Parse(id));
-    //         var result = await mediator.Send(operation);
-    //         return result;
-    //     }
-    //     else 
-    //     {
-    //         var operation = new GetPersonalByIdQuery(int.Parse(id));
-    //         var result = await mediator.Send(operation);
-    //         return result;
-    //     }
-    // }
+
 
     [HttpGet("GetAllAdmin")]
     public async Task<ApiResponse<List<AdminResponse>>> GetAllAdmin()

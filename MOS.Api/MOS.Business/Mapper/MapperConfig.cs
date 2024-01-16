@@ -4,7 +4,7 @@ using AutoMapper;
 using MOS.Data.Entity;
 using MOS.Schema;
 
-namespace Vb.Business.Mapper;
+namespace MOS.Business.Mapper;
 
 public class MapperConfig : Profile
 {

@@ -1,0 +1,14 @@
+{"@t":"2024-01-16T21:42:37.7075024Z","@mt":"Failed to determine the https port for redirect.","@l":"Warning","@tr":"21bbe7df58e8cc964471cbc546e06826","@sp":"c449dfa3744c6ddf","EventId":{"Id":3,"Name":"FailedToDeterminePort"},"SourceContext":"Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware","RequestId":"0HN0MRG7CQR3G:00000001","RequestPath":"/AdminPanel/GetAllExpense","ConnectionId":"0HN0MRG7CQR3G","Application":"Your ASP.NET Core App","Environment":"Development"}
+{"@t":"2024-01-16T21:42:37.8237998Z","@mt":"[Request] Http GET - /AdminPanel/GetAllExpense","@tr":"21bbe7df58e8cc964471cbc546e06826","@sp":"c449dfa3744c6ddf","RequestId":"0HN0MRG7CQR3G:00000001","RequestPath":"/AdminPanel/GetAllExpense","ConnectionId":"0HN0MRG7CQR3G","Application":"Your ASP.NET Core App","Environment":"Development"}
+{"@t":"2024-01-16T21:42:38.8777816Z","@mt":"[Response] Http GET - /AdminPanel/GetAllExpense - Responded 200 in 1053,8775 ms.","@tr":"21bbe7df58e8cc964471cbc546e06826","@sp":"c449dfa3744c6ddf","ActionId":"06724a90-f96f-4421-bc56-3f952234b133","ActionName":"MOS.Api.Controllers.AdminPanelController.GetAllExpense (MOS.Api)","RequestId":"0HN0MRG7CQR3G:00000001","RequestPath":"/AdminPanel/GetAllExpense","ConnectionId":"0HN0MRG7CQR3G","Application":"Your ASP.NET Core App","Environment":"Development"}
+{"@t":"2024-01-16T21:42:38.8814670Z","@mt":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","@r":["1176.5191"],"@tr":"21bbe7df58e8cc964471cbc546e06826","@sp":"c449dfa3744c6ddf","RequestMethod":"GET","RequestPath":"/AdminPanel/GetAllExpense","StatusCode":200,"Elapsed":1176.5191,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HN0MRG7CQR3G:00000001","ConnectionId":"0HN0MRG7CQR3G","Application":"Your ASP.NET Core App","Environment":"Development"}
+2024-01-17 00:45:22.557 [WRN] Failed to determine the https port for redirect.
+2024-01-17 00:45:22.687 [INF] [Request] Http GET - /AdminPanel/GetAllExpense
+2024-01-17 00:45:23.602 [INF] [Response] Http GET - /AdminPanel/GetAllExpense - Responded 200 in 914,7769 ms.
+2024-01-17 00:45:23.606 [INF] HTTP GET /AdminPanel/GetAllExpense responded 200 in 1050.5758 ms
+2024-01-17 00:45:46.082 [INF] [Request] Http GET - /Employee/GetAllAdmin
+2024-01-17 00:45:46.162 [INF] [Response] Http GET - /Employee/GetAllAdmin - Responded 200 in 80,0592 ms.
+2024-01-17 00:45:46.165 [INF] HTTP GET /Employee/GetAllAdmin responded 200 in 85.6691 ms
+2024-01-17 00:45:51.536 [INF] [Request] Http GET - /Employee/GetAllPersonal
+2024-01-17 00:45:51.581 [INF] [Response] Http GET - /Employee/GetAllPersonal - Responded 200 in 45,4548 ms.
+2024-01-17 00:45:51.582 [INF] HTTP GET /Employee/GetAllPersonal responded 200 in 51.0587 ms

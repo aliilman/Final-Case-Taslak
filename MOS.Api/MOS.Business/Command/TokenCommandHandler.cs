@@ -6,15 +6,15 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Mos.Business.Cqrs;
 using MOS.Base.Response;
 using MOS.Base.Token;
 using MOS.Data;
 using MOS.Data.Entity;
 using MOS.Schema;
 
-using Vb.Business.Cqrs;
 
-namespace Vb.Business.Command;
+namespace Mos.Business.Command;
 
 public class TokenCommandHandler :
     IRequestHandler<CreateTokenCommand, ApiResponse<TokenResponse>>
