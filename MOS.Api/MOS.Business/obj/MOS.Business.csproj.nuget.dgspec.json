@@ -88,8 +88,8 @@
               "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Data\\MOS.Data.csproj": {
                 "projectPath": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Data\\MOS.Data.csproj"
               },
-              "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Schema\\MOS.Schema.csproj": {
-                "projectPath": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Schema\\MOS.Schema.csproj"
+              "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Schema\\MOS.Schema.csproj": {
+                "projectPath": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Schema\\MOS.Schema.csproj"
               }
             }
           }
@@ -231,14 +231,14 @@
         }
       }
     },
-    "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Schema\\MOS.Schema.csproj": {
+    "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Schema\\MOS.Schema.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Schema\\MOS.Schema.csproj",
+        "projectUniqueName": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Schema\\MOS.Schema.csproj",
         "projectName": "MOS.Schema",
-        "projectPath": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Schema\\MOS.Schema.csproj",
+        "projectPath": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Schema\\MOS.Schema.csproj",
         "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Schema\\obj\\",
+        "outputPath": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Schema\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",

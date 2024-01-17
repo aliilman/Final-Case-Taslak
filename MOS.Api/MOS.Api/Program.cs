@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using MOS.Api.Service;
 using MOS.Base.Token;
 using MOS.Business.Cqrs;
 using MOS.Business.Mapper;
@@ -101,16 +102,19 @@ builder.Services.AddAuthentication(x =>
      };
  });
 
-// RabbitMQ
-
+// // RabbitMQ
+// IConfiguration configuration = builder.Configuration.GetSection("RabbitMQ");
+// string hostName = configuration["HostName"];
 // var connectionFactory = new ConnectionFactory()
 // {
-//     HostName = builder.Configuration.GetConnectionString("RabbitMQ:HostName"),
-//     UserName = builder.Configuration.GetConnectionString("RabbitMQ:UserName"),
-//     Password = builder.Configuration.GetConnectionString("RabbitMQ:Password")
+//     HostName = "localhost",
+//     Port = 5672,
+//     UserName = "Admin",
+//     Password = "guest"
 // };
 
-// builder.Services.AddSingleton<IConnection>(sp => connectionFactory.CreateConnection());
+// builder.Services.AddSingleton<IConnection>(connectionFactory.CreateConnection());
+
 
 // // RabbitMQ servisini ekleyin
 // builder.Services.AddSingleton(sp =>
@@ -120,10 +124,8 @@ builder.Services.AddAuthentication(x =>
 //             return channel;
 //         });
 
-
-
-
-
+builder.Services.AddSingleton<IRabbitMQService, RabbitMQService>();
+builder.Services.AddSingleton<IRabbitMQConsumerService, RabbitMQConsumerService>();
 
 
 
