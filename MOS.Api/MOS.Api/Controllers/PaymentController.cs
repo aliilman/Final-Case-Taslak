@@ -4,20 +4,22 @@ using System.Diagnostics;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MOS.Base.Response;
 using MOS.Business.Cqrs;
+using MOS.Business.Validator;
 using MOS.Schema;
 
 
 namespace MOS.Api.Controllers;
 
-[Route("[controller]")]
+[Route("api/[controller]")]
 [Authorize(Roles = "Admin")]
-public class PaymentController : Controller
+public class PaymentController : ControllerBase
 {
     private readonly IMediator mediator;
 
@@ -25,7 +27,7 @@ public class PaymentController : Controller
     {
         this.mediator = mediator;
     }
-     //Payment
+    //Payment
     [HttpGet("GetAllPayment")]
     public async Task<ApiResponse<List<PaymentResponse>>> GetAllPayment()
     {
@@ -45,15 +47,15 @@ public class PaymentController : Controller
     [HttpGet("GetPersonaByParameter")]
     public async Task<ApiResponse<List<PaymentResponse>>> GetPersonaByParameter(
         [FromQuery] string? IBAN,
-        [FromQuery] string? Min,
-        [FromQuery] string? Max)
+        [FromQuery] int? Min,
+        [FromQuery] int? Max)
     {
         var operation = new GetPaymentByParameterQuery(
-            IBAN:IBAN,
-            Min: int.Parse(Min),
-            Max:int.Parse(Max)
+            IBAN: IBAN,
+            Min: Min,
+            Max: Max
         );
-        
+
         var result = await mediator.Send(operation);
         return result;
     }
@@ -61,6 +63,9 @@ public class PaymentController : Controller
     [HttpPost("CreatePayment")]
     public async Task<ApiResponse<PaymentResponse>> CreatePayment([FromBody] PaymentRequest Payment)
     {
+        PaymentValidator validations = new();
+        validations.ValidateAndThrow(Payment);
+
         var operation = new CreatePaymentCommand(Payment);
         var result = await mediator.Send(operation);
         return result;
@@ -69,6 +74,9 @@ public class PaymentController : Controller
     [HttpPut("UpdatePayment/{id}")]
     public async Task<ApiResponse> UpdatePayment(int id, [FromBody] PaymentRequest Payment)
     {
+        PaymentValidator validations = new();
+        validations.ValidateAndThrow(Payment);
+
         var operation = new UpdatePaymentCommand(id, Payment);
         var result = await mediator.Send(operation);
         return result;
@@ -82,5 +90,5 @@ public class PaymentController : Controller
         return result;
     }
 
-    
+
 }

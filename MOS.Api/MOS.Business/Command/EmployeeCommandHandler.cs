@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using AutoMapper;
 
@@ -78,17 +79,36 @@ namespace MOS.Business.Command
 
         public async Task<ApiResponse> Handle(DeletePersonalCommand request, CancellationToken cancellationToken)
         {
-            var fromdb = await dbContext.Set<Personal>().Where(x => x.PersonalNumber == request.Id)
-                .FirstOrDefaultAsync(cancellationToken);
+            var fromdb = await dbContext.Set<Personal>()
+                .Join(
+                    dbContext.Set<Expense>(),
+                    personal => personal.PersonalNumber, // Personal tablosundaki ortak alan
+                    expense => expense.PersonalNumber, // AnotherTable tablosundaki ortak alan
+                    (personal, expense) => new
+                    {
+                        Personal = personal,
+                        Expense = expense
+                    }
+                )
+                .Where(x => x.Personal.PersonalNumber == request.Id)
+                .ToListAsync(cancellationToken);
 
             if (fromdb == null)
             {
                 return new ApiResponse("Record not found");
             }
+            foreach (var item in fromdb)
+            {
+                if(item.Expense.ApprovalStatus==Base.Enum.ApprovalStatus.Saved)
+                {
+                    return new ApiResponse("Record has a expense process");
+                }
+            }
+
 
             //fromdb.IsActive = false;
 
-            dbContext.Personals.Remove(fromdb); //hard delate işlemi
+            dbContext.Personals.Remove(await dbContext.Set<Personal>().FirstOrDefaultAsync(x=>x.PersonalNumber==request.Id)); //hard delate işlemi
             await dbContext.SaveChangesAsync(cancellationToken);
             return new ApiResponse();
         }

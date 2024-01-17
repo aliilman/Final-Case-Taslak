@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g0QihErNpdHypZWbjKOqdfzRseORrkL7NzBLsj96peIp52m3oO6nf2m/5J4gY9KtL7PF/UwZZLWC9Yohb9S1dQ==",
+  "dgSpecHash": "3PDRWD2STXpHCt0Eah57it9tyQrjI/odjF7h8BGR5LrnXws/eFnQG+WncUKOBKEeQC81soNFvln6W79n6xdEaw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Business\\MOS.Business.csproj",
+  "projectFilePath": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Business\\MOS.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ali\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

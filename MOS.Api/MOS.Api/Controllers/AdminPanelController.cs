@@ -4,19 +4,21 @@ using System.Diagnostics;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MOS.Base.Response;
 using MOS.Business.Cqrs;
+using MOS.Business.Validator;
 using MOS.Schema;
 
 namespace MOS.Api.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [Authorize(Roles = "Admin")]
-    public class AdminPanelController : Controller
+    public class AdminPanelController : ControllerBase
     {
         private readonly IMediator mediator;
 
@@ -60,15 +62,16 @@ namespace MOS.Api.Controllers
         [HttpGet("GetExpenseParameter")]
         public async Task<ApiResponse<List<ExpenseResponse>>> GetExpenseParameter(
             [FromQuery] string? ExpenseName,
-            [FromQuery] string? ApprovalStatus,
-            [FromQuery] string? Min,
-            [FromQuery] string? Max)
+            [FromQuery] int? ApprovalStatus,
+            [FromQuery] int? Min,
+            [FromQuery] int? Max)
         {
             var operation = new GetExpenseByParameterQuery(
                 ExpenseName: ExpenseName,
-                ApprovalStatus: int.Parse(ApprovalStatus),
-                Min: int.Parse(Min),
-                Max: int.Parse(Max));
+                ApprovalStatus: ApprovalStatus,
+                Min: Min,
+                Max: Max
+                );
             var result = await mediator.Send(operation);
             return result;
         }
@@ -76,6 +79,9 @@ namespace MOS.Api.Controllers
         [HttpPost("ApproveById/{id}")]
         public async Task<ApiResponse> ApproveById(int id, [FromBody] AdminExpenseRequest request)
         {
+            AdminExpenseValidator validations = new();
+            validations.ValidateAndThrow(request);
+
             string AdminNumber = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
 
             var operation = new ApproveByIdCommand(AdminNumber: int.Parse(AdminNumber), ExpenseId: id, request);
@@ -86,6 +92,9 @@ namespace MOS.Api.Controllers
         [HttpPost("RejectedById/{id}")]
         public async Task<ApiResponse> RejectedById(int id, [FromBody] AdminExpenseRequest request)
         {
+            AdminExpenseValidator validations = new();
+            validations.ValidateAndThrow(request);
+
             string AdminNumber = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
 
             var operation = new RejectedByIdCommand(AdminNumber: int.Parse(AdminNumber), id, request);

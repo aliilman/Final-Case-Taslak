@@ -1,6 +1,7 @@
 using System.Reflection;
 using System.Text;
 using AutoMapper;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -8,18 +9,27 @@ using Microsoft.OpenApi.Models;
 using MOS.Base.Token;
 using MOS.Business.Cqrs;
 using MOS.Business.Mapper;
+using MOS.Business.Validator;
 using MOS.Data;
 using MOS.Middleware;
+using RabbitMQ.Client;
 using Serilog;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-
 builder.Services.AddControllers();
+//FluentValidation
+// builder.Services.AddControllers().AddFluentValidation(x =>
+//         {
+//             x.RegisterValidatorsFromAssemblyContaining<PersonalExpenseValidator>();
+//         });
 
+// builder.Services.AddControllers().AddFluentValidation(fv =>
+//          fv.RegisterValidatorsFromAssemblyContaining<PersonalExpenseValidator>());
+
+// builder.Services.AddFluentValidationAutoValidation();
 //Add support to logging with SERILOG
 builder.Host.UseSerilog((context, configuration) =>
     configuration.ReadFrom.Configuration(context.Configuration));
@@ -55,7 +65,7 @@ builder.Services.AddSwaggerGen(c =>
 //builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateExpenseCommand).GetTypeInfo().Assembly));
 
-//FluentValidation
+
 
 
 //DB 
@@ -91,6 +101,31 @@ builder.Services.AddAuthentication(x =>
      };
  });
 
+// RabbitMQ
+
+// var connectionFactory = new ConnectionFactory()
+// {
+//     HostName = builder.Configuration.GetConnectionString("RabbitMQ:HostName"),
+//     UserName = builder.Configuration.GetConnectionString("RabbitMQ:UserName"),
+//     Password = builder.Configuration.GetConnectionString("RabbitMQ:Password")
+// };
+
+// builder.Services.AddSingleton<IConnection>(sp => connectionFactory.CreateConnection());
+
+// // RabbitMQ servisini ekleyin
+// builder.Services.AddSingleton(sp =>
+//         {
+//             var channel = sp.GetRequiredService<IConnection>().CreateModel();
+//             // İhtiyaç duyulan ek konfigürasyonları yapabilirsiniz
+//             return channel;
+//         });
+
+
+
+
+
+
+
 
 var app = builder.Build();
 
@@ -110,6 +145,8 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.UseCustomExceptionMiddleware();
+
+
 
 app.MapControllers();
 

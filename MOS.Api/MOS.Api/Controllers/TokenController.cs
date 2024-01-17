@@ -4,6 +4,8 @@ using MOS.Base.Response;
 using MOS.Schema;
 
 using Mos.Business.Cqrs;
+using MOS.Business.Validator;
+using FluentValidation;
 
 
 namespace MOS.Api.Controllers;
@@ -20,9 +22,12 @@ public class TokenController : ControllerBase
         this.mediator = mediator;
     }
     
-    [HttpPost]
+    [HttpPost("TakeToken")]
     public async Task<ApiResponse<TokenResponse>> Post([FromBody] TokenRequest request)
     {
+        TokenValidator validations = new();
+        validations.ValidateAndThrow(request);
+        
         var operation = new CreateTokenCommand(request);
         var result = await mediator.Send(operation);
         return result;

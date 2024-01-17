@@ -37,7 +37,7 @@ namespace MOS.Schema
     public class ExpenseResponse
     {
         public int ExpenseId { get; set; }
-
+        public int PersonalNumber { get; set; }
         public ApprovalStatus ApprovalStatus { get; set; }
         public DateTime ExpenseCreateDate { get; set; } // harcama zamanı
         public decimal ExpenseAmount { get; set; } //tutar

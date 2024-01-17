@@ -167,3 +167,7 @@ C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\bin\Debug\net8.0\Serilog.
 C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\bin\Debug\net8.0\Serilog.Sinks.File.dll
+c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\bin\Debug\net8.0\FluentValidation.dll
+c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\bin\Debug\net8.0\RabbitMQ.Client.dll

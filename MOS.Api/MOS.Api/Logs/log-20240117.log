@@ -12,3 +12,433 @@
 2024-01-17 00:45:51.536 [INF] [Request] Http GET - /Employee/GetAllPersonal
 2024-01-17 00:45:51.581 [INF] [Response] Http GET - /Employee/GetAllPersonal - Responded 200 in 45,4548 ms.
 2024-01-17 00:45:51.582 [INF] HTTP GET /Employee/GetAllPersonal responded 200 in 51.0587 ms
+2024-01-17 13:20:26.960 [WRN] Failed to determine the https port for redirect.
+2024-01-17 13:20:27.103 [INF] [Request] Http POST - /api/Token
+2024-01-17 13:20:28.830 [INF] [Response] Http POST - /api/Token - Responded 200 in 1726,3579 ms.
+2024-01-17 13:20:28.833 [INF] HTTP POST /api/Token responded 200 in 1877.6318 ms
+2024-01-17 13:21:17.564 [INF] [Request] Http POST - /api/Token
+2024-01-17 13:21:17.627 [INF] [Response] Http POST - /api/Token - Responded 200 in 62,6578 ms.
+2024-01-17 13:21:17.627 [INF] HTTP POST /api/Token responded 200 in 68.3847 ms
+2024-01-17 13:22:29.732 [INF] [Request] Http DELETE - /Employee/DeletePersonal/4
+2024-01-17 13:22:29.862 [INF] [Response] Http DELETE - /Employee/DeletePersonal/4 - Responded 200 in 129,3964 ms.
+2024-01-17 13:22:29.862 [INF] HTTP DELETE /Employee/DeletePersonal/4 responded 200 in 175.1654 ms
+2024-01-17 14:13:28.425 [WRN] Failed to determine the https port for redirect.
+2024-01-17 14:13:28.631 [INF] [Request] Http POST - /Expense/CreateExpense
+2024-01-17 14:13:36.538 [INF] [Response] Http POST - /Expense/CreateExpense - Responded 200 in 7906,232 ms.
+2024-01-17 14:13:36.540 [INF] HTTP POST /Expense/CreateExpense responded 200 in 8116.7857 ms
+2024-01-17 14:14:25.786 [INF] [Request] Http GET - /AdminPanel/GetAllExpense
+2024-01-17 14:14:26.049 [INF] [Response] Http GET - /AdminPanel/GetAllExpense - Responded 200 in 263,5195 ms.
+2024-01-17 14:14:26.050 [INF] HTTP GET /AdminPanel/GetAllExpense responded 200 in 271.5261 ms
+2024-01-17 14:17:26.982 [WRN] Failed to determine the https port for redirect.
+2024-01-17 14:17:27.179 [INF] [Request] Http GET - /AdminPanel/GetAllExpense
+2024-01-17 14:17:28.430 [INF] [Response] Http GET - /AdminPanel/GetAllExpense - Responded 200 in 1250,5582 ms.
+2024-01-17 14:17:28.432 [INF] HTTP GET /AdminPanel/GetAllExpense responded 200 in 1452.5561 ms
+2024-01-17 14:18:40.747 [INF] [Request] Http GET - /AdminPanel/GetExpenseParameter
+2024-01-17 14:18:40.847 [ERR] UnexpectedError
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.Int32.Parse(String s)
+   at MOS.Api.Controllers.AdminPanelController.GetExpenseParameter(String ExpenseName, String ApprovalStatus, String Min, String Max) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\AdminPanelController.cs:line 67
+   at lambda_method124(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-17 14:18:40.858 [FTL] Path=/AdminPanel/GetExpenseParameter || Method=GET || Exception=Value cannot be null. (Parameter 's')Miliseconds=81,8189 ms
+2024-01-17 14:18:40.947 [ERR] HTTP GET /AdminPanel/GetExpenseParameter responded 500 in 204.6435 ms
+2024-01-17 14:21:20.378 [INF] [Request] Http GET - /AdminPanel/GetExpenseParameter
+2024-01-17 14:21:33.285 [ERR] UnexpectedError
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.Int32.Parse(String s)
+   at MOS.Api.Controllers.AdminPanelController.GetExpenseParameter(String ExpenseName, String ApprovalStatus, String Min, String Max) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\AdminPanelController.cs:line 67
+   at lambda_method124(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-17 14:21:33.293 [FTL] Path=/AdminPanel/GetExpenseParameter || Method=GET || Exception=Value cannot be null. (Parameter 's')Miliseconds=12906,9951 ms
+2024-01-17 14:21:33.294 [ERR] HTTP GET /AdminPanel/GetExpenseParameter responded 500 in 12919.4957 ms
+2024-01-17 14:21:35.336 [INF] [Request] Http GET - /AdminPanel/GetExpenseParameter
+2024-01-17 14:23:01.606 [WRN] Failed to determine the https port for redirect.
+2024-01-17 14:23:01.843 [INF] [Request] Http GET - /AdminPanel/GetExpenseParameter
+2024-01-17 14:23:15.374 [ERR] UnexpectedError
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.Int32.Parse(String s)
+   at MOS.Api.Controllers.AdminPanelController.GetExpenseParameter(String ExpenseName, String ApprovalStatus, String Min, String Max) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\AdminPanelController.cs:line 67
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-17 14:23:15.377 [FTL] Path=/AdminPanel/GetExpenseParameter || Method=GET || Exception=Value cannot be null. (Parameter 's')Miliseconds=11260,865 ms
+2024-01-17 14:23:15.456 [ERR] HTTP GET /AdminPanel/GetExpenseParameter responded 500 in 13852.7933 ms
+2024-01-17 14:23:23.025 [INF] [Request] Http GET - /AdminPanel/GetExpenseParameter
+2024-01-17 14:25:16.327 [WRN] Failed to determine the https port for redirect.
+2024-01-17 14:25:16.512 [INF] [Request] Http GET - /AdminPanel/GetExpenseParameter
+2024-01-17 14:25:41.103 [INF] [Response] Http GET - /AdminPanel/GetExpenseParameter - Responded 200 in 24591,4559 ms.
+2024-01-17 14:25:41.107 [INF] HTTP GET /AdminPanel/GetExpenseParameter responded 200 in 24781.3694 ms
+2024-01-17 14:28:05.335 [WRN] Failed to determine the https port for redirect.
+2024-01-17 14:28:05.525 [INF] [Request] Http DELETE - /Employee/DeletePersonal/1
+2024-01-17 14:28:54.052 [INF] [Response] Http DELETE - /Employee/DeletePersonal/1 - Responded 200 in 48526,1951 ms.
+2024-01-17 14:28:54.055 [INF] HTTP DELETE /Employee/DeletePersonal/1 responded 200 in 48721.3919 ms
+2024-01-17 15:06:02.486 [WRN] Failed to determine the https port for redirect.
+2024-01-17 15:06:02.684 [INF] [Request] Http POST - /api/Token
+2024-01-17 15:06:04.001 [INF] [Response] Http POST - /api/Token - Responded 200 in 1315,9559 ms.
+2024-01-17 15:06:04.004 [INF] HTTP POST /api/Token responded 200 in 1520.1653 ms
+2024-01-17 15:08:13.755 [WRN] Failed to determine the https port for redirect.
+2024-01-17 15:08:13.943 [INF] [Request] Http POST - /api/Token
+2024-01-17 15:08:15.239 [INF] [Response] Http POST - /api/Token - Responded 200 in 1294,834 ms.
+2024-01-17 15:08:15.242 [INF] HTTP POST /api/Token responded 200 in 1487.9813 ms
+2024-01-17 15:13:51.182 [WRN] Failed to determine the https port for redirect.
+2024-01-17 15:13:51.371 [INF] [Request] Http POST - /api/Token
+2024-01-17 15:13:58.835 [INF] [Response] Http POST - /api/Token - Responded 400 in 7462,9708 ms.
+2024-01-17 15:13:58.837 [INF] HTTP POST /api/Token responded 400 in 7657.0766 ms
+2024-01-17 15:14:29.777 [INF] [Request] Http POST - /Expense/CreateExpense
+2024-01-17 15:14:37.582 [INF] [Response] Http POST - /Expense/CreateExpense - Responded 200 in 7804,484 ms.
+2024-01-17 15:14:37.583 [INF] HTTP POST /Expense/CreateExpense responded 200 in 7822.4562 ms
+2024-01-17 15:16:18.910 [INF] [Request] Http POST - /Expense/CreateExpense
+2024-01-17 15:17:02.459 [INF] [Response] Http POST - /Expense/CreateExpense - Responded 200 in 43549,4881 ms.
+2024-01-17 15:17:02.460 [INF] HTTP POST /Expense/CreateExpense responded 200 in 43556.9953 ms
+2024-01-17 15:17:19.709 [INF] [Request] Http POST - /Expense/CreateExpense
+2024-01-17 15:17:29.411 [ERR] UnexpectedError
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MOS.Business.Command.ExpenseCommandHandler.Handle(CreateExpenseCommand request, CancellationToken cancellationToken) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Business\Command\ExpenceCommandHandler.cs:line 44
+   at MOS.Api.Controllers.ExpenseController.CreateExpense(PersonalExpenseRequest Expense) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\ExpenseController.cs:line 69
+   at lambda_method15(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-17 15:17:29.425 [FTL] Path=/Expense/CreateExpense || Method=POST || Exception=Object reference not set to an instance of an object.Miliseconds=9689,4446 ms
+2024-01-17 15:17:29.509 [ERR] HTTP POST /Expense/CreateExpense responded 500 in 9800.7459 ms
+2024-01-17 15:17:51.613 [INF] [Request] Http POST - /Expense/CreateExpense
+2024-01-17 15:18:10.826 [INF] [Response] Http POST - /Expense/CreateExpense - Responded 200 in 19212,8946 ms.
+2024-01-17 15:18:10.827 [INF] HTTP POST /Expense/CreateExpense responded 200 in 19214.0851 ms
+2024-01-17 15:19:41.788 [WRN] Failed to determine the https port for redirect.
+2024-01-17 15:19:42.010 [INF] [Request] Http POST - /Expense/CreateExpense
+2024-01-17 15:19:54.767 [INF] [Response] Http POST - /Expense/CreateExpense - Responded 200 in 12756,0261 ms.
+2024-01-17 15:19:54.770 [INF] HTTP POST /Expense/CreateExpense responded 200 in 12985.9844 ms
+2024-01-17 15:20:53.441 [INF] [Request] Http POST - /Expense/CreateExpense
+2024-01-17 15:20:58.664 [INF] [Response] Http POST - /Expense/CreateExpense - Responded 200 in 5223,3641 ms.
+2024-01-17 15:20:58.664 [INF] HTTP POST /Expense/CreateExpense responded 200 in 5228.8725 ms
+2024-01-17 15:40:11.919 [WRN] Failed to determine the https port for redirect.
+2024-01-17 15:40:12.104 [INF] [Request] Http POST - /Expense/CreateExpense
+2024-01-17 15:40:32.868 [ERR] UnexpectedError
+System.InvalidOperationException: No service for type 'FluentValidation.IValidator`1[System.Object]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MOS.Api.Middleware.FluentValidationMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\FluentValidationMiddleware.cs:line 26
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-17 15:40:32.871 [FTL] Path=/Expense/CreateExpense || Method=POST || Exception=No service for type 'FluentValidation.IValidator`1[System.Object]' has been registered.Miliseconds=19801,8702 ms
+2024-01-17 15:40:36.317 [ERR] HTTP POST /Expense/CreateExpense responded 500 in 24400.1902 ms
+2024-01-17 15:41:29.713 [INF] [Request] Http POST - /Expense/CreateExpense
+2024-01-17 15:41:32.825 [ERR] UnexpectedError
+System.InvalidOperationException: No service for type 'FluentValidation.IValidator`1[System.Object]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MOS.Api.Middleware.FluentValidationMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\FluentValidationMiddleware.cs:line 26
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-17 15:41:32.826 [FTL] Path=/Expense/CreateExpense || Method=POST || Exception=No service for type 'FluentValidation.IValidator`1[System.Object]' has been registered.Miliseconds=3111,7405 ms
+2024-01-17 15:41:32.828 [ERR] HTTP POST /Expense/CreateExpense responded 500 in 3161.2695 ms
+2024-01-17 15:50:08.300 [INF] [Request] Http POST - /api/Token
+2024-01-17 15:50:37.202 [WRN] Failed to determine the https port for redirect.
+2024-01-17 15:50:37.388 [INF] [Request] Http POST - /api/Token
+2024-01-17 15:51:04.625 [INF] [Response] Http POST - /api/Token - Responded 400 in 25919,6144 ms.
+2024-01-17 15:51:06.748 [INF] HTTP POST /api/Token responded 400 in 29547.6051 ms
+2024-01-17 15:51:15.696 [INF] [Request] Http POST - /Expense/CreateExpense
+2024-01-17 15:51:34.159 [INF] [Response] Http POST - /Expense/CreateExpense - Responded 200 in 18463,0837 ms.
+2024-01-17 15:51:34.160 [INF] HTTP POST /Expense/CreateExpense responded 200 in 18491.7104 ms
+2024-01-17 15:53:49.672 [WRN] Failed to determine the https port for redirect.
+2024-01-17 15:53:49.854 [INF] [Request] Http POST - /Expense/CreateExpense
+2024-01-17 15:54:10.946 [INF] [Response] Http POST - /Expense/CreateExpense - Responded 200 in 21092,2785 ms.
+2024-01-17 15:54:10.949 [INF] HTTP POST /Expense/CreateExpense responded 200 in 21278.6870 ms
+2024-01-17 15:55:25.396 [WRN] Failed to determine the https port for redirect.
+2024-01-17 15:55:25.591 [INF] [Request] Http POST - /Expense/CreateExpense
+2024-01-17 15:57:53.233 [INF] [Response] Http POST - /Expense/CreateExpense - Responded 200 in 147641,143 ms.
+2024-01-17 15:57:53.235 [INF] HTTP POST /Expense/CreateExpense responded 200 in 147841.7211 ms
+2024-01-17 16:04:48.506 [WRN] Failed to determine the https port for redirect.
+2024-01-17 16:04:48.682 [INF] [Request] Http POST - /api/Token
+2024-01-17 16:04:52.298 [INF] [Response] Http POST - /api/Token - Responded 400 in 3614,2536 ms.
+2024-01-17 16:04:52.302 [INF] HTTP POST /api/Token responded 400 in 3796.4743 ms
+2024-01-17 16:05:08.725 [INF] [Request] Http POST - /Expense/CreateExpense
+2024-01-17 16:05:21.539 [INF] [Response] Http POST - /Expense/CreateExpense - Responded 200 in 12813,5185 ms.
+2024-01-17 16:05:21.539 [INF] HTTP POST /Expense/CreateExpense responded 200 in 12852.7772 ms
+2024-01-17 16:07:40.533 [WRN] Failed to determine the https port for redirect.
+2024-01-17 16:07:40.658 [INF] HTTP POST /api/Expense/CreateExpense responded 401 in 128.3816 ms
+2024-01-17 16:07:58.504 [INF] [Request] Http POST - /api/Token
+2024-01-17 16:08:07.401 [INF] [Response] Http POST - /api/Token - Responded 200 in 8896,862 ms.
+2024-01-17 16:08:07.402 [INF] HTTP POST /api/Token responded 200 in 8902.9680 ms
+2024-01-17 16:08:16.815 [INF] [Request] Http POST - /api/Token
+2024-01-17 16:08:21.294 [INF] [Response] Http POST - /api/Token - Responded 400 in 4478,5055 ms.
+2024-01-17 16:08:21.294 [INF] HTTP POST /api/Token responded 400 in 4479.3141 ms
+2024-01-17 16:08:35.789 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 16:09:18.410 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 42621,4179 ms.
+2024-01-17 16:09:18.410 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 42661.1369 ms
+2024-01-17 16:18:25.680 [WRN] Failed to determine the https port for redirect.
+2024-01-17 16:18:25.874 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 16:18:58.944 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 33069,5911 ms.
+2024-01-17 16:18:58.947 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 33268.1898 ms
+2024-01-17 16:19:35.402 [WRN] Failed to determine the https port for redirect.
+2024-01-17 16:19:35.583 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 16:19:44.515 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 8930,2078 ms.
+2024-01-17 16:19:44.517 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 9116.3046 ms
+2024-01-17 16:29:08.115 [WRN] Failed to determine the https port for redirect.
+2024-01-17 16:29:08.341 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 16:29:47.021 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 38680,676 ms.
+2024-01-17 16:29:47.024 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 38910.4442 ms
+2024-01-17 16:35:46.686 [WRN] Failed to determine the https port for redirect.
+2024-01-17 16:35:46.876 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 16:35:53.290 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 6414,1314 ms.
+2024-01-17 16:35:53.292 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 6609.3059 ms
+2024-01-17 16:40:23.546 [WRN] Failed to determine the https port for redirect.
+2024-01-17 16:40:23.735 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 16:40:29.051 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 5315,3387 ms.
+2024-01-17 16:40:29.054 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 5509.8260 ms
+2024-01-17 16:56:04.128 [WRN] Failed to determine the https port for redirect.
+2024-01-17 16:56:04.317 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 16:57:11.786 [WRN] Failed to determine the https port for redirect.
+2024-01-17 16:57:11.980 [INF] [Request] Http POST - /api/Token
+2024-01-17 16:57:27.590 [INF] [Response] Http POST - /api/Token - Responded 400 in 14242,2504 ms.
+2024-01-17 16:57:29.026 [INF] HTTP POST /api/Token responded 400 in 17241.4482 ms
+2024-01-17 17:00:44.960 [WRN] Failed to determine the https port for redirect.
+2024-01-17 17:00:45.135 [INF] [Request] Http POST - /api/Token
+2024-01-17 17:00:45.138 [INF] [Response] Http POST - /api/Token - Responded 404 in 1,6066 ms.
+2024-01-17 17:00:45.140 [INF] HTTP POST /api/Token responded 404 in 181.2134 ms
+2024-01-17 17:01:01.977 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-17 17:01:04.536 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 400 in 2559,2189 ms.
+2024-01-17 17:01:04.537 [INF] HTTP POST /api/Token/TakeToken responded 400 in 2573.1644 ms
+2024-01-17 17:02:17.976 [INF] HTTP POST /api/Expense/CreateExpense responded 401 in 8.3753 ms
+2024-01-17 17:02:45.774 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-17 17:02:53.003 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 7229,2025 ms.
+2024-01-17 17:02:53.005 [INF] HTTP POST /api/Token/TakeToken responded 200 in 7231.8196 ms
+2024-01-17 17:03:08.079 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 17:04:12.746 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 64666,7662 ms.
+2024-01-17 17:04:12.746 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 64670.0547 ms
+2024-01-17 17:05:51.130 [INF] [Request] Http POST - /AdminPanel/ApproveById/5
+2024-01-17 17:05:51.130 [INF] [Response] Http POST - /AdminPanel/ApproveById/5 - Responded 404 in 0,1633 ms.
+2024-01-17 17:05:51.131 [INF] HTTP POST /AdminPanel/ApproveById/5 responded 404 in 1.8138 ms
+2024-01-17 17:06:18.875 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-17 17:06:22.430 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 3554,9822 ms.
+2024-01-17 17:06:22.431 [INF] HTTP POST /api/Token/TakeToken responded 200 in 3556.1183 ms
+2024-01-17 17:06:40.788 [INF] [Request] Http POST - /api/AdminPanel/ApproveById/5
+2024-01-17 17:07:13.811 [INF] [Response] Http POST - /api/AdminPanel/ApproveById/5 - Responded 200 in 33023,4564 ms.
+2024-01-17 17:07:13.811 [INF] HTTP POST /api/AdminPanel/ApproveById/5 responded 200 in 33025.5366 ms
+2024-01-17 17:07:45.909 [INF] [Request] Http POST - /api/AdminPanel/ApproveById/5
+2024-01-17 17:08:02.422 [ERR] An exception occurred in the database while saving changes for context type 'MOS.Data.MosDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Payment' with unique index 'IX_Payment_ExpenseId'. The duplicate key value is (5).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:6609ddef-62b9-45bd-8e7e-f9ff13ffa349
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Payment' with unique index 'IX_Payment_ExpenseId'. The duplicate key value is (5).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:6609ddef-62b9-45bd-8e7e-f9ff13ffa349
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-17 17:08:02.576 [ERR] UnexpectedError
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Payment' with unique index 'IX_Payment_ExpenseId'. The duplicate key value is (5).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:6609ddef-62b9-45bd-8e7e-f9ff13ffa349
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at MOS.Business.Command.ExpenseCommandHandler.Handle(ApproveByIdCommand request, CancellationToken cancellationToken) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Business\Command\ExpenceCommandHandler.cs:line 128
+   at MOS.Api.Controllers.AdminPanelController.ApproveById(Int32 id, AdminExpenseRequest request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\AdminPanelController.cs:line 83
+   at lambda_method301(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-17 17:08:02.589 [FTL] Path=/api/AdminPanel/ApproveById/5 || Method=POST || Exception=An error occurred while saving the entity changes. See the inner exception for details.Miliseconds=16658,8683 ms
+2024-01-17 17:08:02.679 [ERR] HTTP POST /api/AdminPanel/ApproveById/5 responded 500 in 16774.0566 ms
+2024-01-17 17:19:47.261 [WRN] Failed to determine the https port for redirect.
+2024-01-17 17:19:47.439 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-17 17:19:49.246 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 400 in 1804,5148 ms.
+2024-01-17 17:19:49.248 [INF] HTTP POST /api/Token/TakeToken responded 400 in 1988.0823 ms
+2024-01-17 17:20:01.948 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 17:20:24.806 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 22858,4696 ms.
+2024-01-17 17:20:24.808 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 22892.0977 ms
+2024-01-17 17:29:33.575 [WRN] Failed to determine the https port for redirect.
+2024-01-17 17:29:33.757 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-17 17:29:36.017 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 400 in 2259,1596 ms.
+2024-01-17 17:29:36.020 [INF] HTTP POST /api/Token/TakeToken responded 400 in 2446.5203 ms
+2024-01-17 17:29:45.434 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 17:29:49.570 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 4136,322 ms.
+2024-01-17 17:29:49.572 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 4160.0602 ms
+2024-01-17 17:46:53.352 [WRN] Failed to determine the https port for redirect.
+2024-01-17 17:46:53.565 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 17:46:56.915 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 3348,9969 ms.
+2024-01-17 17:46:56.918 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 3567.7878 ms
+2024-01-17 17:47:22.818 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 17:54:11.604 [WRN] Failed to determine the https port for redirect.
+2024-01-17 17:54:11.808 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 17:54:18.715 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 6904,7638 ms.
+2024-01-17 17:54:18.717 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 7114.5603 ms
+2024-01-17 17:59:26.813 [WRN] Failed to determine the https port for redirect.
+2024-01-17 17:59:27.037 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 17:59:32.301 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 5261,8255 ms.
+2024-01-17 17:59:32.303 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 5492.6540 ms
+2024-01-17 17:59:54.893 [WRN] Failed to determine the https port for redirect.
+2024-01-17 17:59:55.105 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 18:00:59.527 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 64417,4165 ms.
+2024-01-17 18:00:59.531 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 64638.6431 ms
+2024-01-17 18:02:04.852 [WRN] Failed to determine the https port for redirect.
+2024-01-17 18:02:05.064 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 18:02:10.851 [INF] [Response] Http POST - /api/Expense/CreateExpense - Responded 200 in 5785,9321 ms.
+2024-01-17 18:02:10.853 [INF] HTTP POST /api/Expense/CreateExpense responded 200 in 6002.8969 ms
+2024-01-17 18:03:18.567 [WRN] Failed to determine the https port for redirect.
+2024-01-17 18:03:18.779 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 18:03:34.677 [ERR] UnexpectedError
+FluentValidation.ValidationException: Validation failed: 
+ -- ExpenseAmount: Harcama tutarı 0'dan büyük olmalıdır. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 531
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 258
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /_/src/FluentValidation/AbstractValidator.cs:line 202
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(IValidationContext context) in /_/src/FluentValidation/AbstractValidator.cs:line 153
+   at FluentValidation.DefaultValidatorExtensions.Validate[T](IValidator`1 validator, T instance, Action`1 options) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 38
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrow[T](IValidator`1 validator, T instance) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 59
+   at MOS.Api.Controllers.ExpenseController.CreateExpense(PersonalExpenseRequest Expense) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\ExpenseController.cs:line 65
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-17 18:03:34.681 [FTL] Path=/api/Expense/CreateExpense || Method=POST || Exception=Validation failed: 
+ -- ExpenseAmount: Harcama tutarı 0'dan büyük olmalıdır. Severity: ErrorMiliseconds=15099,174 ms
+2024-01-17 18:03:37.040 [ERR] HTTP POST /api/Expense/CreateExpense responded 500 in 18474.5234 ms
+2024-01-17 18:05:30.507 [WRN] Failed to determine the https port for redirect.
+2024-01-17 18:05:30.705 [INF] [Request] Http POST - /api/Expense/CreateExpense
+2024-01-17 18:05:35.652 [ERR] UnexpectedError
+FluentValidation.ValidationException: Validation failed: 
+ -- ExpenseAmount: Harcama tutarı 0'dan büyük olmalıdır. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 531
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 258
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /_/src/FluentValidation/AbstractValidator.cs:line 202
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(IValidationContext context) in /_/src/FluentValidation/AbstractValidator.cs:line 153
+   at FluentValidation.DefaultValidatorExtensions.Validate[T](IValidator`1 validator, T instance, Action`1 options) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 38
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrow[T](IValidator`1 validator, T instance) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 59
+   at MOS.Api.Controllers.ExpenseController.CreateExpense(PersonalExpenseRequest Expense) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\ExpenseController.cs:line 65
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-17 18:05:35.679 [FTL] Path=/api/Expense/CreateExpense || Method=POST || Exception=Validation failed: 
+ -- ExpenseAmount: Harcama tutarı 0'dan büyük olmalıdır. Severity: ErrorMiliseconds=4940,7963 ms
+2024-01-17 18:05:35.760 [ERR] HTTP POST /api/Expense/CreateExpense responded 500 in 5255.9016 ms
+2024-01-17 18:05:52.981 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-17 18:06:03.253 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 10271,4614 ms.
+2024-01-17 18:06:03.254 [INF] HTTP POST /api/Token/TakeToken responded 200 in 10284.1956 ms

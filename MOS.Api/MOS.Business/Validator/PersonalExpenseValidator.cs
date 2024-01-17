@@ -29,7 +29,7 @@ namespace MOS.Business.Validator
             RuleFor(x => x.InvoiceImageFilePath)
                 .NotEmpty().WithMessage("Fatura resmi yolu boş bırakılamaz.")
                 .MaximumLength(150).WithMessage("Harcama açıklaması en fazla 150 karakter olmalıdır.");
-               
+
             RuleFor(x => x.Location)
                 .MaximumLength(150).WithMessage("Konum en fazla 150 karakter olmalıdır.");
         }
