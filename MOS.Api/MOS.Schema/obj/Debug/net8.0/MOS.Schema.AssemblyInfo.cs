@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MOS.Schema")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba7593f3d0e9b74dd9713f89ae76107b662df992")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73cfff8c65e775010950e802bfdd94663dafba62")]
 [assembly: System.Reflection.AssemblyProductAttribute("MOS.Schema")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MOS.Schema")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

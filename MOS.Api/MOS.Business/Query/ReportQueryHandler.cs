@@ -37,12 +37,10 @@ namespace MOS.Business.Query
                 ReportEachPersonalList = new List<ReportEachPersonal>()
             };
 
-
-
             DateTime? StartExpenceDate = new DateTime(2024, 1, 1);
             DateTime? EndExpenceDate = DateTime.Now;
-            DateTime? StartDecisionDate = new DateTime(2024, 1, 1);
-            DateTime? EndDecisionDate = DateTime.Now;
+            // DateTime? StartDecisionDate = new DateTime(2024, 1, 1);
+            // DateTime? EndDecisionDate = DateTime.Now;
             if (request.Model.StartExpenceDate != null)
             {
                 StartExpenceDate = request.Model.StartExpenceDate;
@@ -51,14 +49,14 @@ namespace MOS.Business.Query
             {
                 EndExpenceDate = request.Model.EndExpenceDate;
             }
-            if (request.Model.StartDecisionDate != null)
-            {
-                StartDecisionDate = request.Model.StartDecisionDate;
-            }
-            if (request.Model.EndDecisionDate != null)
-            {
-                EndDecisionDate = request.Model.EndDecisionDate;
-            }
+            // if (request.Model.StartDecisionDate != null)
+            // {
+            //     StartDecisionDate = request.Model.StartDecisionDate;
+            // }
+            // if (request.Model.EndDecisionDate != null)
+            // {
+            //     EndDecisionDate = request.Model.EndDecisionDate;
+            // }
             //string connectionString = "Server=DESKTOP-J6P579G\\SQLEXPRESS;Database=MasrafOdemeSistemi;trusted_connection=true;TrustServerCertificate=true;";
             string connectionString = _configuration.GetValue<string>("ConnectionStrings:MsSqlConnection");
             using (var connection = new SqlConnection(connectionString))
@@ -86,7 +84,7 @@ namespace MOS.Business.Query
                         FROM dbo.Expense
                         WHERE PersonalNumber = @PersonalNumber
                             AND (ExpenseCreateDate >= @StartExpenceDate AND ExpenseCreateDate <= @EndExpenceDate)
-                            AND (DecisionDate IS NULL OR (DecisionDate >= @StartDecisionDate AND DecisionDate <= @EndDecisionDate))";
+                            AND (DecisionDate IS NULL OR (DecisionDate >= @EndExpenceDate))";
 
                     List<Expense> WaitingExpenseList = connection.Query<Expense>(query,
                      new
@@ -94,8 +92,8 @@ namespace MOS.Business.Query
                          PersonalNumber = PNumber,
                          StartExpenceDate = StartExpenceDate,
                          EndExpenceDate = EndExpenceDate,
-                         StartDecisionDate = StartDecisionDate,
-                         EndDecisionDate = EndDecisionDate
+                        //  StartDecisionDate = StartDecisionDate,
+                        //  EndDecisionDate = EndDecisionDate
                      }).ToList();
                     reportEachPersonal.WaitingExpenseList = mapper.Map<List<Expense>, List<ExpenseResponse>>(WaitingExpenseList);
 
@@ -109,8 +107,8 @@ namespace MOS.Business.Query
                     query = @"SELECT *
                         FROM dbo.Expense
                         WHERE PersonalNumber = @PersonalNumber
-                            AND (ExpenseCreateDate >= @StartExpenceDate AND ExpenseCreateDate <= @EndExpenceDate)
-                            AND (DecisionDate >= @StartDecisionDate AND DecisionDate <= @EndDecisionDate)
+                            AND (ExpenseCreateDate <= @EndExpenceDate)
+                            AND (DecisionDate >= @StartExpenceDate AND DecisionDate <= @EndExpenceDate)
                             AND ApprovalStatus = 2";
                     List<Expense> AproveedExpenseList = connection.Query<Expense>(query,
                     new
@@ -118,8 +116,8 @@ namespace MOS.Business.Query
                         PersonalNumber = PNumber,
                         StartExpenceDate = StartExpenceDate,
                         EndExpenceDate = EndExpenceDate,
-                        StartDecisionDate = StartDecisionDate,
-                        EndDecisionDate = EndDecisionDate
+                        // StartDecisionDate = StartDecisionDate,
+                        // EndDecisionDate = EndDecisionDate
                     }).ToList();
                     reportEachPersonal.AproveedExpenseList = mapper.Map<List<Expense>, List<ExpenseResponse>>(AproveedExpenseList);
                     foreach (var item in AproveedExpenseList)
@@ -132,8 +130,8 @@ namespace MOS.Business.Query
                     query = @"SELECT *
                         FROM dbo.Expense
                         WHERE PersonalNumber = @PersonalNumber
-                            AND (ExpenseCreateDate >= @StartExpenceDate AND ExpenseCreateDate <= @EndExpenceDate)
-                            AND (DecisionDate >= @StartDecisionDate AND DecisionDate <= @EndDecisionDate)
+                            AND (ExpenseCreateDate <= @EndExpenceDate)
+                            AND (DecisionDate >= @StartExpenceDate AND DecisionDate <= @EndExpenceDate)
                             AND ApprovalStatus = 3";
                     List<Expense> RejecetExpenseList = connection.Query<Expense>(query,
                     new
@@ -141,8 +139,8 @@ namespace MOS.Business.Query
                         PersonalNumber = PNumber,
                         StartExpenceDate = StartExpenceDate,
                         EndExpenceDate = EndExpenceDate,
-                        StartDecisionDate = StartDecisionDate,
-                        EndDecisionDate = EndDecisionDate
+                        // StartDecisionDate = StartDecisionDate,
+                        // EndDecisionDate = EndDecisionDate
                     }).ToList();
                     reportEachPersonal.RejecetExpenseList = mapper.Map<List<Expense>, List<ExpenseResponse>>(RejecetExpenseList);
                     foreach (var item in RejecetExpenseList)
@@ -157,8 +155,8 @@ namespace MOS.Business.Query
                         FROM dbo.Payment p
                         INNER JOIN dbo.Expense e ON p.ExpenseId = e.ExpenseId
                         WHERE e.PersonalNumber = @PersonalNumber
-                            AND (e.ExpenseCreateDate >= @StartExpenceDate AND e.ExpenseCreateDate <= @EndExpenceDate)
-                            AND (e.DecisionDate IS NULL OR (e.DecisionDate >= @StartDecisionDate AND e.DecisionDate <= @EndDecisionDate))
+                            AND (e.ExpenseCreateDate <= @EndExpenceDate)
+                            AND (e.DecisionDate >= @StartExpenceDate AND e.DecisionDate <= @EndExpenceDate)
                             AND e.ApprovalStatus = 2";
 
                     List<Payment> PaymentList = connection.Query<Payment>(query,
@@ -167,8 +165,8 @@ namespace MOS.Business.Query
                          PersonalNumber = PNumber,
                          StartExpenceDate = StartExpenceDate,
                          EndExpenceDate = EndExpenceDate,
-                         StartDecisionDate = StartDecisionDate,
-                         EndDecisionDate = EndDecisionDate
+                        //  StartDecisionDate = StartDecisionDate,
+                        //  EndDecisionDate = EndDecisionDate
                      }).ToList();
                     reportEachPersonal.PaymentList = mapper.Map<List<Payment>, List<PaymentResponse>>(PaymentList);
 
@@ -184,7 +182,6 @@ namespace MOS.Business.Query
             string sd = (reportResponse.StartTheDate).ToString("yyyy-MM-dd");
             string ed = (reportResponse.EndTheDate).ToString("yyyy-MM-dd");
             reportResponse.RaporName = $"Report_{sd}-{ed} Arası Faliyet Raporu";
-
 
             return new ApiResponse<ReportResponse>(reportResponse);
         }
