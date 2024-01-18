@@ -15,7 +15,7 @@ public record DeleteExpenseCommand(int PersonalNumber,int ExpenseId) : IRequest<
 
 public record GetAllOwnExpenseQuery(int PersonalNumber) : IRequest<ApiResponse<List<ExpenseResponse>>>;
 public record GetOwnExpenseByIdQuery(int PersonalNumber,int ExpenseId) : IRequest<ApiResponse<ExpenseResponse>>;
-public record GetOwnExpenseByParameterQuery(int PersonalNumber,string ExpenseName,int? ApprovalStatus) : IRequest<ApiResponse<List<ExpenseResponse>>>;
+public record GetOwnExpenseByParameterQuery(int PersonalNumber,string? ExpenseName,int? ApprovalStatus) : IRequest<ApiResponse<List<ExpenseResponse>>>;
 
 //Expense CQRS For Admin
         //getallExpense //getparameter //getbyid
@@ -24,7 +24,7 @@ public record GetOwnExpenseByParameterQuery(int PersonalNumber,string ExpenseNam
 
 public record GetAllExpenseQuery() : IRequest<ApiResponse<List<ExpenseResponse>>>;
 public record GetExpenseByIdQuery(int ExpenseId) : IRequest<ApiResponse<ExpenseResponse>>;
-public record GetExpenseByParameterQuery(string? ExpenseName,int? ApprovalStatus ,int? Min, int? Max, DateTime? afterdate,  DateTime? beforedate ) : IRequest<ApiResponse<List<ExpenseResponse>>>;
+public record GetExpenseByParameterQuery(string? ExpenseName,int? PersonalNumber, int? ApprovalStatus ,int? Min, int? Max, DateTime? afterdate,  DateTime? beforedate ) : IRequest<ApiResponse<List<ExpenseResponse>>>;
 
 
 public record ApproveByIdCommand(int AdminNumber, int ExpenseId,AdminExpenseRequest Model) : IRequest<ApiResponse>;

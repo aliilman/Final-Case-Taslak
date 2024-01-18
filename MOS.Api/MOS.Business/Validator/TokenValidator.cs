@@ -13,7 +13,8 @@ namespace MOS.Business.Validator
         {
             RuleFor(x => x.UserName).NotEmpty().WithMessage("Username is mus be not null!!")
             .MinimumLength(5).MaximumLength(50);
-            RuleFor(x => x.Password).NotEmpty().MinimumLength(5).MaximumLength(50);
+            RuleFor(x => x.Password).NotEmpty().WithMessage("Username is mus be not null!!")
+            .MinimumLength(5).MaximumLength(50);
         }
     }
 }

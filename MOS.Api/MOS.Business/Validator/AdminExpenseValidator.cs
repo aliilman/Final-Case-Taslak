@@ -12,8 +12,8 @@ namespace MOS.Business.Validator
         public AdminExpenseValidator()
         {
            RuleFor(x => x.DecisionDescription)
-                .NotEmpty().WithMessage("Açıklama boş bırakılamaz.")
-                .MaximumLength(255).WithMessage("Açıklama en fazla 255 karakter olmalıdır.");
+                .NotEmpty()
+                .MaximumLength(255).WithMessage("DecisionDescription can be up to 255 characters");
         }
     }
 }

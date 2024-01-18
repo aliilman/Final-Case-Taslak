@@ -55,7 +55,7 @@ public class PaymentQueryHandler :
         CancellationToken cancellationToken)
     {
         var predicate = PredicateBuilder.New<Payment>(true);
-        if (string.IsNullOrEmpty(request.IBAN))
+        if (!string.IsNullOrEmpty(request.IBAN))
             predicate.And(x => x.IBAN.ToUpper().Contains(request.IBAN.ToUpper()));
 
         if (request.Min != null)

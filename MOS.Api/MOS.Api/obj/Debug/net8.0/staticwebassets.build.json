@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "umJp8eDTPAJqPRwyIRcRMTmdMr+yruhx6jzceNZ1k20=",
+  "Hash": "BQDgkchVDw4avCG7Y8OenMD/uGJaLocLLCRhiVpFp0Q=",
   "Source": "MOS.Api",
   "BasePath": "_content/MOS.Api",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "MOS.Api\\wwwroot",
       "Source": "MOS.Api",
-      "ContentRoot": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\",
+      "ContentRoot": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\",
       "BasePath": "_content/MOS.Api",
       "Pattern": "**"
     }
@@ -20,7 +20,7 @@
       "Identity": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\uploads\\799f7b3d-7b46-4728-a756-3445f0ff97d1_fatura-av-asilcan-tuzcu.jpg",
       "SourceId": "MOS.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\",
+      "ContentRoot": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\",
       "BasePath": "_content/MOS.Api",
       "RelativePath": "uploads/799f7b3d-7b46-4728-a756-3445f0ff97d1_fatura-av-asilcan-tuzcu.jpg",
       "AssetKind": "All",
@@ -39,7 +39,7 @@
       "Identity": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\uploads\\88ff7d06-1be3-45d2-996d-6067c4938e67_300_Akbank_Odev-1_2241a85fb3444bc4bfafafd7def020fd.pdf",
       "SourceId": "MOS.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\",
+      "ContentRoot": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\",
       "BasePath": "_content/MOS.Api",
       "RelativePath": "uploads/88ff7d06-1be3-45d2-996d-6067c4938e67_300_Akbank_Odev-1_2241a85fb3444bc4bfafafd7def020fd.pdf",
       "AssetKind": "All",

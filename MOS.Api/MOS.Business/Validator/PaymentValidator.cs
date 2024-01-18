@@ -12,27 +12,24 @@ namespace MOS.Business.Validator
         public PaymentValidator()
         {
             RuleFor(x => x.IBAN)
-                .NotEmpty().WithMessage("IBAN boş bırakılamaz.")
-                .Length(26).WithMessage("IBAN 26 karakter olmalıdır.");
+                .NotEmpty()
+                .Length(26).WithMessage("IBAN must be 26 characters");
 
             RuleFor(x => x.PaymentAmount)
-                .GreaterThan(0).WithMessage("Ödeme miktarı 0'dan büyük olmalıdır.");
+                .GreaterThan(0).WithMessage("PaymentAmount must be greater than 0");
 
             RuleFor(x => x.Description)
-                .NotEmpty().WithMessage("Açıklama boş bırakılamaz.")
-                .MaximumLength(200).WithMessage("Açıklama en fazla 200 karakter olmalıdır.");
+                .NotEmpty()
+                .MaximumLength(200).WithMessage("Description must be at most 200 characters.");
 
             RuleFor(x => x.PaymentType)
-                .NotEmpty().WithMessage("Ödeme türü boş bırakılamaz.")
-                .MaximumLength(30).WithMessage("Ödeme türü en fazla 30 karakter olmalıdır.");
+                .NotEmpty()
+                .MaximumLength(30).WithMessage("PaymentType must be at most 30 characters.");
 
             RuleFor(x => x.ExpenseDate)
-                .NotEmpty().WithMessage("Harcama tarihi boş bırakılamaz.")
-                .Must(BeAValidDate).WithMessage("Geçerli bir tarih giriniz.");
+                .NotEmpty();
+                
         }
-        private bool BeAValidDate(DateTime date)
-        {
-            return date.Date >= DateTime.Now.Date;
-        }
+
     }
 }

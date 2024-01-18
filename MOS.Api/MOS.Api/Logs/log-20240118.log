@@ -610,3 +610,142 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 2024-01-18 15:18:34.621 [INF] [Request] Http GET - /api/File/downloadFile
 2024-01-18 15:18:34.652 [INF] [Response] Http GET - /api/File/downloadFile - Responded 404 in 29,0688 ms.
 2024-01-18 15:18:34.655 [INF] HTTP GET /api/File/downloadFile responded 404 in 104.2915 ms
+2024-01-18 15:21:01.381 [WRN] Failed to determine the https port for redirect.
+2024-01-18 15:21:01.497 [INF] [Request] Http GET - /api/File/downloadByPath
+2024-01-18 15:21:01.548 [INF] [Response] Http GET - /api/File/downloadByPath - Responded 200 in 49,1976 ms.
+2024-01-18 15:21:01.552 [INF] HTTP GET /api/File/downloadByPath responded 200 in 174.4524 ms
+2024-01-18 16:49:25.434 [WRN] Failed to determine the https port for redirect.
+2024-01-18 16:49:25.561 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-18 16:49:26.861 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 1298,9145 ms.
+2024-01-18 16:49:26.863 [INF] HTTP POST /api/Token/TakeToken responded 200 in 1431.6084 ms
+2024-01-18 16:49:51.423 [INF] [Request] Http GET - /api/AdminPanel/MyProfile
+2024-01-18 16:49:51.485 [INF] [Response] Http GET - /api/AdminPanel/MyProfile - Responded 200 in 61,7325 ms.
+2024-01-18 16:49:51.485 [INF] HTTP GET /api/AdminPanel/MyProfile responded 200 in 100.2354 ms
+2024-01-18 16:52:17.696 [INF] [Request] Http GET - /api/AdminPanel/ApproveWaitingExpense
+2024-01-18 16:52:17.909 [ERR] UnexpectedError
+System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Object.GetType()
+   at System.Linq.Expressions.Interpreter.FuncCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.Interpreter.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.LightLambda.Run(Object[] arguments)
+   at System.Dynamic.Utils.DelegateHelpers.FuncThunk[TReturn](Func`2 handler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, Boolean generateParameter)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression, Boolean clearEvaluatedValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExtractParameters(Expression query, IParameterValues parameterValues, IDiagnosticsLogger`1 logger, Boolean parameterize, Boolean generateContextAccessors)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at MOS.Business.Query.ExpenseQueryHandler.Handle(GetExpenseByParameterQuery request, CancellationToken cancellationToken) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Business\Query\ExpenseQueryHandler.cs:line 144
+   at MOS.Api.Controllers.AdminPanelController.GetApproveWaitingExpense() in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\AdminPanelController.cs:line 93
+   at lambda_method97(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 16:52:17.924 [FTL] Path=/api/AdminPanel/ApproveWaitingExpense || Method=GET || Exception=An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.Miliseconds=200,8057 ms
+2024-01-18 16:52:17.991 [ERR] HTTP GET /api/AdminPanel/ApproveWaitingExpense responded 500 in 302.1863 ms
+2024-01-18 16:54:54.677 [WRN] Failed to determine the https port for redirect.
+2024-01-18 16:54:54.853 [INF] [Request] Http GET - /api/AdminPanel/ApproveWaitingExpense
+2024-01-18 16:55:34.597 [ERR] UnexpectedError
+System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Object.GetType()
+   at System.Linq.Expressions.Interpreter.FuncCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.Interpreter.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.LightLambda.Run(Object[] arguments)
+   at System.Dynamic.Utils.DelegateHelpers.FuncThunk[TReturn](Func`2 handler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, Boolean generateParameter)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression, Boolean clearEvaluatedValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExtractParameters(Expression query, IParameterValues parameterValues, IDiagnosticsLogger`1 logger, Boolean parameterize, Boolean generateContextAccessors)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at MOS.Business.Query.ExpenseQueryHandler.Handle(GetExpenseByParameterQuery request, CancellationToken cancellationToken) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Business\Query\ExpenseQueryHandler.cs:line 144
+   at MOS.Api.Controllers.AdminPanelController.GetApproveWaitingExpense() in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\AdminPanelController.cs:line 93
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 16:55:34.603 [FTL] Path=/api/AdminPanel/ApproveWaitingExpense || Method=GET || Exception=An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.Miliseconds=39738,7593 ms
+2024-01-18 16:55:34.674 [ERR] HTTP GET /api/AdminPanel/ApproveWaitingExpense responded 500 in 39998.5326 ms
+2024-01-18 16:57:26.329 [WRN] Failed to determine the https port for redirect.
+2024-01-18 16:57:26.508 [INF] [Request] Http GET - /api/AdminPanel/ApproveWaitingExpense
+2024-01-18 16:57:55.053 [INF] [Response] Http GET - /api/AdminPanel/ApproveWaitingExpense - Responded 200 in 28544,6701 ms.
+2024-01-18 16:57:55.057 [INF] HTTP GET /api/AdminPanel/ApproveWaitingExpense responded 200 in 28729.3794 ms
+2024-01-18 16:59:27.898 [INF] [Request] Http GET - /api/AdminPanel/GetExpenseParameter
+2024-01-18 16:59:54.424 [INF] [Response] Http GET - /api/AdminPanel/GetExpenseParameter - Responded 200 in 26525,7212 ms.
+2024-01-18 16:59:54.424 [INF] HTTP GET /api/AdminPanel/GetExpenseParameter responded 200 in 26530.9428 ms
+2024-01-18 17:01:21.087 [INF] [Request] Http GET - /api/AdminPanel/GetAllExpense
+2024-01-18 17:01:21.119 [INF] [Response] Http GET - /api/AdminPanel/GetAllExpense - Responded 200 in 32,067 ms.
+2024-01-18 17:01:21.119 [INF] HTTP GET /api/AdminPanel/GetAllExpense responded 200 in 34.6358 ms
+2024-01-18 17:04:42.600 [INF] [Request] Http POST - /api/AdminPanel/RejectedById/4
+2024-01-18 17:04:42.807 [INF] [Response] Http POST - /api/AdminPanel/RejectedById/4 - Responded 200 in 207,2249 ms.
+2024-01-18 17:04:42.807 [INF] HTTP POST /api/AdminPanel/RejectedById/4 responded 200 in 208.1972 ms
+2024-01-18 17:05:38.406 [INF] [Request] Http POST - /api/AdminPanel/RejectedById/10
+2024-01-18 17:05:38.422 [INF] [Response] Http POST - /api/AdminPanel/RejectedById/10 - Responded 200 in 16,484 ms.
+2024-01-18 17:05:38.422 [INF] HTTP POST /api/AdminPanel/RejectedById/10 responded 200 in 45.2918 ms
+2024-01-18 17:10:06.411 [WRN] Failed to determine the https port for redirect.
+2024-01-18 17:10:06.527 [INF] [Request] Http GET - /api/AdminPanel/GetExpenseParameter
+2024-01-18 17:10:07.532 [INF] [Response] Http GET - /api/AdminPanel/GetExpenseParameter - Responded 200 in 1004,4914 ms.
+2024-01-18 17:10:07.535 [INF] HTTP GET /api/AdminPanel/GetExpenseParameter responded 200 in 1125.6767 ms
+2024-01-18 17:11:04.059 [INF] [Request] Http POST - /api/AdminPanel/RejectedById/6
+2024-01-18 17:11:04.224 [INF] [Response] Http POST - /api/AdminPanel/RejectedById/6 - Responded 200 in 164,6471 ms.
+2024-01-18 17:11:04.225 [INF] HTTP POST /api/AdminPanel/RejectedById/6 responded 200 in 170.9438 ms
+2024-01-18 19:12:37.332 [WRN] Failed to determine the https port for redirect.
+2024-01-18 19:12:37.396 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-18 19:12:38.390 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 993,8734 ms.
+2024-01-18 19:12:38.394 [INF] HTTP POST /api/Token/TakeToken responded 200 in 1064.1473 ms

@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using MOS.Api.Service;
 using MOS.Base.Token;
 using MOS.Business.Cqrs;
 using MOS.Business.Mapper;
+using MOS.Business.Service;
 using MOS.Business.Validator;
 using MOS.Data;
 using MOS.Middleware;
@@ -22,15 +22,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 //FluentValidation
-// builder.Services.AddControllers().AddFluentValidation(x =>
+// builder.Services.AddControllers().AddFluentValidation(x => 
 //         {
 //             x.RegisterValidatorsFromAssemblyContaining<PersonalExpenseValidator>();
-//         });
+//         }); // düzgün çalışmıyo
 
-// builder.Services.AddControllers().AddFluentValidation(fv =>
-//          fv.RegisterValidatorsFromAssemblyContaining<PersonalExpenseValidator>());
-
-// builder.Services.AddFluentValidationAutoValidation();
 //Add support to logging with SERILOG
 builder.Host.UseSerilog((context, configuration) =>
     configuration.ReadFrom.Configuration(context.Configuration));
@@ -66,9 +62,6 @@ builder.Services.AddSwaggerGen(c =>
 //builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateExpenseCommand).GetTypeInfo().Assembly));
 
-
-
-
 //DB 
 builder.Services.AddDbContext<MosDbContext>(options =>
 {
@@ -102,27 +95,6 @@ builder.Services.AddAuthentication(x =>
      };
  });
 
-// // RabbitMQ
-// IConfiguration configuration = builder.Configuration.GetSection("RabbitMQ");
-// string hostName = configuration["HostName"];
-// var connectionFactory = new ConnectionFactory()
-// {
-//     HostName = "localhost",
-//     Port = 5672,
-//     UserName = "Admin",
-//     Password = "guest"
-// };
-
-// builder.Services.AddSingleton<IConnection>(connectionFactory.CreateConnection());
-
-
-// // RabbitMQ servisini ekleyin
-// builder.Services.AddSingleton(sp =>
-//         {
-//             var channel = sp.GetRequiredService<IConnection>().CreateModel();
-//             // İhtiyaç duyulan ek konfigürasyonları yapabilirsiniz
-//             return channel;
-//         });
 
 builder.Services.AddSingleton<IRabbitMQService, RabbitMQService>();
 builder.Services.AddSingleton<IRabbitMQConsumerService, RabbitMQConsumerService>();

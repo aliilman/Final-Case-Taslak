@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+
+using MOS.Base.DTO;
 using MOS.Base.Enum;
 using MOS.Base.Response;
 using MOS.Business.Cqrs;
+using MOS.Business.Service;
 using MOS.Data;
 using MOS.Data.Entity;
 using MOS.Schema;
-
 
 namespace MOS.Business.Command
 {
@@ -26,19 +27,18 @@ namespace MOS.Business.Command
     {
         private readonly MosDbContext dbContext;
         private readonly IMapper mapper;
+        private readonly IRabbitMQService rabbitMQService;
 
-        public ExpenseCommandHandler(MosDbContext dbContext, IMapper mapper)
+        public ExpenseCommandHandler(MosDbContext dbContext, IMapper mapper,IRabbitMQService rabbitMQService)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;
+            this.rabbitMQService=rabbitMQService;
         }
         //Expense
         public async Task<ApiResponse<ExpenseResponse>> Handle(CreateExpenseCommand request, CancellationToken cancellationToken)
         {
-            //public string ExpenseName { get; set; }
-            //public string ExpenseCategory { get; set; }
-
-            //ExpenseAmount  ExpenseDescription  InvoiceImageFilePath  ?Location //mapden gelir
+            // ExpenseName ExpenseCategory ExpenseAmount  ExpenseDescription  InvoiceImageFilePath  ?Location //mapden gelir
 
             var entity = mapper.Map<PersonalExpenseRequest, Expense>(request.Model);
             entity.PersonalNumber = request.PersonalNumber;
@@ -61,7 +61,7 @@ namespace MOS.Business.Command
             {
                 return new ApiResponse("Record not found");
             }
-            if (fromdb.ApprovalStatus==ApprovalStatus.Approved ||fromdb.ApprovalStatus==ApprovalStatus.Rejected )
+            if (fromdb.ApprovalStatus == ApprovalStatus.Approved || fromdb.ApprovalStatus == ApprovalStatus.Rejected)
             {
                 return new ApiResponse("Onaylanmış veya Reddedilmiş kayıtlar üzerinde değişiklik yapılamaz");
             }
@@ -77,14 +77,15 @@ namespace MOS.Business.Command
 
         public async Task<ApiResponse> Handle(DeleteExpenseCommand request, CancellationToken cancellationToken)
         {
+
             var fromdb = await dbContext.Set<Expense>().Where(x => x.PersonalNumber == request.PersonalNumber)
                 .FirstOrDefaultAsync(a => a.ExpenseId == request.ExpenseId, cancellationToken);
-
             if (fromdb == null)
             {
                 return new ApiResponse("Record not found");
             }
-            if (fromdb.ApprovalStatus==ApprovalStatus.Approved ||fromdb.ApprovalStatus==ApprovalStatus.Rejected )
+
+            if (fromdb.ApprovalStatus == ApprovalStatus.Approved || fromdb.ApprovalStatus == ApprovalStatus.Rejected)
             {
                 return new ApiResponse("Onaylanmış veya Reddedilmiş kayıtlar silinemez");
             }
@@ -106,9 +107,13 @@ namespace MOS.Business.Command
             var personal = await dbContext.Set<Personal>().Where(a => a.PersonalNumber == fromdb.PersonalNumber)
                 .FirstOrDefaultAsync(cancellationToken);
 
-            if (fromdb == null)
+            if (personal == null)
             {
-                return new ApiResponse("Record not found");
+                return new ApiResponse("Personal not found");
+            }
+            if (fromdb.ApprovalStatus != ApprovalStatus.Saved)
+            {
+                return new ApiResponse("The decision for this Expense has already been made.");
             }
 
             fromdb.ApprovalStatus = ApprovalStatus.Approved;
@@ -126,6 +131,10 @@ namespace MOS.Business.Command
                 ExpenseDate = DateTime.Now
             };
             await dbContext.SaveChangesAsync(cancellationToken);
+
+            NotificationCrateAndSend(true,fromdb, personal.GetType().Name);
+
+
             return new ApiResponse();
         }
 
@@ -137,14 +146,51 @@ namespace MOS.Business.Command
             {
                 return new ApiResponse("Record not found");
             }
-            
+            var personal = await dbContext.Set<Personal>().Where(a => a.PersonalNumber == fromdb.PersonalNumber)
+                    .FirstOrDefaultAsync(cancellationToken);
+
+            if (personal == null)
+            {
+                return new ApiResponse("Personal not found");
+            }
+
+            if (fromdb.ApprovalStatus != ApprovalStatus.Saved)
+            {
+                return new ApiResponse("The decision for this Expense has already been made.");
+            }
+
             fromdb.ApprovalStatus = ApprovalStatus.Rejected;
             fromdb.DeciderAdminNumber = request.AdminNumber;
             fromdb.DecisionDescription = $"Harcamanız Reddedilmiştir. Açıkama: {request.Model.DecisionDescription}";
             fromdb.DecisionDate = DateTime.Now;
 
             await dbContext.SaveChangesAsync(cancellationToken);
+
+            NotificationCrateAndSend(false,fromdb, personal.GetType().Name);
+
             return new ApiResponse();
+        }
+
+        private async Task NotificationCrateAndSend(bool Approved, Expense expense, string role)
+        {
+            NotificationDTO notificationDTO = new();
+            if (Approved)
+            {
+                notificationDTO.Title = "Harcamanız onaylandı";
+                notificationDTO.Content = $"'{expense.ExpenseName}' isimli harcamanız oanylandı: Ödeme emriniz tanımlanmıştır. ";
+                notificationDTO.EmployeNumber = expense.PersonalNumber;
+                notificationDTO.EmployeRole = role;
+                rabbitMQService.SendPaymentQueue(expense.Payment.PaymentId.ToString());
+            }
+            else
+            {
+                notificationDTO.Title = "Harcamanız reddedildi";
+                notificationDTO.Content = $"'{expense.ExpenseName}' isimli harcamanız reddedildi. Açıklama:{expense.DecisionDescription} ";
+                notificationDTO.EmployeNumber = expense.PersonalNumber;
+                notificationDTO.EmployeRole = role;
+            }
+            rabbitMQService.SendNotificationQueue(notificationDTO);
+
         }
     }
 }

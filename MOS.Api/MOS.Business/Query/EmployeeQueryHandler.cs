@@ -59,16 +59,16 @@ public class EmployeeQueryHandler :
         CancellationToken cancellationToken)
     {
         var predicate = PredicateBuilder.New<Admin>(true);
-        if (string.IsNullOrEmpty(request.FirstName))
+        if (!string.IsNullOrEmpty(request.FirstName))
             predicate.And(x => x.FirstName.ToUpper().Contains(request.FirstName.ToUpper()));
 
-        if (string.IsNullOrEmpty(request.LastName))
+        if (!string.IsNullOrEmpty(request.LastName))
             predicate.And(x => x.LastName.ToUpper().Contains(request.LastName.ToUpper()));
 
-        if (string.IsNullOrEmpty(request.UserName))
+        if (!string.IsNullOrEmpty(request.UserName))
             predicate.And(x => x.UserName.ToUpper().Contains(request.UserName.ToUpper()));
 
-        if (string.IsNullOrEmpty(request.Email))
+        if (!string.IsNullOrEmpty(request.Email))
             predicate.And(x => x.Email.ToUpper().Contains(request.Email.ToUpper()));
 
         var list = await dbContext.Set<Admin>()
@@ -102,16 +102,16 @@ public class EmployeeQueryHandler :
     public async Task<ApiResponse<List<PersonalResponse>>> Handle(GetPersonalByParameterQuery request, CancellationToken cancellationToken)
     {
         var predicate = PredicateBuilder.New<Personal>(true);
-        if (string.IsNullOrEmpty(request.FirstName))
+        if (!string.IsNullOrEmpty(request.FirstName))
             predicate.And(x => x.FirstName.ToUpper().Contains(request.FirstName.ToUpper()));
 
-        if (string.IsNullOrEmpty(request.LastName))
+        if (!string.IsNullOrEmpty(request.LastName))
             predicate.And(x => x.LastName.ToUpper().Contains(request.LastName.ToUpper()));
 
-        if (string.IsNullOrEmpty(request.UserName))
+        if (!string.IsNullOrEmpty(request.UserName))
             predicate.And(x => x.UserName.ToUpper().Contains(request.UserName.ToUpper()));
 
-        if (string.IsNullOrEmpty(request.Email))
+        if (!string.IsNullOrEmpty(request.Email))
             predicate.And(x => x.Email.ToUpper().Contains(request.Email.ToUpper()));
 
         var list = await dbContext.Set<Personal>()

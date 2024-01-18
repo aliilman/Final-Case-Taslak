@@ -2,12 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MOS.Base.DTO;
 
-namespace MOS.Api.Service
+namespace MOS.Business.Service
 {
     public interface IRabbitMQConsumerService
     {
-        string ReceiveNotificationQueue();
+        NotificationDTO ReceiveNotificationQueue();
         string ReceivePaymentQueue();
     }
 }

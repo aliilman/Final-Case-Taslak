@@ -14,11 +14,11 @@ namespace MOS.Api.Controllers;
 
 [Route("api/[controller]")]
 [Authorize(Roles = "Personal")]
-public class ExpenseController : ControllerBase
+public class PersonalPanelController : ControllerBase
 {
     private readonly IMediator mediator;
 
-    public ExpenseController(IMediator mediator)
+    public PersonalPanelController(IMediator mediator)
     {
         this.mediator = mediator;
     }

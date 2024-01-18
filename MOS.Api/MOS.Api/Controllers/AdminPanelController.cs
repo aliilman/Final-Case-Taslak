@@ -62,17 +62,19 @@ namespace MOS.Api.Controllers
         [HttpGet("GetExpenseParameter")]
         public async Task<ApiResponse<List<ExpenseResponse>>> GetExpenseParameter(
             [FromQuery] string? ExpenseName,
+            [FromQuery] int? PersonalNumber,
             [FromQuery] int? ApprovalStatus,
-            [FromQuery] int? Min,
-            [FromQuery] int? Max,
+            [FromQuery] int? MinAmount,
+            [FromQuery] int? MaxAmount,
             [FromQuery] DateTime? afterthedate,
             [FromQuery] DateTime? beforethedate)
         {
             var operation = new GetExpenseByParameterQuery(
                 ExpenseName: ExpenseName,
+                PersonalNumber:PersonalNumber,
                 ApprovalStatus: ApprovalStatus,
-                Min: Min,
-                Max: Max,
+                Min: MinAmount,
+                Max: MaxAmount,
                 afterdate: afterthedate,
                 beforedate:beforethedate
                 );
@@ -84,6 +86,7 @@ namespace MOS.Api.Controllers
         {
             var operation = new GetExpenseByParameterQuery(
                 ExpenseName: null,
+                 PersonalNumber:null,
                 ApprovalStatus: 1,
                 Min: null,
                 Max: null,

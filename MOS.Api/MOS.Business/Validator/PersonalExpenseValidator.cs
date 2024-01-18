@@ -12,26 +12,26 @@ namespace MOS.Business.Validator
         public PersonalExpenseValidator()
         {
             RuleFor(x => x.ExpenseName)
-                .NotEmpty().WithMessage("Harcama adı boş bırakılamaz.")
-                .MaximumLength(50).WithMessage("Harcama adı en fazla 50 karakter olmalıdır.");
+                .NotEmpty()
+                .MaximumLength(50).WithMessage("ExpenseName can be up to 50 characters");
 
             RuleFor(x => x.ExpenseCategory)
-                .NotEmpty().WithMessage("Harcama kategorisi boş bırakılamaz.")
-                .MaximumLength(50).WithMessage("Harcama kategorisi en fazla 50 karakter olmalıdır.");
+                .NotEmpty()
+                .MaximumLength(50).WithMessage("ExpenseCategory name can be up to 50 characters");
 
             RuleFor(x => x.ExpenseAmount)
-                .GreaterThan(0).WithMessage("Harcama tutarı 0'dan büyük olmalıdır.");
+                .GreaterThan(0).WithMessage("ExpenseAmount must be greater than 0.");
 
             RuleFor(x => x.ExpenseDescription)
-                .NotEmpty().WithMessage("Harcama açıklaması boş bırakılamaz.")
-                .MaximumLength(100).WithMessage("Harcama açıklaması en fazla 100 karakter olmalıdır.");
+                .NotEmpty()
+                .MaximumLength(100).WithMessage("ExpenseDescription can be up to 100 characters");
 
             RuleFor(x => x.InvoiceImageFilePath)
-                .NotEmpty().WithMessage("Fatura resmi yolu boş bırakılamaz.")
-                .MaximumLength(150).WithMessage("Harcama açıklaması en fazla 150 karakter olmalıdır.");
+                .NotEmpty()
+                .MaximumLength(150).WithMessage("InvoiceImageFilePath can be up to 150 characters");
 
             RuleFor(x => x.Location)
-                .MaximumLength(150).WithMessage("Konum en fazla 150 karakter olmalıdır.");
+                .MaximumLength(150).WithMessage("Location can be up to 150 characters");
         }
     }
 }

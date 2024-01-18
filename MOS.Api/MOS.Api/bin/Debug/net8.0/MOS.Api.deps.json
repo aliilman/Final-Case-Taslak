@@ -1249,7 +1249,9 @@
           "LinqKit": "1.2.5",
           "MOS.Data": "1.0.0",
           "MOS.Schema": "1.0.0",
-          "MediatR": "12.2.0"
+          "MediatR": "12.2.0",
+          "Newtonsoft.Json": "13.0.3",
+          "RabbitMQ.Client": "6.8.1"
         },
         "runtime": {
           "MOS.Business.dll": {}

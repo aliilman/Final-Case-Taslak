@@ -12,27 +12,27 @@ namespace MOS.Business.Validator
         public AdminValidator()
         {
             RuleFor(x => x.UserName)
-                .NotEmpty().WithMessage("Kullanıcı adı boş bırakılamaz.")
-                .MinimumLength(3).WithMessage("Kullanıcı adı en az 3 karakter olmalıdır.")
-                .MaximumLength(50).WithMessage("Kullanıcı adı en fazla 50 karakter olmalıdır.")
-                .Matches("^[a-zA-Z0-9]*$").WithMessage("Kullanıcı adı sadece harf ve rakam içermelidir.");
+                .NotEmpty()
+                .MinimumLength(3).WithMessage("UserName can be at least 3 characters")
+                .MaximumLength(50).WithMessage("UserName can be a maximum of 50 characters")
+                .Matches("^[a-zA-Z0-9]*$").WithMessage("UserName must contain only letters and numbers.");
 
             RuleFor(x => x.Password)
-                .NotEmpty().WithMessage("Parola boş bırakılamaz.")
-                .MinimumLength(6).WithMessage("Parola en az 6 karakter olmalıdır.");
+                .NotEmpty()
+                .MinimumLength(6).WithMessage("Password can be at least 6 characters");
 
             RuleFor(x => x.FirstName)
-                .NotEmpty().WithMessage("Ad boş bırakılamaz.")
-                .MaximumLength(50).WithMessage("Ad en fazla 50 karakter olmalıdır.");
+                .NotEmpty()
+                .MaximumLength(50).WithMessage("FirstName can be a maximum of 50 characters");
 
             RuleFor(x => x.LastName)
-                .NotEmpty().WithMessage("Soyad boş bırakılamaz.")
-                .MaximumLength(50).WithMessage("Soyad en fazla 50 karakter olmalıdır.");
+                .NotEmpty()
+                .MaximumLength(50).WithMessage("Surname can be a maximum of 50 characters");
 
             RuleFor(x => x.Email)
-                .NotEmpty().WithMessage("E-posta adresi boş bırakılamaz.")
-                .EmailAddress().WithMessage("Geçerli bir e-posta adresi giriniz.")
-                .MaximumLength(100).WithMessage("E-posta adresi en fazla 100 karakter olmalıdır.");
+                .NotEmpty()
+                .EmailAddress().WithMessage("Please enter a valid e-mail address.")
+                .MaximumLength(100).WithMessage("Email address can be up to 100 characters");
         }
     }
 }

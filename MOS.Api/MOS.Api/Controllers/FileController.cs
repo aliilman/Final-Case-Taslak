@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MOS.Base.Response;
 
@@ -9,13 +10,13 @@ namespace MOS.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class FileController : ControllerBase
     {
-        private readonly IConfiguration _configuration;
 
-        public FileController(IConfiguration configuration)
+        public FileController()
         {
-            _configuration = configuration;
+
         }
 
         [HttpPost("UploadFile")]
@@ -36,8 +37,6 @@ namespace MOS.Api.Controllers
             {
                 await file.CopyToAsync(stream);
             }
-
-            // Resmin yüklendiği dosya yolu veya diğer işlemler buraya eklenebilir.
 
             string imageUrl = Url.Content("~/uploads/" + uniqueFileName);
             return new ApiResponse<string>(data: imageUrl);

@@ -64,8 +64,8 @@ public class ExpenseQueryHandler :
         CancellationToken cancellationToken)
     {
         var predicate = PredicateBuilder.New<Expense>(true);
-        // if (string.IsNullOrEmpty(request.ExpenseName))
-        //     predicate.And(x => x.ExpenseName.ToUpper().Contains(request.ExpenseName.ToUpper()));
+        if (!string.IsNullOrEmpty(request.ExpenseName))
+            predicate.And(x => x.ExpenseName.ToUpper().Contains(request.ExpenseName.ToUpper()));
 
         if (request.ApprovalStatus != null)
             predicate.And(x => ((int)x.ApprovalStatus) == request.ApprovalStatus);
@@ -122,8 +122,11 @@ public class ExpenseQueryHandler :
             return new ApiResponse<List<ExpenseResponse>>($" {request.afterdate} - {request.beforedate} range is invalid. Please check");
         }
         var predicate = PredicateBuilder.New<Expense>(true);
-        if (string.IsNullOrEmpty(request.ExpenseName))
+        if (!string.IsNullOrEmpty(request.ExpenseName))
             predicate.And(x => x.ExpenseName.ToUpper().Contains(request.ExpenseName.ToUpper()));
+
+        if (request.PersonalNumber != null)
+            predicate.And(x => x.PersonalNumber == request.PersonalNumber);
 
         if (request.ApprovalStatus != null)
             predicate.And(x => ((int)x.ApprovalStatus) == request.ApprovalStatus);
