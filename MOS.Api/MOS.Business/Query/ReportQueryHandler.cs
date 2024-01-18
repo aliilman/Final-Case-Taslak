@@ -49,15 +49,7 @@ namespace MOS.Business.Query
             {
                 EndExpenceDate = request.Model.EndExpenceDate;
             }
-            // if (request.Model.StartDecisionDate != null)
-            // {
-            //     StartDecisionDate = request.Model.StartDecisionDate;
-            // }
-            // if (request.Model.EndDecisionDate != null)
-            // {
-            //     EndDecisionDate = request.Model.EndDecisionDate;
-            // }
-            //string connectionString = "Server=DESKTOP-J6P579G\\SQLEXPRESS;Database=MasrafOdemeSistemi;trusted_connection=true;TrustServerCertificate=true;";
+
             string connectionString = _configuration.GetValue<string>("ConnectionStrings:MsSqlConnection");
             using (var connection = new SqlConnection(connectionString))
             {
@@ -92,8 +84,8 @@ namespace MOS.Business.Query
                          PersonalNumber = PNumber,
                          StartExpenceDate = StartExpenceDate,
                          EndExpenceDate = EndExpenceDate,
-                        //  StartDecisionDate = StartDecisionDate,
-                        //  EndDecisionDate = EndDecisionDate
+                         //  StartDecisionDate = StartDecisionDate,
+                         //  EndDecisionDate = EndDecisionDate
                      }).ToList();
                     reportEachPersonal.WaitingExpenseList = mapper.Map<List<Expense>, List<ExpenseResponse>>(WaitingExpenseList);
 
@@ -165,8 +157,8 @@ namespace MOS.Business.Query
                          PersonalNumber = PNumber,
                          StartExpenceDate = StartExpenceDate,
                          EndExpenceDate = EndExpenceDate,
-                        //  StartDecisionDate = StartDecisionDate,
-                        //  EndDecisionDate = EndDecisionDate
+                         //  StartDecisionDate = StartDecisionDate,
+                         //  EndDecisionDate = EndDecisionDate
                      }).ToList();
                     reportEachPersonal.PaymentList = mapper.Map<List<Payment>, List<PaymentResponse>>(PaymentList);
 

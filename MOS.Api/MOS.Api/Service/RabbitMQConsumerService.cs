@@ -18,10 +18,11 @@ namespace MOS.Api.Service
 
         public string ReceiveNotificationQueue()
         {       
-            string queueName ="NotificationQueue";
+            string queueName =configuration.GetValue<string>("Queue:NotificationQueue");
+            string uri= configuration.GetValue<string>("Queue:Uri");
             string mesaj = null;
             ConnectionFactory factory = new ConnectionFactory();
-            factory.Uri = new Uri("amqps://ocdvcuen:0Qh_eUzUCDoG-iHudqT8P4NGOAf6P2vf@fish.rmq.cloudamqp.com/ocdvcuen");
+            factory.Uri = new Uri(uri);
 
             using (IConnection connection = factory.CreateConnection())
             using (IModel channel = connection.CreateModel())
@@ -41,10 +42,11 @@ namespace MOS.Api.Service
         }
         public string ReceivePaymentQueue()
         {
-            string queueName = "PaymentQueue";
+            string queueName =configuration.GetValue<string>("Queue:PaymentQueue");
+            string uri= configuration.GetValue<string>("Queue:Uri");
             string mesaj = null;
             ConnectionFactory factory = new ConnectionFactory();
-            factory.Uri = new Uri("amqps://ocdvcuen:0Qh_eUzUCDoG-iHudqT8P4NGOAf6P2vf@fish.rmq.cloudamqp.com/ocdvcuen");
+            factory.Uri = new Uri(uri);
 
             using (IConnection connection = factory.CreateConnection())
             using (IModel channel = connection.CreateModel())

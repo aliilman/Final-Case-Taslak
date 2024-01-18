@@ -234,3 +234,196 @@ ClientConnectionId:8aef4e38-f630-4a9b-95e5-5103d3e12ae0
 Error Number:102,State:1,Class:15
 2024-01-18 04:29:38.560 [FTL] Path=/api/AdminPanel/Report || Method=POST || Exception=Incorrect syntax near ')'.Miliseconds=330,4962 ms
 2024-01-18 04:29:38.625 [ERR] HTTP POST /api/AdminPanel/Report responded 500 in 571.9128 ms
+2024-01-18 04:30:25.330 [WRN] Failed to determine the https port for redirect.
+2024-01-18 04:30:25.486 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 04:30:25.900 [INF] [Response] Http POST - /api/AdminPanel/Report - Responded 200 in 413,7364 ms.
+2024-01-18 04:30:25.903 [INF] HTTP POST /api/AdminPanel/Report responded 200 in 576.6619 ms
+2024-01-18 04:33:03.018 [WRN] Failed to determine the https port for redirect.
+2024-01-18 04:33:03.154 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 04:33:03.557 [INF] [Response] Http POST - /api/AdminPanel/Report - Responded 200 in 402,3807 ms.
+2024-01-18 04:33:03.561 [INF] HTTP POST /api/AdminPanel/Report responded 200 in 544.4130 ms
+2024-01-18 04:41:24.100 [WRN] Failed to determine the https port for redirect.
+2024-01-18 04:41:24.247 [INF] [Request] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ
+2024-01-18 04:41:24.376 [ERR] UnexpectedError
+System.ArgumentNullException: Value cannot be null. (Parameter 'uriString')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Uri..ctor(String uriString)
+   at MOS.Api.Service.RabbitMQService..ctor(IConfiguration configuration) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Service\RabbitMQService.cs:line 23
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 04:41:24.400 [FTL] Path=/api/RabbitMQConsumer/SendToRabbitMQ || Method=GET || Exception=Value cannot be null. (Parameter 'uriString')Miliseconds=128,1615 ms
+2024-01-18 04:41:24.463 [ERR] HTTP GET /api/RabbitMQConsumer/SendToRabbitMQ responded 500 in 365.0230 ms
+2024-01-18 04:41:47.579 [INF] [Request] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ
+2024-01-18 04:41:47.581 [ERR] UnexpectedError
+System.ArgumentNullException: Value cannot be null. (Parameter 'uriString')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Uri..ctor(String uriString)
+   at MOS.Api.Service.RabbitMQService..ctor(IConfiguration configuration) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Service\RabbitMQService.cs:line 23
+   at InvokeStub_RabbitMQService..ctor(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 04:41:47.590 [FTL] Path=/api/RabbitMQConsumer/SendToRabbitMQ || Method=GET || Exception=Value cannot be null. (Parameter 'uriString')Miliseconds=2,1906 ms
+2024-01-18 04:41:47.593 [ERR] HTTP GET /api/RabbitMQConsumer/SendToRabbitMQ responded 500 in 16.8970 ms
+2024-01-18 04:44:17.281 [WRN] Failed to determine the https port for redirect.
+2024-01-18 04:44:17.488 [INF] [Request] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ
+2024-01-18 04:44:52.049 [ERR] UnexpectedError
+System.ArgumentNullException: Value cannot be null. (Parameter 'uriString')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Uri..ctor(String uriString)
+   at MOS.Api.Service.RabbitMQService..ctor(IConfiguration configuration) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Service\RabbitMQService.cs:line 23
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 04:44:52.071 [FTL] Path=/api/RabbitMQConsumer/SendToRabbitMQ || Method=GET || Exception=Value cannot be null. (Parameter 'uriString')Miliseconds=34552,6971 ms
+2024-01-18 04:44:52.233 [ERR] HTTP GET /api/RabbitMQConsumer/SendToRabbitMQ responded 500 in 34942.4421 ms
+2024-01-18 04:45:07.921 [INF] [Request] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ
+2024-01-18 04:45:17.642 [ERR] UnexpectedError
+System.ArgumentNullException: Value cannot be null. (Parameter 'uriString')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Uri..ctor(String uriString)
+   at MOS.Api.Service.RabbitMQService..ctor(IConfiguration configuration) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Service\RabbitMQService.cs:line 23
+   at InvokeStub_RabbitMQService..ctor(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method6(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 04:45:17.643 [FTL] Path=/api/RabbitMQConsumer/GetFromRabbitMQ || Method=GET || Exception=Value cannot be null. (Parameter 'uriString')Miliseconds=9720,2519 ms
+2024-01-18 04:45:17.644 [ERR] HTTP GET /api/RabbitMQConsumer/GetFromRabbitMQ responded 500 in 9743.7777 ms
+2024-01-18 04:45:54.176 [INF] [Request] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ
+2024-01-18 04:46:07.850 [ERR] UnexpectedError
+System.ArgumentNullException: Value cannot be null. (Parameter 'uriString')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Uri..ctor(String uriString)
+   at MOS.Api.Service.RabbitMQService..ctor(IConfiguration configuration) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Service\RabbitMQService.cs:line 23
+   at InvokeStub_RabbitMQService..ctor(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method6(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 04:46:07.852 [FTL] Path=/api/RabbitMQConsumer/GetFromRabbitMQ || Method=GET || Exception=Value cannot be null. (Parameter 'uriString')Miliseconds=13674,7138 ms
+2024-01-18 04:46:07.852 [ERR] HTTP GET /api/RabbitMQConsumer/GetFromRabbitMQ responded 500 in 13679.0145 ms
+2024-01-18 04:46:09.308 [INF] [Request] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ
+2024-01-18 04:46:25.000 [WRN] Failed to determine the https port for redirect.
+2024-01-18 04:46:25.302 [INF] [Request] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ
+2024-01-18 04:47:29.657 [WRN] Failed to determine the https port for redirect.
+2024-01-18 04:47:29.928 [INF] [Request] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ
+2024-01-18 04:49:36.538 [WRN] Failed to determine the https port for redirect.
+2024-01-18 04:49:36.699 [INF] [Request] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ
+2024-01-18 04:49:41.358 [INF] [Response] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ - Responded 200 in 4657,7286 ms.
+2024-01-18 04:49:41.360 [INF] HTTP GET /api/RabbitMQConsumer/GetFromRabbitMQ responded 200 in 4824.1355 ms
+2024-01-18 04:49:45.541 [INF] [Request] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ
+2024-01-18 04:49:49.735 [INF] [Response] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ - Responded 200 in 4194,4083 ms.
+2024-01-18 04:49:49.736 [INF] HTTP GET /api/RabbitMQConsumer/GetFromRabbitMQ responded 200 in 4198.2551 ms
+2024-01-18 04:49:59.594 [INF] [Request] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ
+2024-01-18 04:50:00.002 [INF] [Response] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ - Responded 200 in 407,9646 ms.
+2024-01-18 04:50:00.003 [INF] HTTP GET /api/RabbitMQConsumer/SendToRabbitMQ responded 200 in 411.4523 ms
+2024-01-18 04:50:11.610 [INF] [Request] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ
+2024-01-18 04:50:15.114 [INF] [Response] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ - Responded 200 in 3504,3214 ms.
+2024-01-18 04:50:15.115 [INF] HTTP GET /api/RabbitMQConsumer/GetFromRabbitMQ responded 200 in 3505.9666 ms
+2024-01-18 04:50:18.927 [INF] [Request] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ
+2024-01-18 04:50:22.318 [INF] [Response] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ - Responded 200 in 3391,0147 ms.
+2024-01-18 04:50:22.319 [INF] HTTP GET /api/RabbitMQConsumer/GetFromRabbitMQ responded 200 in 3392.4817 ms
+2024-01-18 04:50:26.144 [INF] [Request] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ
+2024-01-18 04:50:30.750 [INF] [Response] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ - Responded 200 in 4606,218 ms.
+2024-01-18 04:50:30.751 [INF] HTTP GET /api/RabbitMQConsumer/GetFromRabbitMQ responded 200 in 4607.7955 ms
+2024-01-18 04:52:40.958 [WRN] Failed to determine the https port for redirect.
+2024-01-18 04:52:41.281 [INF] [Request] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ
+2024-01-18 04:52:45.084 [INF] [Response] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ - Responded 200 in 3801,38 ms.
+2024-01-18 04:52:45.086 [INF] HTTP GET /api/RabbitMQConsumer/SendToRabbitMQ responded 200 in 4137.3376 ms
+2024-01-18 04:53:18.064 [INF] [Request] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ
+2024-01-18 04:53:25.590 [INF] [Response] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ - Responded 200 in 7525,9201 ms.
+2024-01-18 04:53:25.590 [INF] HTTP GET /api/RabbitMQConsumer/SendToRabbitMQ responded 200 in 7541.5160 ms
+2024-01-18 04:53:28.407 [INF] [Request] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ
+2024-01-18 04:54:01.566 [INF] [Response] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ - Responded 200 in 33159,2261 ms.
+2024-01-18 04:54:01.568 [INF] HTTP GET /api/RabbitMQConsumer/SendToRabbitMQ responded 200 in 33163.4665 ms

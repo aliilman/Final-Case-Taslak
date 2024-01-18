@@ -13,19 +13,17 @@ namespace MOS.Api.Service
         //https://fish.rmq.cloudamqp.com/#/connections
         private readonly IConnection _connection;
         private readonly IModel _channel;
-        private readonly IConfiguration _configuration;
+        private readonly IConfiguration configuration;
         public RabbitMQService(IConfiguration configuration)
         {
-            _configuration=configuration;
+            this.configuration=configuration;
+
+            string uri= configuration.GetValue<string>("Queue:Uri");
             ConnectionFactory factory = new ConnectionFactory();
-            factory.Uri = new Uri("amqps://ocdvcuen:0Qh_eUzUCDoG-iHudqT8P4NGOAf6P2vf@fish.rmq.cloudamqp.com/ocdvcuen");
+            factory.Uri = new Uri(uri);
 
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
-
-            //_channel.QueueDeclare("mesajkuyrugu", false, false, true);
-            // byte[] bytemessage = Encoding.UTF8.GetBytes("Bağlandım");
-            // _channel.BasicPublish(exchange: "", routingKey: "mesajkuyrugu", body: bytemessage);
         }
         public void CloseConnection()
         {
@@ -35,8 +33,8 @@ namespace MOS.Api.Service
 
         public void SendNotificationQueue(string message)
         {
-            string queueName = "NotificationQueue";
-            
+            string queueName =configuration.GetValue<string>("Queue:NotificationQueue");
+                        
             _channel.QueueDeclare(queue: queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
             var body = Encoding.UTF8.GetBytes(message);
             _channel.BasicPublish(exchange: "", routingKey: queueName, basicProperties: null, body: body);
@@ -44,7 +42,7 @@ namespace MOS.Api.Service
         }
         public void SendPaymentQueue(string PaymentId)
         {
-            string queueName = "PaymentQueue";
+             string queueName =configuration.GetValue<string>("Queue:PaymentQueue");
             _channel.QueueDeclare(queue: queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
             var body = Encoding.UTF8.GetBytes(PaymentId);
             _channel.BasicPublish(exchange: "", routingKey: queueName, basicProperties: null, body: body);

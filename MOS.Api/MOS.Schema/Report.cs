@@ -9,9 +9,6 @@ namespace MOS.Schema
     {
         public DateTime? StartExpenceDate { get; set; } // harcama tarih aralığı için başlangıç tarihi
         public DateTime? EndExpenceDate { get; set; }// harcama tarih araliği için bitiş tarihi
-
-        public DateTime? StartDecisionDate { get; set; } // Karar(onay, red) tarih aralığı için başlangıç tarihi
-        public DateTime? EndDecisionDate { get; set; }// Karar(onay, red)  tarih araliği için bitiş tarihi
         public List<int> PersonalNumberList { get; set; } // İstenen Personaller
     }
     public class ReportResponse
@@ -26,7 +23,7 @@ namespace MOS.Schema
         public decimal TotalApprovedSpentMoney { get; set; } // toplam onaylanan
         public decimal TotalRejectedSpentMoney { get; set; } // toplan reddedilen
 
-        public List<ReportEachPersonal> ReportEachPersonalList { get; set; } 
+        public List<ReportEachPersonal> ReportEachPersonalList { get; set; }
 
     }
     public class ReportEachPersonal // her perosnal için ayrı listeme
