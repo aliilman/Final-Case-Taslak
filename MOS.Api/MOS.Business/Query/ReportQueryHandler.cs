@@ -37,15 +37,14 @@ namespace MOS.Business.Query
                 ReportEachPersonalList = new List<ReportEachPersonal>()
             };
 
-            DateTime? StartExpenceDate = new DateTime(2024, 1, 1);
+            DateTime? StartExpenceDate = new DateTime(2023, 1, 1); // tarih aralığı verilmemiş tüm kayıtları getirir
             DateTime? EndExpenceDate = DateTime.Now;
-            // DateTime? StartDecisionDate = new DateTime(2024, 1, 1);
-            // DateTime? EndDecisionDate = DateTime.Now;
-            if (request.Model.StartExpenceDate != null)
+
+            if (request.Model.StartExpenceDate.HasValue) 
             {
                 StartExpenceDate = request.Model.StartExpenceDate;
             }
-            if (request.Model.EndExpenceDate != null)
+            if (request.Model.EndExpenceDate.HasValue)
             {
                 EndExpenceDate = request.Model.EndExpenceDate;
             }
@@ -55,7 +54,7 @@ namespace MOS.Business.Query
             {
                 connection.Open();
                 // Dapper'ı kullanarak sorguyu çalıştırma
-                if (request.Model.PersonalNumberList.Count == 0)
+                if (request.Model.PersonalNumberList.Count == 0) // liste boş ise tüm çalışanları getir
                 {
                     request.Model.PersonalNumberList = connection.Query<int>("SELECT PersonalNumber FROM Personal").ToList();
                 }
@@ -173,7 +172,7 @@ namespace MOS.Business.Query
             reportResponse.EndTheDate = (DateTime)EndExpenceDate;
             string sd = (reportResponse.StartTheDate).ToString("yyyy-MM-dd");
             string ed = (reportResponse.EndTheDate).ToString("yyyy-MM-dd");
-            reportResponse.RaporName = $"Report_{sd}-{ed} Arası Faliyet Raporu";
+            reportResponse.RaporName = $"Report__{sd}__{ed}__Activity_Report";
 
             return new ApiResponse<ReportResponse>(reportResponse);
         }

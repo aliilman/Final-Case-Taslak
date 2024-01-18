@@ -427,3 +427,186 @@ System.ArgumentNullException: Value cannot be null. (Parameter 'uriString')
 2024-01-18 04:53:28.407 [INF] [Request] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ
 2024-01-18 04:54:01.566 [INF] [Response] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ - Responded 200 in 33159,2261 ms.
 2024-01-18 04:54:01.568 [INF] HTTP GET /api/RabbitMQConsumer/SendToRabbitMQ responded 200 in 33163.4665 ms
+2024-01-18 14:10:30.231 [WRN] Failed to determine the https port for redirect.
+2024-01-18 14:10:30.320 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-18 14:10:31.716 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 1394,1375 ms.
+2024-01-18 14:10:31.718 [INF] HTTP POST /api/Token/TakeToken responded 200 in 1489.2275 ms
+2024-01-18 14:11:31.280 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-18 14:11:31.341 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 61,1764 ms.
+2024-01-18 14:11:31.342 [INF] HTTP POST /api/Token/TakeToken responded 200 in 63.1539 ms
+2024-01-18 14:12:29.541 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 14:12:29.955 [INF] [Response] Http POST - /api/AdminPanel/Report - Responded 200 in 414,0227 ms.
+2024-01-18 14:12:29.955 [INF] HTTP POST /api/AdminPanel/Report responded 200 in 446.0941 ms
+2024-01-18 14:14:58.472 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 14:14:58.491 [ERR] UnexpectedError
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MOS.Business.Query.ReportQueryHandler.Handle(GetReportQuery request, CancellationToken cancellationToken) in C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Business\Query\ReportQueryHandler.cs:line 43
+   at MOS.Api.Controllers.AdminPanelController.GetReprot(ReportRequest request) in C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\AdminPanelController.cs:line 130
+   at lambda_method130(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 14:14:58.511 [FTL] Path=/api/AdminPanel/Report || Method=POST || Exception=Object reference not set to an instance of an object.Miliseconds=10,6674 ms
+2024-01-18 14:14:58.556 [ERR] HTTP POST /api/AdminPanel/Report responded 500 in 87.3503 ms
+2024-01-18 14:15:09.654 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 14:15:09.657 [ERR] UnexpectedError
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MOS.Business.Query.ReportQueryHandler.Handle(GetReportQuery request, CancellationToken cancellationToken) in C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Business\Query\ReportQueryHandler.cs:line 43
+   at MOS.Api.Controllers.AdminPanelController.GetReprot(ReportRequest request) in C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\AdminPanelController.cs:line 130
+   at lambda_method130(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 14:15:09.658 [FTL] Path=/api/AdminPanel/Report || Method=POST || Exception=Object reference not set to an instance of an object.Miliseconds=2,7092 ms
+2024-01-18 14:15:09.658 [ERR] HTTP POST /api/AdminPanel/Report responded 500 in 5.4955 ms
+2024-01-18 14:15:26.150 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 14:15:26.151 [ERR] UnexpectedError
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MOS.Business.Query.ReportQueryHandler.Handle(GetReportQuery request, CancellationToken cancellationToken) in C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Business\Query\ReportQueryHandler.cs:line 43
+   at MOS.Api.Controllers.AdminPanelController.GetReprot(ReportRequest request) in C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\AdminPanelController.cs:line 130
+   at lambda_method130(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 14:15:26.152 [FTL] Path=/api/AdminPanel/Report || Method=POST || Exception=Object reference not set to an instance of an object.Miliseconds=1,3192 ms
+2024-01-18 14:15:26.152 [ERR] HTTP POST /api/AdminPanel/Report responded 500 in 2.5571 ms
+2024-01-18 14:16:06.105 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 14:16:06.121 [INF] [Response] Http POST - /api/AdminPanel/Report - Responded 200 in 15,6963 ms.
+2024-01-18 14:16:06.121 [INF] HTTP POST /api/AdminPanel/Report responded 200 in 16.3436 ms
+2024-01-18 14:18:49.643 [WRN] Failed to determine the https port for redirect.
+2024-01-18 14:18:49.811 [INF] HTTP POST /api/AdminPanel/Report responded 401 in 170.2717 ms
+2024-01-18 14:19:11.906 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-18 14:19:13.239 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 1332,4524 ms.
+2024-01-18 14:19:13.240 [INF] HTTP POST /api/Token/TakeToken responded 200 in 1341.3984 ms
+2024-01-18 14:19:36.442 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-18 14:19:36.535 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 93,2086 ms.
+2024-01-18 14:19:36.536 [INF] HTTP POST /api/Token/TakeToken responded 200 in 97.7340 ms
+2024-01-18 14:19:48.872 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 14:20:14.686 [ERR] UnexpectedError
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MOS.Business.Query.ReportQueryHandler.Handle(GetReportQuery request, CancellationToken cancellationToken) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Business\Query\ReportQueryHandler.cs:line 43
+   at MOS.Api.Controllers.AdminPanelController.GetReprot(ReportRequest request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\AdminPanelController.cs:line 130
+   at lambda_method86(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 14:20:14.693 [FTL] Path=/api/AdminPanel/Report || Method=POST || Exception=Object reference not set to an instance of an object.Miliseconds=25805,5991 ms
+2024-01-18 14:20:14.759 [ERR] HTTP POST /api/AdminPanel/Report responded 500 in 25923.3748 ms
+2024-01-18 14:21:02.061 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 14:21:14.383 [ERR] UnexpectedError
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MOS.Business.Query.ReportQueryHandler.Handle(GetReportQuery request, CancellationToken cancellationToken) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Business\Query\ReportQueryHandler.cs:line 43
+   at MOS.Api.Controllers.AdminPanelController.GetReprot(ReportRequest request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\AdminPanelController.cs:line 130
+   at lambda_method86(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 14:21:14.385 [FTL] Path=/api/AdminPanel/Report || Method=POST || Exception=Object reference not set to an instance of an object.Miliseconds=12321,9172 ms
+2024-01-18 14:21:14.385 [ERR] HTTP POST /api/AdminPanel/Report responded 500 in 12325.4622 ms
+2024-01-18 14:21:27.631 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 14:21:58.500 [ERR] UnexpectedError
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MOS.Business.Query.ReportQueryHandler.Handle(GetReportQuery request, CancellationToken cancellationToken) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Business\Query\ReportQueryHandler.cs:line 43
+   at MOS.Api.Controllers.AdminPanelController.GetReprot(ReportRequest request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\AdminPanelController.cs:line 130
+   at lambda_method86(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 14:21:58.501 [FTL] Path=/api/AdminPanel/Report || Method=POST || Exception=Object reference not set to an instance of an object.Miliseconds=30868,8988 ms
+2024-01-18 14:21:58.502 [ERR] HTTP POST /api/AdminPanel/Report responded 500 in 30871.4615 ms
+2024-01-18 14:22:36.783 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 14:22:56.491 [ERR] UnexpectedError
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MOS.Business.Query.ReportQueryHandler.Handle(GetReportQuery request, CancellationToken cancellationToken) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Business\Query\ReportQueryHandler.cs:line 43
+   at MOS.Api.Controllers.AdminPanelController.GetReprot(ReportRequest request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\AdminPanelController.cs:line 130
+   at lambda_method86(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-18 14:22:56.492 [FTL] Path=/api/AdminPanel/Report || Method=POST || Exception=Object reference not set to an instance of an object.Miliseconds=19708,2107 ms
+2024-01-18 14:22:56.493 [ERR] HTTP POST /api/AdminPanel/Report responded 500 in 19710.6791 ms
+2024-01-18 14:24:30.148 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 14:24:47.932 [INF] [Response] Http POST - /api/AdminPanel/Report - Responded 200 in 17785,4477 ms.
+2024-01-18 14:24:47.933 [INF] HTTP POST /api/AdminPanel/Report responded 200 in 17787.9680 ms
+2024-01-18 14:25:09.913 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 14:27:26.848 [WRN] Failed to determine the https port for redirect.
+2024-01-18 14:27:27.063 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-18 14:28:13.774 [INF] [Response] Http POST - /api/AdminPanel/Report - Responded 200 in 46710,7822 ms.
+2024-01-18 14:28:13.776 [INF] HTTP POST /api/AdminPanel/Report responded 200 in 46930.5199 ms
+2024-01-18 14:58:41.769 [WRN] Failed to determine the https port for redirect.
+2024-01-18 14:58:41.900 [INF] [Request] Http POST - /api/Image/upload
+2024-01-18 14:58:41.982 [INF] [Response] Http POST - /api/Image/upload - Responded 200 in 80,6285 ms.
+2024-01-18 14:58:41.986 [INF] HTTP POST /api/Image/upload responded 200 in 219.4869 ms
+2024-01-18 15:10:17.622 [WRN] Failed to determine the https port for redirect.
+2024-01-18 15:10:17.738 [INF] [Request] Http POST - /api/Image/upload
+2024-01-18 15:10:17.741 [INF] [Response] Http POST - /api/Image/upload - Responded 404 in 2,5389 ms.
+2024-01-18 15:10:17.743 [INF] HTTP POST /api/Image/upload responded 404 in 122.6851 ms
+2024-01-18 15:10:45.727 [INF] [Request] Http POST - /api/Image/upload
+2024-01-18 15:10:45.729 [INF] [Response] Http POST - /api/Image/upload - Responded 404 in 2,0836 ms.
+2024-01-18 15:10:45.730 [INF] HTTP POST /api/Image/upload responded 404 in 5.7863 ms
+2024-01-18 15:10:57.691 [INF] [Request] Http POST - /api/Image/upload
+2024-01-18 15:10:57.692 [INF] [Response] Http POST - /api/Image/upload - Responded 404 in 1,2072 ms.
+2024-01-18 15:10:57.693 [INF] HTTP POST /api/Image/upload responded 404 in 4.1224 ms
+2024-01-18 15:11:11.335 [INF] [Request] Http POST - /api/File/UploadFile
+2024-01-18 15:11:11.397 [INF] [Response] Http POST - /api/File/UploadFile - Responded 200 in 62,7685 ms.
+2024-01-18 15:11:11.400 [INF] HTTP POST /api/File/UploadFile responded 200 in 66.7551 ms
+2024-01-18 15:18:34.554 [WRN] Failed to determine the https port for redirect.
+2024-01-18 15:18:34.621 [INF] [Request] Http GET - /api/File/downloadFile
+2024-01-18 15:18:34.652 [INF] [Response] Http GET - /api/File/downloadFile - Responded 404 in 29,0688 ms.
+2024-01-18 15:18:34.655 [INF] HTTP GET /api/File/downloadFile responded 404 in 104.2915 ms

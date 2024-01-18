@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\uploads\\799f7b3d-7b46-4728-a756-3445f0ff97d1_fatura-av-asilcan-tuzcu.jpg",
+      "PackagePath": "staticwebassets\\uploads\\799f7b3d-7b46-4728-a756-3445f0ff97d1_fatura-av-asilcan-tuzcu.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\uploads\\88ff7d06-1be3-45d2-996d-6067c4938e67_300_Akbank_Odev-1_2241a85fb3444bc4bfafafd7def020fd.pdf",
+      "PackagePath": "staticwebassets\\uploads\\88ff7d06-1be3-45d2-996d-6067c4938e67_300_Akbank_Odev-1_2241a85fb3444bc4bfafafd7def020fd.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MOS.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MOS.Api.props",
+      "PackagePath": "build\\MOS.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MOS.Api.props",
+      "PackagePath": "buildMultiTargeting\\MOS.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MOS.Api.props",
+      "PackagePath": "buildTransitive\\MOS.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

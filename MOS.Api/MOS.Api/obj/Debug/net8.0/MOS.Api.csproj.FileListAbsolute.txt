@@ -172,3 +172,4 @@ c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\bin\Debug\net8.0\FluentVa
 c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\bin\Debug\net8.0\RabbitMQ.Client.dll
 c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\bin\Debug\net8.0\Dapper.dll
+c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\bin\Debug\net8.0\MOS.Api.staticwebassets.runtime.json

@@ -1,11 +1,58 @@
 {
   "Version": 1,
-  "Hash": "1JW+lJwN7P2dcbqQgOyN+OLXCwZW32SaBNMGj6ThPvY=",
+  "Hash": "umJp8eDTPAJqPRwyIRcRMTmdMr+yruhx6jzceNZ1k20=",
   "Source": "MOS.Api",
   "BasePath": "_content/MOS.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "MOS.Api\\wwwroot",
+      "Source": "MOS.Api",
+      "ContentRoot": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\",
+      "BasePath": "_content/MOS.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\uploads\\799f7b3d-7b46-4728-a756-3445f0ff97d1_fatura-av-asilcan-tuzcu.jpg",
+      "SourceId": "MOS.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\",
+      "BasePath": "_content/MOS.Api",
+      "RelativePath": "uploads/799f7b3d-7b46-4728-a756-3445f0ff97d1_fatura-av-asilcan-tuzcu.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\799f7b3d-7b46-4728-a756-3445f0ff97d1_fatura-av-asilcan-tuzcu.jpg"
+    },
+    {
+      "Identity": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\uploads\\88ff7d06-1be3-45d2-996d-6067c4938e67_300_Akbank_Odev-1_2241a85fb3444bc4bfafafd7def020fd.pdf",
+      "SourceId": "MOS.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\",
+      "BasePath": "_content/MOS.Api",
+      "RelativePath": "uploads/88ff7d06-1be3-45d2-996d-6067c4938e67_300_Akbank_Odev-1_2241a85fb3444bc4bfafafd7def020fd.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\88ff7d06-1be3-45d2-996d-6067c4938e67_300_Akbank_Odev-1_2241a85fb3444bc4bfafafd7def020fd.pdf"
+    }
+  ]
 }
