@@ -7,6 +7,7 @@ namespace MOS.Api.Service
 {
     public interface IRabbitMQService
     {
-        void SendMessage(string queueName, string message);
+        void SendNotificationQueue(string message);
+        void SendPaymentQueue(string message);
     }
 }

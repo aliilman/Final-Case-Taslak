@@ -20,6 +20,7 @@ namespace MOS.Schema
     }
     public class PersonalResponse: BaseEmployeeResponse
     {
+        public string IBAN { get; set; }
         public int PersonalNumber { get; set; }
     }
 }

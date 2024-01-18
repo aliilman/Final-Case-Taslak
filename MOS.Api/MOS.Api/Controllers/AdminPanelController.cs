@@ -64,13 +64,31 @@ namespace MOS.Api.Controllers
             [FromQuery] string? ExpenseName,
             [FromQuery] int? ApprovalStatus,
             [FromQuery] int? Min,
-            [FromQuery] int? Max)
+            [FromQuery] int? Max,
+            [FromQuery] DateTime? afterthedate,
+            [FromQuery] DateTime? beforethedate)
         {
             var operation = new GetExpenseByParameterQuery(
                 ExpenseName: ExpenseName,
                 ApprovalStatus: ApprovalStatus,
                 Min: Min,
-                Max: Max
+                Max: Max,
+                afterdate: afterthedate,
+                beforedate:beforethedate
+                );
+            var result = await mediator.Send(operation);
+            return result;
+        }
+        [HttpGet("ApproveWaitingExpense")]
+        public async Task<ApiResponse<List<ExpenseResponse>>> GetApproveWaitingExpense()
+        {
+            var operation = new GetExpenseByParameterQuery(
+                ExpenseName: null,
+                ApprovalStatus: 1,
+                Min: null,
+                Max: null,
+                afterdate: null,
+                beforedate:null
                 );
             var result = await mediator.Send(operation);
             return result;
@@ -101,6 +119,19 @@ namespace MOS.Api.Controllers
             var result = await mediator.Send(operation);
             return result;
         }
+
+        [HttpPost("Report")]
+        public async Task<ApiResponse<ReportResponse>> GetReprot([FromBody] ReportRequest request)
+        {
+            // AdminExpenseValidator validations = new();
+            // validations.ValidateAndThrow(request);
+
+            var operation = new GetReportQuery(request);
+            var result = await mediator.Send(operation);
+            return result;
+        }
+
+
 
     }
 }

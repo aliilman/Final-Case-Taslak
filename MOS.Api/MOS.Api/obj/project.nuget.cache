@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ad/FyAZktlZmPU3ktbAYq/XohxpiVxTG6b9iGM5QbeVl9bp/mvd0KoEDQ5WulnIyTTLM6aiLiBI7KEztoyONHA==",
+  "dgSpecHash": "H6AjbtJwjGgu+dowKocRS3BliJUTsTN4jJKwcDrxeoyBm8HD/79wKHzG4RKggBGcJgrU0Bbw79Ul58GlUOCzDQ==",
   "success": true,
   "projectFilePath": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\MOS.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ali\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\Ali\\.nuget\\packages\\dapper\\2.1.28\\dapper.2.1.28.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\entityframework\\6.3.0\\entityframework.6.3.0.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",

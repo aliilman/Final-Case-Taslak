@@ -33,9 +33,9 @@ public class ExpenseQueryHandler :
     public async Task<ApiResponse<List<ExpenseResponse>>> Handle(GetAllOwnExpenseQuery request,
         CancellationToken cancellationToken)
     {
-        var list = await dbContext.Set<Expense>().Where(x=>x.PersonalNumber==request.PersonalNumber)
+        var list = await dbContext.Set<Expense>().Where(x => x.PersonalNumber == request.PersonalNumber)
         .ToListAsync(cancellationToken);
-        if(list == null)
+        if (list == null)
         {
             return new ApiResponse<List<ExpenseResponse>>("Record not found");
         }
@@ -48,7 +48,7 @@ public class ExpenseQueryHandler :
     public async Task<ApiResponse<ExpenseResponse>> Handle(GetOwnExpenseByIdQuery request,
         CancellationToken cancellationToken)
     {
-        var entity = await dbContext.Set<Expense>().Where(x=>x.PersonalNumber==request.PersonalNumber)
+        var entity = await dbContext.Set<Expense>().Where(x => x.PersonalNumber == request.PersonalNumber)
             .FirstOrDefaultAsync(x => x.ExpenseId == request.ExpenseId, cancellationToken);
 
         if (entity == null)
@@ -67,13 +67,13 @@ public class ExpenseQueryHandler :
         // if (string.IsNullOrEmpty(request.ExpenseName))
         //     predicate.And(x => x.ExpenseName.ToUpper().Contains(request.ExpenseName.ToUpper()));
 
-        if (request.ApprovalStatus!=null)
+        if (request.ApprovalStatus != null)
             predicate.And(x => ((int)x.ApprovalStatus) == request.ApprovalStatus);
 
-        var list = await dbContext.Set<Expense>().Where(x=>x.PersonalNumber==request.PersonalNumber)
+        var list = await dbContext.Set<Expense>().Where(x => x.PersonalNumber == request.PersonalNumber)
             .Where(predicate).ToListAsync(cancellationToken);
 
-        if(list == null)
+        if (list == null)
         {
             return new ApiResponse<List<ExpenseResponse>>("Record not found");
         }
@@ -86,7 +86,7 @@ public class ExpenseQueryHandler :
         CancellationToken cancellationToken)
     {
         var list = await dbContext.Set<Expense>().ToListAsync(cancellationToken);
-        if(list == null)
+        if (list == null)
         {
             return new ApiResponse<List<ExpenseResponse>>("Record not found");
         }
@@ -113,11 +113,19 @@ public class ExpenseQueryHandler :
     public async Task<ApiResponse<List<ExpenseResponse>>> Handle(GetExpenseByParameterQuery request,
         CancellationToken cancellationToken)
     {
+        if (request.Min != null && request.Max != null && request.Min > request.Max)
+        {
+            return new ApiResponse<List<ExpenseResponse>>($" {request.Min} - {request.Max} range is invalid. Please check");
+        }
+        if (request.afterdate != null && request.beforedate != null && request.afterdate > request.beforedate)
+        {
+            return new ApiResponse<List<ExpenseResponse>>($" {request.afterdate} - {request.beforedate} range is invalid. Please check");
+        }
         var predicate = PredicateBuilder.New<Expense>(true);
-        // if (string.IsNullOrEmpty(request.ExpenseName))
-        //     predicate.And(x => x.ExpenseName.ToUpper().Contains(request.ExpenseName.ToUpper()));
+        if (string.IsNullOrEmpty(request.ExpenseName))
+            predicate.And(x => x.ExpenseName.ToUpper().Contains(request.ExpenseName.ToUpper()));
 
-        if (request.ApprovalStatus!=null)
+        if (request.ApprovalStatus != null)
             predicate.And(x => ((int)x.ApprovalStatus) == request.ApprovalStatus);
 
         if (request.Min != null)
@@ -126,11 +134,17 @@ public class ExpenseQueryHandler :
         if (request.Max != null)
             predicate.And(x => x.ExpenseAmount < request.Max);
 
+        if (request.afterdate != null)
+            predicate.And(x => x.ExpenseCreateDate > request.afterdate);
+
+        if (request.beforedate != null)
+            predicate.And(x => x.ExpenseCreateDate < request.beforedate);
+
 
         var list = await dbContext.Set<Expense>()
             .Where(predicate).ToListAsync(cancellationToken);
 
-        if(list == null)
+        if (list == null)
         {
             return new ApiResponse<List<ExpenseResponse>>("Record not found");
         }
@@ -139,7 +153,7 @@ public class ExpenseQueryHandler :
         return new ApiResponse<List<ExpenseResponse>>(mappedList);
     }
 
-    
+
 }
 
 

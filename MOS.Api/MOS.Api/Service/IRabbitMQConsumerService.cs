@@ -7,6 +7,7 @@ namespace MOS.Api.Service
 {
     public interface IRabbitMQConsumerService
     {
-        string ReceiveMessage(string queueName);
+        string ReceiveNotificationQueue();
+        string ReceivePaymentQueue();
     }
 }

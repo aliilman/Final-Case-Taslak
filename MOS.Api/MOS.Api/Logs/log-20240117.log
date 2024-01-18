@@ -1099,3 +1099,46 @@ RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified end
 2024-01-17 22:22:42.143 [INF] [Request] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ
 2024-01-17 22:22:43.663 [INF] [Response] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ - Responded 200 in 1520,3948 ms.
 2024-01-17 22:22:43.663 [INF] HTTP GET /api/RabbitMQConsumer/GetFromRabbitMQ responded 200 in 1521.3240 ms
+2024-01-17 22:41:49.862 [WRN] Failed to determine the https port for redirect.
+2024-01-17 22:41:50.089 [INF] [Request] Http GET - /api/Expense/GetOwnExpenseParameter
+2024-01-17 22:41:52.037 [INF] [Response] Http GET - /api/Expense/GetOwnExpenseParameter - Responded 200 in 1947,6717 ms.
+2024-01-17 22:41:52.040 [INF] HTTP GET /api/Expense/GetOwnExpenseParameter responded 200 in 2182.3892 ms
+2024-01-17 22:42:03.638 [INF] [Request] Http GET - /api/Expense/GetOwnExpenseParameter
+2024-01-17 22:42:03.695 [INF] [Response] Http GET - /api/Expense/GetOwnExpenseParameter - Responded 200 in 57,1563 ms.
+2024-01-17 22:42:03.696 [INF] HTTP GET /api/Expense/GetOwnExpenseParameter responded 200 in 62.1745 ms
+2024-01-17 22:42:14.561 [INF] [Request] Http GET - /api/Expense/GetOwnExpenseParameter
+2024-01-17 22:42:14.581 [INF] [Response] Http GET - /api/Expense/GetOwnExpenseParameter - Responded 200 in 20,0575 ms.
+2024-01-17 22:42:14.581 [INF] HTTP GET /api/Expense/GetOwnExpenseParameter responded 200 in 27.9887 ms
+2024-01-17 23:14:42.807 [WRN] Failed to determine the https port for redirect.
+2024-01-17 23:14:42.928 [INF] [Request] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ/jkg
+2024-01-17 23:15:08.847 [ERR] UnexpectedError
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MOS.Api.Service.RabbitMQService.SendPaymentQueue(String PaymentId) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Service\RabbitMQService.cs:line 46
+   at MOS.Api.Controllers.RabbitMQConsumerController.sendMessages(String PaymentId) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\NewApiController.cs:line 26
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-17 23:15:08.872 [FTL] Path=/api/RabbitMQConsumer/SendToRabbitMQ/jkg || Method=GET || Exception=Object reference not set to an instance of an object.Miliseconds=25903,978 ms
+2024-01-17 23:15:09.186 [ERR] HTTP GET /api/RabbitMQConsumer/SendToRabbitMQ/jkg responded 500 in 26383.2430 ms
+2024-01-17 23:17:16.002 [WRN] Failed to determine the https port for redirect.
+2024-01-17 23:17:16.117 [INF] [Request] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ
+2024-01-17 23:20:36.672 [WRN] Failed to determine the https port for redirect.
+2024-01-17 23:20:36.796 [INF] [Request] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ
+2024-01-17 23:22:00.725 [WRN] Failed to determine the https port for redirect.
+2024-01-17 23:22:00.852 [INF] [Request] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ
+2024-01-17 23:22:02.297 [INF] [Response] Http GET - /api/RabbitMQConsumer/SendToRabbitMQ - Responded 200 in 1443,6728 ms.
+2024-01-17 23:22:02.299 [INF] HTTP GET /api/RabbitMQConsumer/SendToRabbitMQ responded 200 in 1576.5438 ms
+2024-01-17 23:22:26.169 [INF] [Request] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ
+2024-01-17 23:22:34.711 [INF] [Response] Http GET - /api/RabbitMQConsumer/GetFromRabbitMQ - Responded 200 in 8542,666 ms.
+2024-01-17 23:22:34.711 [INF] HTTP GET /api/RabbitMQConsumer/GetFromRabbitMQ responded 200 in 8548.8325 ms

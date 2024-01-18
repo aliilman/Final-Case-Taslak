@@ -24,7 +24,7 @@ public record GetOwnExpenseByParameterQuery(int PersonalNumber,string ExpenseNam
 
 public record GetAllExpenseQuery() : IRequest<ApiResponse<List<ExpenseResponse>>>;
 public record GetExpenseByIdQuery(int ExpenseId) : IRequest<ApiResponse<ExpenseResponse>>;
-public record GetExpenseByParameterQuery(string? ExpenseName,int? ApprovalStatus ,int? Min, int? Max) : IRequest<ApiResponse<List<ExpenseResponse>>>;
+public record GetExpenseByParameterQuery(string? ExpenseName,int? ApprovalStatus ,int? Min, int? Max, DateTime? afterdate,  DateTime? beforedate ) : IRequest<ApiResponse<List<ExpenseResponse>>>;
 
 
 public record ApproveByIdCommand(int AdminNumber, int ExpenseId,AdminExpenseRequest Model) : IRequest<ApiResponse>;

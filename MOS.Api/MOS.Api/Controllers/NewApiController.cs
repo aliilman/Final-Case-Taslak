@@ -20,18 +20,18 @@ namespace MOS.Api.Controllers
             this.rabbitMQConsumerService = rabbitMQConsumerService;
         }
 
-        [HttpGet("SendToRabbitMQ/{mesaj}")]
-        public IActionResult sendMessages( string mesaj)
+        [HttpGet("SendToRabbitMQ")]
+        public IActionResult sendMessages( [FromQuery] string? PaymentId,[FromQuery] string? mesaj)
         {
-            _rabbitMQService.SendMessage("myQueue", mesaj);
+            _rabbitMQService.SendPaymentQueue( PaymentId );
+            _rabbitMQService.SendNotificationQueue( mesaj);
 
             return Ok("Listening for messages from RabbitMQ.");
         }
         [HttpGet("GetFromRabbitMQ")]
         public IActionResult GetMessages()
         {
-
-            return Ok(rabbitMQConsumerService.ReceiveMessage("myQueue"));
+            return Ok(rabbitMQConsumerService.ReceiveNotificationQueue()+rabbitMQConsumerService.ReceivePaymentQueue());
         }
     }
 }
