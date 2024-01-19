@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8ZNtcXHd/P0HqJOfE6V/1J+SL93aifpPp6GqnMhHDyW9SfWbNjFj6K1H+yHlnT50VGocu+waLGn+6U1VN6r76w==",
+  "dgSpecHash": "GWWHOG7mF5d0aYy8s9JKlX/UjhabWCtdz49Z6ab1qZSSSymhz8IHZY8KX0OkAannCd6T/SpOFImmnMUwEAbUEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Data\\MOS.Data.csproj",
+  "projectFilePath": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Data\\MOS.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ali\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

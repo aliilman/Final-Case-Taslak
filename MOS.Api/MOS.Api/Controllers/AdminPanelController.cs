@@ -9,6 +9,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MOS.Base.Enum;
 using MOS.Base.Response;
 using MOS.Business.Cqrs;
 using MOS.Business.Validator;
@@ -63,7 +64,7 @@ namespace MOS.Api.Controllers
         public async Task<ApiResponse<List<ExpenseResponse>>> GetExpenseParameter(
             [FromQuery] string? ExpenseName,
             [FromQuery] int? PersonalNumber,
-            [FromQuery] int? ApprovalStatus,
+            [FromQuery] ApprovalStatus? ApprovalStatus,
             [FromQuery] int? MinAmount,
             [FromQuery] int? MaxAmount,
             [FromQuery] DateTime? afterthedate,
@@ -72,12 +73,12 @@ namespace MOS.Api.Controllers
             var operation = new GetExpenseByParameterQuery(
                 ExpenseName: ExpenseName,
                 PersonalNumber:PersonalNumber,
-                ApprovalStatus: ApprovalStatus,
+                ApprovalStatus: (int?)ApprovalStatus,
                 Min: MinAmount,
                 Max: MaxAmount,
                 afterdate: afterthedate,
-                beforedate:beforethedate
-                );
+                beforedate:beforethedate);
+
             var result = await mediator.Send(operation);
             return result;
         }
@@ -126,8 +127,8 @@ namespace MOS.Api.Controllers
         [HttpPost("Report")]
         public async Task<ApiResponse<ReportResponse>> GetReprot([FromBody] ReportRequest request)
         {
-            // AdminExpenseValidator validations = new();
-            // validations.ValidateAndThrow(request);
+            ReportValidator validations = new();
+            validations.ValidateAndThrow(request);
 
             var operation = new GetReportQuery(request);
             var result = await mediator.Send(operation);

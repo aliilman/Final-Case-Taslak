@@ -17,7 +17,7 @@ namespace MOS.Business.Query;
 public class ExpenseQueryHandler :
         IRequestHandler<GetAllOwnExpenseQuery, ApiResponse<List<ExpenseResponse>>>,
         IRequestHandler<GetOwnExpenseByIdQuery, ApiResponse<ExpenseResponse>>,
-        IRequestHandler<GetOwnExpenseByParameterQuery, ApiResponse<List<ExpenseResponse>>>,
+        //IRequestHandler<GetOwnExpenseByParameterQuery, ApiResponse<List<ExpenseResponse>>>,
         IRequestHandler<GetAllExpenseQuery, ApiResponse<List<ExpenseResponse>>>,
         IRequestHandler<GetExpenseByIdQuery, ApiResponse<ExpenseResponse>>,
         IRequestHandler<GetExpenseByParameterQuery, ApiResponse<List<ExpenseResponse>>>
@@ -60,28 +60,7 @@ public class ExpenseQueryHandler :
         return new ApiResponse<ExpenseResponse>(mapped);
     }
 
-    public async Task<ApiResponse<List<ExpenseResponse>>> Handle(GetOwnExpenseByParameterQuery request,
-        CancellationToken cancellationToken)
-    {
-        var predicate = PredicateBuilder.New<Expense>(true);
-        if (!string.IsNullOrEmpty(request.ExpenseName))
-            predicate.And(x => x.ExpenseName.ToUpper().Contains(request.ExpenseName.ToUpper()));
-
-        if (request.ApprovalStatus != null)
-            predicate.And(x => ((int)x.ApprovalStatus) == request.ApprovalStatus);
-
-        var list = await dbContext.Set<Expense>().Where(x => x.PersonalNumber == request.PersonalNumber)
-            .Where(predicate).ToListAsync(cancellationToken);
-
-        if (list == null)
-        {
-            return new ApiResponse<List<ExpenseResponse>>("Record not found");
-        }
-
-        var mappedList = mapper.Map<List<Expense>, List<ExpenseResponse>>(list);
-        return new ApiResponse<List<ExpenseResponse>>(mappedList);
-    }
-
+    
     public async Task<ApiResponse<List<ExpenseResponse>>> Handle(GetAllExpenseQuery request,
         CancellationToken cancellationToken)
     {
@@ -155,6 +134,28 @@ public class ExpenseQueryHandler :
         var mappedList = mapper.Map<List<Expense>, List<ExpenseResponse>>(list);
         return new ApiResponse<List<ExpenseResponse>>(mappedList);
     }
+
+    // public async Task<ApiResponse<List<ExpenseResponse>>> Handle(GetOwnExpenseByParameterQuery request,
+    //     CancellationToken cancellationToken)
+    // {
+    //     var predicate = PredicateBuilder.New<Expense>(true);
+    //     if (!string.IsNullOrEmpty(request.ExpenseName))
+    //         predicate.And(x => x.ExpenseName.ToUpper().Contains(request.ExpenseName.ToUpper()));
+
+    //     if (request.ApprovalStatus != null)
+    //         predicate.And(x => ((int)x.ApprovalStatus) == request.ApprovalStatus);
+
+    //     var list = await dbContext.Set<Expense>().Where(x => x.PersonalNumber == request.PersonalNumber)
+    //         .Where(predicate).ToListAsync(cancellationToken);
+
+    //     if (list == null)
+    //     {
+    //         return new ApiResponse<List<ExpenseResponse>>("Record not found");
+    //     }
+
+    //     var mappedList = mapper.Map<List<Expense>, List<ExpenseResponse>>(list);
+    //     return new ApiResponse<List<ExpenseResponse>>(mappedList);
+    // }
 
 
 }

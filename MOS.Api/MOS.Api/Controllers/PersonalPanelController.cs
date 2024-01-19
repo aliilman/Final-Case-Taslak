@@ -4,6 +4,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using MOS.Base.Enum;
 using MOS.Base.Response;
 using MOS.Business.Cqrs;
 using MOS.Business.Validator;
@@ -46,22 +47,34 @@ public class PersonalPanelController : ControllerBase
 
     [HttpGet("GetOwnExpenseParameter")]
     public async Task<ApiResponse<List<ExpenseResponse>>> GetExpenseParameter(
-        [FromQuery] string? Name,
-        [FromQuery] int? ApprovalStatus)
+        [FromQuery] string? ExpenseName,
+        [FromQuery] ApprovalStatus? ApprovalStatus,
+        [FromQuery] int? MinAmount,
+        [FromQuery] int? MaxAmount,
+        [FromQuery] DateTime? afterthedate,
+        [FromQuery] DateTime? beforethedate)
     {
+
         string PersonalNumber = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
-        var operation = new GetOwnExpenseByParameterQuery(
+
+        var operation = new GetExpenseByParameterQuery(
             PersonalNumber: int.Parse(PersonalNumber),
-            ExpenseName: Name,
-            ApprovalStatus: ApprovalStatus);
+            ExpenseName: ExpenseName,
+            ApprovalStatus: (int?)ApprovalStatus,
+            Min: MinAmount,
+            Max: MaxAmount,
+            afterdate: afterthedate,
+            beforedate: beforethedate);
+
         var result = await mediator.Send(operation);
+
         return result;
     }
 
     [HttpPost("CreateExpense")]
     public async Task<ApiResponse<ExpenseResponse>> CreateExpense([FromBody] PersonalExpenseRequest Expense)
     {
-        PersonalExpenseValidator validations =new();
+        PersonalExpenseValidator validations = new();
         validations.ValidateAndThrow(Expense);
 
         string PersonalNumber = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
@@ -70,23 +83,43 @@ public class PersonalPanelController : ControllerBase
         return result;
     }
 
-    [HttpPut("UpdateExpense/{id}")]
-    public async Task<ApiResponse> UpdateExpense(int id, [FromBody] PersonalExpenseRequest Expense)
+    [HttpPut("UpdateOwnExpense/{id}")]
+    public async Task<ApiResponse> UpdateOwnExpense(int id, [FromBody] PersonalExpenseRequest Expense)
     {
-        PersonalExpenseValidator validations =new();
+        PersonalExpenseValidator validations = new();
         validations.ValidateAndThrow(Expense);
-        
+
         string PersonalNumber = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
         var operation = new UpdateExpenseCommand(PersonalNumber: int.Parse(PersonalNumber), id, Expense);
         var result = await mediator.Send(operation);
         return result;
     }
 
-    [HttpDelete("DeleteExpense/{id}")]
-    public async Task<ApiResponse> DeleteExpense(int id)
+    [HttpDelete("DeleteOwnExpense/{id}")]
+    public async Task<ApiResponse> DeleteOwnExpense(int id)
     {
         string PersonalNumber = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
         var operation = new DeleteExpenseCommand(PersonalNumber: int.Parse(PersonalNumber), id);
+        var result = await mediator.Send(operation);
+        return result;
+    }
+
+    [HttpPost("PersonalReport")]
+    public async Task<ApiResponse<ReportResponse>> GetPersonalReport([FromBody] ReportRequestForOnePersonal request)
+    {
+        ReportRequestForOnePersonalValidator validations = new();
+        validations.ValidateAndThrow(request);
+        string PersonalNumber = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
+
+        List<int> PersonalNumberList = new List<int>();
+        PersonalNumberList.Add(int.Parse(PersonalNumber)); 
+        ReportRequest reportRequest = new()
+        {
+            StartExpenceDate=request.StartExpenceDate,
+            EndExpenceDate= request.EndExpenceDate,
+            PersonalNumberList=PersonalNumberList
+        };
+        var operation = new GetReportQuery(reportRequest);
         var result = await mediator.Send(operation);
         return result;
     }

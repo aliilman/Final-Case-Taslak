@@ -749,3 +749,16 @@ System.InvalidOperationException: An exception was thrown while attempting to ev
 2024-01-18 19:12:37.396 [INF] [Request] Http POST - /api/Token/TakeToken
 2024-01-18 19:12:38.390 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 993,8734 ms.
 2024-01-18 19:12:38.394 [INF] HTTP POST /api/Token/TakeToken responded 200 in 1064.1473 ms
+2024-01-18 22:55:34.938 [WRN] Failed to determine the https port for redirect.
+2024-01-18 22:55:35.163 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-18 22:55:38.063 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 2896,9644 ms.
+2024-01-18 22:55:38.067 [INF] HTTP POST /api/Token/TakeToken responded 200 in 3135.8546 ms
+2024-01-18 22:56:54.761 [INF] [Request] Http POST - /api/PersonalPanel/CreateExpense
+2024-01-18 22:57:17.215 [INF] [Response] Http POST - /api/PersonalPanel/CreateExpense - Responded 200 in 22453,9284 ms.
+2024-01-18 22:57:17.215 [INF] HTTP POST /api/PersonalPanel/CreateExpense responded 200 in 22524.1921 ms
+2024-01-18 22:58:02.338 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-18 22:58:02.376 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 38,0772 ms.
+2024-01-18 22:58:02.376 [INF] HTTP POST /api/Token/TakeToken responded 200 in 44.8838 ms
+2024-01-18 22:58:40.056 [INF] [Request] Http POST - /api/AdminPanel/ApproveById/21
+2024-01-18 23:00:15.711 [INF] [Response] Http POST - /api/AdminPanel/ApproveById/21 - Responded 200 in 95655,1978 ms.
+2024-01-18 23:00:15.712 [INF] HTTP POST /api/AdminPanel/ApproveById/21 responded 200 in 95658.3817 ms

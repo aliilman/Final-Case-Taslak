@@ -1,0 +1,334 @@
+2024-01-19 02:30:48.515 [WRN] Failed to determine the https port for redirect.
+2024-01-19 02:30:48.633 [INF] [Request] Http GET - /favicon.ico
+2024-01-19 02:30:48.635 [INF] [Response] Http GET - /favicon.ico - Responded 404 in 1,5779 ms.
+2024-01-19 02:30:48.637 [INF] HTTP GET /favicon.ico responded 404 in 124.1868 ms
+2024-01-19 02:48:06.875 [INF] [Request] Http OPTIONS - /swagger/index.html
+2024-01-19 02:48:06.878 [INF] [Response] Http OPTIONS - /swagger/index.html - Responded 404 in 2,9691 ms.
+2024-01-19 02:48:06.878 [INF] HTTP OPTIONS /swagger/index.html responded 404 in 4.8409 ms
+2024-01-19 02:48:20.660 [INF] [Request] Http OPTIONS - /swagger/v1/swagger.json
+2024-01-19 02:48:20.660 [INF] [Response] Http OPTIONS - /swagger/v1/swagger.json - Responded 404 in 0,4884 ms.
+2024-01-19 02:48:20.660 [INF] HTTP OPTIONS /swagger/v1/swagger.json responded 404 in 2.5177 ms
+2024-01-19 16:20:21.122 [WRN] Failed to determine the https port for redirect.
+2024-01-19 16:20:21.265 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-19 16:20:23.014 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 1748,332 ms.
+2024-01-19 16:20:23.017 [INF] HTTP POST /api/Token/TakeToken responded 200 in 1898.6548 ms
+2024-01-19 16:24:54.652 [WRN] Failed to determine the https port for redirect.
+2024-01-19 16:24:54.725 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-19 16:24:55.899 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 1173,4371 ms.
+2024-01-19 16:24:55.903 [INF] HTTP POST /api/Token/TakeToken responded 200 in 1253.1071 ms
+2024-01-19 16:25:40.695 [INF] [Request] Http GET - /api/PersonalPanel/GetOwnExpenseParameter
+2024-01-19 16:25:40.890 [INF] [Response] Http GET - /api/PersonalPanel/GetOwnExpenseParameter - Responded 200 in 195,3837 ms.
+2024-01-19 16:25:40.892 [INF] HTTP GET /api/PersonalPanel/GetOwnExpenseParameter responded 200 in 233.4608 ms
+2024-01-19 16:26:04.967 [INF] [Request] Http GET - /api/PersonalPanel/GetOwnExpenseParameter
+2024-01-19 16:26:04.988 [INF] [Response] Http GET - /api/PersonalPanel/GetOwnExpenseParameter - Responded 200 in 21,2796 ms.
+2024-01-19 16:26:04.989 [INF] HTTP GET /api/PersonalPanel/GetOwnExpenseParameter responded 200 in 27.8265 ms
+2024-01-19 16:26:09.162 [INF] [Request] Http GET - /api/PersonalPanel/GetOwnExpenseParameter
+2024-01-19 16:26:09.169 [INF] [Response] Http GET - /api/PersonalPanel/GetOwnExpenseParameter - Responded 200 in 7,7966 ms.
+2024-01-19 16:26:09.172 [INF] HTTP GET /api/PersonalPanel/GetOwnExpenseParameter responded 200 in 11.7558 ms
+2024-01-19 16:26:16.389 [INF] [Request] Http GET - /api/PersonalPanel/GetOwnExpenseParameter
+2024-01-19 16:26:16.392 [INF] [Response] Http GET - /api/PersonalPanel/GetOwnExpenseParameter - Responded 200 in 3,5946 ms.
+2024-01-19 16:26:16.394 [INF] HTTP GET /api/PersonalPanel/GetOwnExpenseParameter responded 200 in 5.0359 ms
+2024-01-19 16:26:26.350 [INF] [Request] Http DELETE - /api/PersonalPanel/DeleteOwnExpense/20
+2024-01-19 16:26:27.771 [INF] [Response] Http DELETE - /api/PersonalPanel/DeleteOwnExpense/20 - Responded 200 in 1421,5106 ms.
+2024-01-19 16:26:27.773 [INF] HTTP DELETE /api/PersonalPanel/DeleteOwnExpense/20 responded 200 in 1423.4799 ms
+2024-01-19 16:26:45.041 [INF] [Request] Http DELETE - /api/PersonalPanel/DeleteOwnExpense/21
+2024-01-19 16:26:45.050 [INF] [Response] Http DELETE - /api/PersonalPanel/DeleteOwnExpense/21 - Responded 200 in 9,3565 ms.
+2024-01-19 16:26:45.052 [INF] HTTP DELETE /api/PersonalPanel/DeleteOwnExpense/21 responded 200 in 11.2487 ms
+2024-01-19 16:36:22.913 [INF] [Request] Http DELETE - /api/PersonalPanel/DeleteOwnExpense/20
+2024-01-19 16:36:22.926 [INF] [Response] Http DELETE - /api/PersonalPanel/DeleteOwnExpense/20 - Responded 200 in 12,9394 ms.
+2024-01-19 16:36:22.928 [INF] HTTP DELETE /api/PersonalPanel/DeleteOwnExpense/20 responded 200 in 16.3270 ms
+2024-01-19 16:51:42.243 [WRN] Failed to determine the https port for redirect.
+2024-01-19 16:51:42.360 [INF] [Request] Http GET - /api/PersonalPanel/GetOwnExpenseParameter
+2024-01-19 16:51:43.504 [INF] [Response] Http GET - /api/PersonalPanel/GetOwnExpenseParameter - Responded 200 in 1144,4779 ms.
+2024-01-19 16:51:43.509 [INF] HTTP GET /api/PersonalPanel/GetOwnExpenseParameter responded 200 in 1267.8246 ms
+2024-01-19 16:51:57.244 [INF] [Request] Http GET - /api/PersonalPanel/GetOwnExpenseParameter
+2024-01-19 16:51:57.323 [INF] [Response] Http GET - /api/PersonalPanel/GetOwnExpenseParameter - Responded 200 in 79,4587 ms.
+2024-01-19 16:51:57.325 [INF] HTTP GET /api/PersonalPanel/GetOwnExpenseParameter responded 200 in 86.1997 ms
+2024-01-19 16:52:03.353 [INF] [Request] Http GET - /api/PersonalPanel/GetOwnExpenseParameter
+2024-01-19 16:52:03.380 [INF] [Response] Http GET - /api/PersonalPanel/GetOwnExpenseParameter - Responded 200 in 26,4507 ms.
+2024-01-19 16:52:03.383 [INF] HTTP GET /api/PersonalPanel/GetOwnExpenseParameter responded 200 in 32.1941 ms
+2024-01-19 17:58:30.052 [INF] HTTP POST /api/AdminPanel/Report responded 403 in 3.9818 ms
+2024-01-19 17:58:41.200 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-19 17:58:41.673 [INF] [Response] Http POST - /api/AdminPanel/Report - Responded 200 in 472,9978 ms.
+2024-01-19 17:58:41.674 [INF] HTTP POST /api/AdminPanel/Report responded 200 in 475.7134 ms
+2024-01-19 17:59:09.133 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-19 17:59:09.187 [INF] [Response] Http POST - /api/AdminPanel/Report - Responded 200 in 53,8481 ms.
+2024-01-19 17:59:09.188 [INF] HTTP POST /api/AdminPanel/Report responded 200 in 55.4180 ms
+2024-01-19 18:03:08.190 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-19 18:03:08.218 [INF] [Response] Http POST - /api/AdminPanel/Report - Responded 200 in 27,9417 ms.
+2024-01-19 18:03:08.220 [INF] HTTP POST /api/AdminPanel/Report responded 200 in 30.2396 ms
+2024-01-19 18:05:40.758 [WRN] Failed to determine the https port for redirect.
+2024-01-19 18:05:40.970 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-19 18:05:56.450 [WRN] Failed to determine the https port for redirect.
+2024-01-19 18:05:56.574 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-19 18:05:56.974 [INF] [Response] Http POST - /api/AdminPanel/Report - Responded 200 in 399,5257 ms.
+2024-01-19 18:05:56.977 [INF] HTTP POST /api/AdminPanel/Report responded 200 in 528.5842 ms
+2024-01-19 18:20:51.050 [WRN] Failed to determine the https port for redirect.
+2024-01-19 18:20:51.206 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-19 18:20:52.503 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 1296,2367 ms.
+2024-01-19 18:20:52.506 [INF] HTTP POST /api/Token/TakeToken responded 200 in 1460.7833 ms
+2024-01-19 18:21:30.991 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 18:21:31.020 [ERR] UnexpectedError
+FluentValidation.ValidationException: Validation failed: 
+ -- : The StartExpenceDate must be less than the enddate. Severity: Error
+ -- : The StartExpenceDate must be less than the DateTime.NOW. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 531
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 258
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /_/src/FluentValidation/AbstractValidator.cs:line 202
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(IValidationContext context) in /_/src/FluentValidation/AbstractValidator.cs:line 153
+   at FluentValidation.DefaultValidatorExtensions.Validate[T](IValidator`1 validator, T instance, Action`1 options) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 38
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrow[T](IValidator`1 validator, T instance) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 59
+   at MOS.Api.Controllers.PersonalPanelController.GetPersonalReport(ReportRequestForOnePersonal request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\PersonalPanelController.cs:line 111
+   at lambda_method91(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-19 18:21:31.153 [FTL] Path=/api/PersonalPanel/PersonalReport || Method=POST || Exception=Validation failed: 
+ -- : The StartExpenceDate must be less than the enddate. Severity: Error
+ -- : The StartExpenceDate must be less than the DateTime.NOW. Severity: ErrorMiliseconds=23,8059 ms
+2024-01-19 18:21:31.305 [ERR] HTTP POST /api/PersonalPanel/PersonalReport responded 500 in 319.6897 ms
+2024-01-19 18:23:30.366 [WRN] Failed to determine the https port for redirect.
+2024-01-19 18:23:30.547 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 18:23:30.683 [ERR] UnexpectedError
+FluentValidation.ValidationException: Validation failed: 
+ -- : The StartExpenceDate must be less than the enddate. Severity: Error
+ -- : The StartExpenceDate must be less than the DateTime.NOW. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 531
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 258
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /_/src/FluentValidation/AbstractValidator.cs:line 202
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(IValidationContext context) in /_/src/FluentValidation/AbstractValidator.cs:line 153
+   at FluentValidation.DefaultValidatorExtensions.Validate[T](IValidator`1 validator, T instance, Action`1 options) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 38
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrow[T](IValidator`1 validator, T instance) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 59
+   at MOS.Api.Controllers.PersonalPanelController.GetPersonalReport(ReportRequestForOnePersonal request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\PersonalPanelController.cs:line 111
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-19 18:23:30.716 [FTL] Path=/api/PersonalPanel/PersonalReport || Method=POST || Exception=Validation failed: 
+ -- : The StartExpenceDate must be less than the enddate. Severity: Error
+ -- : The StartExpenceDate must be less than the DateTime.NOW. Severity: ErrorMiliseconds=130,9707 ms
+2024-01-19 18:23:30.810 [ERR] HTTP POST /api/PersonalPanel/PersonalReport responded 500 in 446.2563 ms
+2024-01-19 18:25:05.111 [WRN] Failed to determine the https port for redirect.
+2024-01-19 18:25:05.255 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 18:25:05.343 [ERR] UnexpectedError
+FluentValidation.ValidationException: Validation failed: 
+ -- : The StartExpenceDate must be less than the enddate. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 531
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 258
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /_/src/FluentValidation/AbstractValidator.cs:line 202
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(IValidationContext context) in /_/src/FluentValidation/AbstractValidator.cs:line 153
+   at FluentValidation.DefaultValidatorExtensions.Validate[T](IValidator`1 validator, T instance, Action`1 options) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 38
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrow[T](IValidator`1 validator, T instance) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 59
+   at MOS.Api.Controllers.PersonalPanelController.GetPersonalReport(ReportRequestForOnePersonal request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\PersonalPanelController.cs:line 111
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-19 18:25:05.367 [FTL] Path=/api/PersonalPanel/PersonalReport || Method=POST || Exception=Validation failed: 
+ -- : The StartExpenceDate must be less than the enddate. Severity: ErrorMiliseconds=86,24 ms
+2024-01-19 18:25:05.442 [ERR] HTTP POST /api/PersonalPanel/PersonalReport responded 500 in 332.2449 ms
+2024-01-19 18:25:44.874 [WRN] Failed to determine the https port for redirect.
+2024-01-19 18:25:45.033 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 18:25:45.118 [ERR] UnexpectedError
+FluentValidation.ValidationException: Validation failed: 
+ -- : The StartExpenceDate must be less than the enddate. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 531
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 258
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /_/src/FluentValidation/AbstractValidator.cs:line 202
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(IValidationContext context) in /_/src/FluentValidation/AbstractValidator.cs:line 153
+   at FluentValidation.DefaultValidatorExtensions.Validate[T](IValidator`1 validator, T instance, Action`1 options) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 38
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrow[T](IValidator`1 validator, T instance) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 59
+   at MOS.Api.Controllers.PersonalPanelController.GetPersonalReport(ReportRequestForOnePersonal request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\PersonalPanelController.cs:line 111
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-19 18:25:45.138 [FTL] Path=/api/PersonalPanel/PersonalReport || Method=POST || Exception=Validation failed: 
+ -- : The StartExpenceDate must be less than the enddate. Severity: ErrorMiliseconds=83,2147 ms
+2024-01-19 18:25:45.220 [ERR] HTTP POST /api/PersonalPanel/PersonalReport responded 500 in 348.2241 ms
+2024-01-19 19:03:04.076 [WRN] Failed to determine the https port for redirect.
+2024-01-19 19:03:04.213 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 19:03:04.970 [INF] [Response] Http POST - /api/PersonalPanel/PersonalReport - Responded 200 in 756,7605 ms.
+2024-01-19 19:03:04.973 [INF] HTTP POST /api/PersonalPanel/PersonalReport responded 200 in 897.8653 ms
+2024-01-19 19:03:19.966 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 19:03:19.982 [ERR] UnexpectedError
+FluentValidation.ValidationException: Validation failed: 
+ -- :  The StartExpenceDate must be less than the enddate - The StartExpenceDate must be less than the DateTime.NOW. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 531
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 258
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /_/src/FluentValidation/AbstractValidator.cs:line 202
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(IValidationContext context) in /_/src/FluentValidation/AbstractValidator.cs:line 153
+   at FluentValidation.DefaultValidatorExtensions.Validate[T](IValidator`1 validator, T instance, Action`1 options) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 38
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrow[T](IValidator`1 validator, T instance) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 59
+   at MOS.Api.Controllers.PersonalPanelController.GetPersonalReport(ReportRequestForOnePersonal request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\PersonalPanelController.cs:line 111
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-19 19:03:20.088 [FTL] Path=/api/PersonalPanel/PersonalReport || Method=POST || Exception=Validation failed: 
+ -- :  The StartExpenceDate must be less than the enddate - The StartExpenceDate must be less than the DateTime.NOW. Severity: ErrorMiliseconds=14,3327 ms
+2024-01-19 19:03:20.232 [ERR] HTTP POST /api/PersonalPanel/PersonalReport responded 500 in 269.6692 ms
+2024-01-19 19:03:34.598 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 19:03:34.613 [INF] [Response] Http POST - /api/PersonalPanel/PersonalReport - Responded 200 in 14,9939 ms.
+2024-01-19 19:03:34.615 [INF] HTTP POST /api/PersonalPanel/PersonalReport responded 200 in 19.7672 ms
+2024-01-19 19:05:01.560 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 19:05:01.563 [ERR] UnexpectedError
+FluentValidation.ValidationException: Validation failed: 
+ -- :  The StartExpenceDate must be less than the enddate - The StartExpenceDate must be less than the DateTime.NOW. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 531
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 258
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /_/src/FluentValidation/AbstractValidator.cs:line 202
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(IValidationContext context) in /_/src/FluentValidation/AbstractValidator.cs:line 153
+   at FluentValidation.DefaultValidatorExtensions.Validate[T](IValidator`1 validator, T instance, Action`1 options) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 38
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrow[T](IValidator`1 validator, T instance) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 59
+   at MOS.Api.Controllers.PersonalPanelController.GetPersonalReport(ReportRequestForOnePersonal request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\PersonalPanelController.cs:line 111
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-19 19:05:01.572 [FTL] Path=/api/PersonalPanel/PersonalReport || Method=POST || Exception=Validation failed: 
+ -- :  The StartExpenceDate must be less than the enddate - The StartExpenceDate must be less than the DateTime.NOW. Severity: ErrorMiliseconds=2,2752 ms
+2024-01-19 19:05:01.576 [ERR] HTTP POST /api/PersonalPanel/PersonalReport responded 500 in 16.1448 ms
+2024-01-19 19:05:09.529 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 19:05:09.546 [INF] [Response] Http POST - /api/PersonalPanel/PersonalReport - Responded 200 in 16,5053 ms.
+2024-01-19 19:05:09.547 [INF] HTTP POST /api/PersonalPanel/PersonalReport responded 200 in 18.5946 ms
+2024-01-19 19:11:19.410 [WRN] Failed to determine the https port for redirect.
+2024-01-19 19:11:19.531 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 19:11:19.605 [ERR] UnexpectedError
+FluentValidation.ValidationException: Validation failed: 
+ -- :  The StartExpenceDate must be less than the enddate - The StartExpenceDate must be less than the DateTime.NOW. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 531
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 258
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /_/src/FluentValidation/AbstractValidator.cs:line 202
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(IValidationContext context) in /_/src/FluentValidation/AbstractValidator.cs:line 153
+   at FluentValidation.DefaultValidatorExtensions.Validate[T](IValidator`1 validator, T instance, Action`1 options) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 38
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrow[T](IValidator`1 validator, T instance) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 59
+   at MOS.Api.Controllers.PersonalPanelController.GetPersonalReport(ReportRequestForOnePersonal request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\PersonalPanelController.cs:line 111
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-19 19:11:19.624 [FTL] Path=/api/PersonalPanel/PersonalReport || Method=POST || Exception=Validation failed: 
+ -- :  The StartExpenceDate must be less than the enddate - The StartExpenceDate must be less than the DateTime.NOW. Severity: ErrorMiliseconds=73,1428 ms
+2024-01-19 19:11:19.692 [ERR] HTTP POST /api/PersonalPanel/PersonalReport responded 500 in 283.1735 ms
+2024-01-19 19:11:33.821 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 19:11:34.087 [INF] [Response] Http POST - /api/PersonalPanel/PersonalReport - Responded 200 in 266,5103 ms.
+2024-01-19 19:11:34.090 [INF] HTTP POST /api/PersonalPanel/PersonalReport responded 200 in 273.3254 ms
+2024-01-19 19:11:43.884 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 19:11:43.911 [INF] [Response] Http POST - /api/PersonalPanel/PersonalReport - Responded 200 in 26,3978 ms.
+2024-01-19 19:11:43.912 [INF] HTTP POST /api/PersonalPanel/PersonalReport responded 200 in 30.6352 ms
+2024-01-19 19:12:23.486 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 19:12:23.491 [INF] [Response] Http POST - /api/PersonalPanel/PersonalReport - Responded 200 in 5,2303 ms.
+2024-01-19 19:12:23.492 [INF] HTTP POST /api/PersonalPanel/PersonalReport responded 200 in 7.1649 ms
+2024-01-19 19:12:35.353 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 19:12:35.355 [ERR] UnexpectedError
+FluentValidation.ValidationException: Validation failed: 
+ -- :  The StartExpenceDate must be less than the enddate - The StartExpenceDate must be less than the DateTime.NOW. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 531
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 258
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /_/src/FluentValidation/AbstractValidator.cs:line 202
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(IValidationContext context) in /_/src/FluentValidation/AbstractValidator.cs:line 153
+   at FluentValidation.DefaultValidatorExtensions.Validate[T](IValidator`1 validator, T instance, Action`1 options) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 38
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrow[T](IValidator`1 validator, T instance) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 59
+   at MOS.Api.Controllers.PersonalPanelController.GetPersonalReport(ReportRequestForOnePersonal request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\PersonalPanelController.cs:line 111
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-19 19:12:35.363 [FTL] Path=/api/PersonalPanel/PersonalReport || Method=POST || Exception=Validation failed: 
+ -- :  The StartExpenceDate must be less than the enddate - The StartExpenceDate must be less than the DateTime.NOW. Severity: ErrorMiliseconds=2,0752 ms
+2024-01-19 19:12:35.365 [ERR] HTTP POST /api/PersonalPanel/PersonalReport responded 500 in 12.3817 ms
+2024-01-19 19:14:42.024 [WRN] Failed to determine the https port for redirect.
+2024-01-19 19:14:42.148 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 19:14:42.213 [ERR] UnexpectedError
+FluentValidation.ValidationException: Validation failed: 
+ -- :  The StartExpenceDate must be less than the enddate - The StartExpenceDate must be less than the DateTime.NOW. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 531
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 258
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /_/src/FluentValidation/AbstractValidator.cs:line 202
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(IValidationContext context) in /_/src/FluentValidation/AbstractValidator.cs:line 153
+   at FluentValidation.DefaultValidatorExtensions.Validate[T](IValidator`1 validator, T instance, Action`1 options) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 38
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrow[T](IValidator`1 validator, T instance) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 59
+   at MOS.Api.Controllers.PersonalPanelController.GetPersonalReport(ReportRequestForOnePersonal request) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Controllers\PersonalPanelController.cs:line 111
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MOS.Middleware.CustomExceptionMiddleware.Invoke(HttpContext context) in c:\Users\Ali\Desktop\Final-Case-Taslak\MOS.Api\MOS.Api\Middleware\CustomExceptionMiddleware.cs:line 22
+2024-01-19 19:14:42.234 [FTL] Path=/api/PersonalPanel/PersonalReport || Method=POST || Exception=Validation failed: 
+ -- :  The StartExpenceDate must be less than the enddate - The StartExpenceDate must be less than the DateTime.NOW. Severity: ErrorMiliseconds=62,6562 ms
+2024-01-19 19:14:42.305 [ERR] HTTP POST /api/PersonalPanel/PersonalReport responded 500 in 280.8500 ms
+2024-01-19 19:14:50.916 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-19 19:14:51.219 [INF] [Response] Http POST - /api/PersonalPanel/PersonalReport - Responded 200 in 302,6071 ms.
+2024-01-19 19:14:51.221 [INF] HTTP POST /api/PersonalPanel/PersonalReport responded 200 in 308.6045 ms

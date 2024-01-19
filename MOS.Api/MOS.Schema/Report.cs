@@ -11,6 +11,11 @@ namespace MOS.Schema
         public DateTime? EndExpenceDate { get; set; }// harcama tarih araliği için bitiş tarihi
         public List<int> PersonalNumberList { get; set; } // İstenen Personaller
     }
+    public class ReportRequestForOnePersonal
+    {
+        public DateTime? StartExpenceDate { get; set; } // harcama tarih aralığı için başlangıç tarihi
+        public DateTime? EndExpenceDate { get; set; }// harcama tarih araliği için bitiş tarihi
+    }
     public class ReportResponse
     {
         public string RaporName { get; set; }// rapor adı
@@ -34,7 +39,7 @@ namespace MOS.Schema
         public decimal RejectedSpentMoney { get; set; } // personalin toplam reddedilen
         public List<ExpenseResponse> WaitingExpenseList { get; set; } //beliritlen tarihler arasında beklemde olan
         public List<ExpenseResponse> AproveedExpenseList { get; set; }// belirtilen tarihler arasında onaylanmış olan
-        public List<ExpenseResponse> RejecetExpenseList { get; set; } // belirtilen tarihler arasında reddilmiş olan
         public List<PaymentResponse> PaymentList { get; set; } // belirtilen tarihler arasında oluşturulmuş olan 
+        public List<ExpenseResponse> RejecetExpenseList { get; set; } // belirtilen tarihler arasında reddilmiş olan
     }
 }
