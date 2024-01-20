@@ -17,9 +17,14 @@ namespace MOS.Business.Validator
             .WithMessage(" The StartExpenceDate must be less than the enddate - The StartExpenceDate must be less than the DateTime.NOW.");
             //içeriklerin boş geliği durumlar için senaryolar geliştirilmiştir. O yüzden konraol edilmemiştir.   
         }
-         private bool Datetimevalidate(DateTime? StartExpenceDate, DateTime? EndExpenceDate)
+        private bool Datetimevalidate(DateTime? StartExpenceDate, DateTime? EndExpenceDate)
         {
-            if (StartExpenceDate != null && EndExpenceDate != null && (StartExpenceDate > EndExpenceDate || StartExpenceDate > DateTime.Now.AddMinutes(1)))
+            //ikisin de null oluğu durum için işlem yapılabilir durumdadır.
+            //ikisinin de null olamdığı durumlarda bu koşullar sağlanmalıdır
+            if (!(StartExpenceDate == null && EndExpenceDate == null) &&
+             (StartExpenceDate > EndExpenceDate ||
+              StartExpenceDate > DateTime.Now.AddMinutes(1) ||
+              EndExpenceDate > DateTime.Now.AddMinutes(1)))
             {
                 return false;
             }

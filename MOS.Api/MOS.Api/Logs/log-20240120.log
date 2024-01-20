@@ -1,0 +1,33 @@
+2024-01-20 00:12:50.223 [WRN] Failed to determine the https port for redirect.
+2024-01-20 00:12:50.404 [INF] HTTP GET /api/AdminPanel/MyProfile responded 401 in 183.2009 ms
+2024-01-20 00:13:00.452 [INF] HTTP GET /api/AdminPanel/MyProfile responded 401 in 4.8850 ms
+2024-01-20 00:13:26.028 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-20 00:13:27.863 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 1834,7837 ms.
+2024-01-20 00:13:27.865 [INF] HTTP POST /api/Token/TakeToken responded 200 in 1838.6997 ms
+2024-01-20 00:13:45.979 [INF] [Request] Http GET - /api/AdminPanel/MyProfile
+2024-01-20 00:13:46.044 [INF] [Response] Http GET - /api/AdminPanel/MyProfile - Responded 200 in 64,6933 ms.
+2024-01-20 00:13:46.044 [INF] HTTP GET /api/AdminPanel/MyProfile responded 200 in 110.4685 ms
+2024-01-20 00:45:27.638 [INF] [Request] Http GET - /api/AdminPanel/GetAllExpense
+2024-01-20 00:45:27.750 [INF] [Response] Http GET - /api/AdminPanel/GetAllExpense - Responded 200 in 112,6626 ms.
+2024-01-20 00:45:27.751 [INF] HTTP GET /api/AdminPanel/GetAllExpense responded 200 in 114.2537 ms
+2024-01-20 00:47:55.717 [INF] [Request] Http GET - /api/AdminPanel/GetExpenseById/1
+2024-01-20 00:47:55.739 [INF] [Response] Http GET - /api/AdminPanel/GetExpenseById/1 - Responded 200 in 21,7575 ms.
+2024-01-20 00:47:55.739 [INF] HTTP GET /api/AdminPanel/GetExpenseById/1 responded 200 in 23.9292 ms
+2024-01-20 00:48:53.770 [INF] [Request] Http GET - /api/AdminPanel/GetAllExpense
+2024-01-20 00:48:53.780 [INF] [Response] Http GET - /api/AdminPanel/GetAllExpense - Responded 200 in 9,2787 ms.
+2024-01-20 00:48:53.780 [INF] HTTP GET /api/AdminPanel/GetAllExpense responded 200 in 35.9284 ms
+2024-01-20 01:53:47.323 [WRN] Failed to determine the https port for redirect.
+2024-01-20 01:53:47.440 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-20 01:53:48.886 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 1444,9178 ms.
+2024-01-20 01:53:48.888 [INF] HTTP POST /api/Token/TakeToken responded 200 in 1567.3027 ms
+2024-01-20 01:54:08.597 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
+2024-01-20 01:54:18.872 [INF] [Response] Http POST - /api/PersonalPanel/PersonalReport - Responded 200 in 10274,9466 ms.
+2024-01-20 01:54:18.872 [INF] HTTP POST /api/PersonalPanel/PersonalReport responded 200 in 10327.4047 ms
+2024-01-20 02:54:25.081 [WRN] Failed to determine the https port for redirect.
+2024-01-20 02:54:25.170 [INF] HTTP POST /api/AdminPanel/Report responded 401 in 91.4393 ms
+2024-01-20 02:54:48.778 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-20 02:54:49.943 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 1164,8862 ms.
+2024-01-20 02:54:49.945 [INF] HTTP POST /api/Token/TakeToken responded 200 in 1171.6334 ms
+2024-01-20 02:55:02.480 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-20 02:55:02.724 [INF] [Response] Http POST - /api/AdminPanel/Report - Responded 200 in 243,5111 ms.
+2024-01-20 02:55:02.725 [INF] HTTP POST /api/AdminPanel/Report responded 200 in 291.9717 ms

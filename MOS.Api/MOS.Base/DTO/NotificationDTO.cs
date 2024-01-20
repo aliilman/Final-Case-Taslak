@@ -9,7 +9,7 @@ namespace MOS.Base.DTO
     {
         public string Title { get; set; }
         public string Content { get; set; }
-        public string EmployeRole { get; set; }
+        public string EmployeRole { get; set; } 
         public int EmployeNumber { get; set; }
 
     }

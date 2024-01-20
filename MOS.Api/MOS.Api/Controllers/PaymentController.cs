@@ -44,8 +44,8 @@ public class PaymentController : ControllerBase
         return result;
     }
 
-    [HttpGet("GetPersonaByParameter")]
-    public async Task<ApiResponse<List<PaymentResponse>>> GetPersonaByParameter(
+    [HttpGet("GetPaymentByParameter")]
+    public async Task<ApiResponse<List<PaymentResponse>>> GetPaymentByParameter(
         [FromQuery] string? IBAN,
         [FromQuery] int? Min,
         [FromQuery] int? Max)

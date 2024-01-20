@@ -332,3 +332,25 @@ FluentValidation.ValidationException: Validation failed:
 2024-01-19 19:14:50.916 [INF] [Request] Http POST - /api/PersonalPanel/PersonalReport
 2024-01-19 19:14:51.219 [INF] [Response] Http POST - /api/PersonalPanel/PersonalReport - Responded 200 in 302,6071 ms.
 2024-01-19 19:14:51.221 [INF] HTTP POST /api/PersonalPanel/PersonalReport responded 200 in 308.6045 ms
+2024-01-19 20:38:51.484 [WRN] Failed to determine the https port for redirect.
+2024-01-19 20:38:51.613 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-19 20:38:51.965 [INF] [Response] Http POST - /api/AdminPanel/Report - Responded 200 in 351,9542 ms.
+2024-01-19 20:38:51.968 [INF] HTTP POST /api/AdminPanel/Report responded 200 in 485.0213 ms
+2024-01-19 20:59:54.025 [INF] [Request] Http GET - /api/Employee/GetAllAdmin
+2024-01-19 20:59:55.215 [INF] [Response] Http GET - /api/Employee/GetAllAdmin - Responded 200 in 1190,5059 ms.
+2024-01-19 20:59:55.218 [INF] HTTP GET /api/Employee/GetAllAdmin responded 200 in 1198.0529 ms
+2024-01-19 21:00:15.111 [INF] [Request] Http GET - /api/Employee/GetAdminParameter
+2024-01-19 21:00:15.333 [INF] [Response] Http GET - /api/Employee/GetAdminParameter - Responded 200 in 221,2762 ms.
+2024-01-19 21:00:15.335 [INF] HTTP GET /api/Employee/GetAdminParameter responded 200 in 227.1516 ms
+2024-01-19 21:02:05.165 [INF] [Request] Http GET - /favicon.ico
+2024-01-19 21:02:05.166 [INF] [Response] Http GET - /favicon.ico - Responded 404 in 1,0252 ms.
+2024-01-19 21:02:05.167 [INF] HTTP GET /favicon.ico responded 404 in 4.1107 ms
+2024-01-19 21:03:38.418 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-19 21:03:38.485 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 67,1103 ms.
+2024-01-19 21:03:38.487 [INF] HTTP POST /api/Token/TakeToken responded 200 in 69.2067 ms
+2024-01-19 21:11:08.682 [INF] [Request] Http POST - /api/Employee/CreateAdmin
+2024-01-19 21:11:08.816 [INF] [Response] Http POST - /api/Employee/CreateAdmin - Responded 200 in 133,5871 ms.
+2024-01-19 21:11:08.817 [INF] HTTP POST /api/Employee/CreateAdmin responded 200 in 136.0360 ms
+2024-01-19 21:13:39.180 [INF] [Request] Http GET - /api/Payment/GetAllPayment
+2024-01-19 21:13:39.211 [INF] [Response] Http GET - /api/Payment/GetAllPayment - Responded 200 in 31,6349 ms.
+2024-01-19 21:13:39.213 [INF] HTTP GET /api/Payment/GetAllPayment responded 200 in 34.5422 ms

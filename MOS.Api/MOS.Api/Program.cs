@@ -35,11 +35,11 @@ builder.Host.UseSerilog((context, configuration) =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
         {
-            c.SwaggerDoc("v1", new OpenApiInfo { Title = "Vb Api Management", Version = "v1.0" });
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "Masraf Odeme Sitemi Management", Version = "v1.0" });
 
             var securityScheme = new OpenApiSecurityScheme
             {
-                Name = "Vb Management for IT Company",
+                Name = "Masraf Odeme Sitemi for Akbank Bootcamp",
                 Description = "Enter JWT Bearer token **_only_**",
                 In = ParameterLocation.Header,
                 Type = SecuritySchemeType.Http,

@@ -82,7 +82,7 @@ namespace MOS.Api.Controllers
             var result = await mediator.Send(operation);
             return result;
         }
-        [HttpGet("ApproveWaitingExpense")]
+        [HttpPost("ApproveWaitingExpense")]
         public async Task<ApiResponse<List<ExpenseResponse>>> GetApproveWaitingExpense()
         {
             var operation = new GetExpenseByParameterQuery(
