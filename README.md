@@ -8,8 +8,7 @@ https://docs.google.com/document/d/1KVlnjHXq-ycsa81-50Ql2FtGAjLAEoVtLac-SLWIJGs/
 
 Projeye Ait APİ Dokümantasyonu:
 
-[https://web.postman.co/documentation/32455003-111c6cf2-6521-4c45-9bb9-0123c2b0a2cd/publish?workspaceId=50829f1c-2a0a-4bda-8ce8-eb792075a32f#seo](https://documenter.getpostman.com/view/32455003/2s9YsT68u6)
-
+https://documenter.getpostman.com/view/32455003/2s9YsT68u6
 --------------------------------------------------------------------------------
 Kurulum sonrası appsettings.json üzerinden gerekli Veritabanı bağlantılarını oluşturun
 RabbitMQ için kendi kullanığım sunucuyu kullanıcı adı ve şifreyi aynen appsettings.json a bıraktım. 
