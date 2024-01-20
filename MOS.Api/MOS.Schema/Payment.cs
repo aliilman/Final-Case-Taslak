@@ -11,7 +11,7 @@ namespace MOS.Schema
         [JsonIgnore]
         public int PaymentId { get; set; }
         public int ExpenseId { get; set; }
-        public virtual ExpenseResponse Expense { get; set; }
+       // public virtual ExpenseResponse Expense { get; set; }
 
         public string IBAN { get; set; }
         public decimal PaymentAmount { get; set; }
@@ -25,7 +25,7 @@ namespace MOS.Schema
     {
         public int PaymentId { get; set; }
         public int ExpenseId { get; set; }
-        public virtual ExpenseResponse Expense { get; set; }
+        //public virtual ExpenseResponse Expense { get; set; }
 
         public string IBAN { get; set; }
         public decimal PaymentAmount { get; set; }

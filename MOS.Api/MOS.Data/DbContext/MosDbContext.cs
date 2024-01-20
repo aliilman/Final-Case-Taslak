@@ -27,7 +27,8 @@ public class MosDbContext : DbContext
         modelBuilder.ApplyConfiguration(new PersonalConfiguration());
 
         base.OnModelCreating(modelBuilder);
-
+        
+        //Modelde hazır gelecek veriler
         modelBuilder.Entity<Admin>().HasData(
             new Admin() 
             { 

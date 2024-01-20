@@ -19,21 +19,19 @@ namespace MOS.Data.Entity
     {
         public void Configure(EntityTypeBuilder<Admin> builder)
         {
-            //builder.Property(x => x.UserId).ValueGeneratedNever();//patladı
+
 
             builder.Property(x => x.AdminNumber).IsRequired(true);
 
-            // builder.Property(x => x.UserId).IsRequired(true);
+
             builder.Property(x => x.UserName).IsRequired(true).HasMaxLength(100);
             builder.Property(x => x.Password).IsRequired(true).HasMaxLength(50);
             builder.Property(x => x.FirstName).IsRequired(false).HasMaxLength(50);
             builder.Property(x => x.LastName).IsRequired(false).HasMaxLength(50);
             builder.Property(x => x.Email).IsRequired(false).HasMaxLength(100); ;
-            //builder.Property(x => x.Role).IsRequired(false).HasDefaultValue("Personal");
-            //builder.Property(x => x.IsActive).IsRequired(true).HasDefaultValue(true);
 
             builder.HasIndex(x => x.AdminNumber).IsUnique(true);
-            // builder.HasIndex(x => x.UserId).IsUnique(true);
+
             builder.HasKey(x => x.AdminNumber);
 
         }

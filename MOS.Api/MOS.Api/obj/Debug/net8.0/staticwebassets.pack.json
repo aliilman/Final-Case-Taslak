@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\uploads\\88ff7d06-1be3-45d2-996d-6067c4938e67_300_Akbank_Odev-1_2241a85fb3444bc4bfafafd7def020fd.pdf"
     },
     {
+      "Id": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\uploads\\a4abd3c2-3f1f-4d8e-899c-6f73a651a23f_ÖrnekFiş.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a4abd3c2-3f1f-4d8e-899c-6f73a651a23f_ÖrnekFiş.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MOS.Api.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

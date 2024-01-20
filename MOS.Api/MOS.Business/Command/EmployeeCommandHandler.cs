@@ -133,7 +133,7 @@ namespace MOS.Business.Command
 
         public async Task<ApiResponse> Handle(UpdateAdminCommand request, CancellationToken cancellationToken)
         {
-            var fromdb = await dbContext.Set<Personal>().Where(x => x.PersonalNumber == request.Id)
+            var fromdb = await dbContext.Set<Admin>().Where(x => x.AdminNumber == request.Id)
                 .FirstOrDefaultAsync(cancellationToken);
             if (fromdb == null)
             {
@@ -153,7 +153,7 @@ namespace MOS.Business.Command
 
         public async Task<ApiResponse> Handle(DeleteAdminCommand request, CancellationToken cancellationToken)
         {
-            var fromdb = await dbContext.Set<Personal>().Where(x => x.PersonalNumber == request.Id)
+            var fromdb = await dbContext.Set<Admin>().Where(x => x.AdminNumber == request.Id)
                  .FirstOrDefaultAsync(cancellationToken);
 
             if (fromdb == null)
@@ -163,7 +163,7 @@ namespace MOS.Business.Command
 
             //fromdb.IsActive = false;
 
-            dbContext.Personals.Remove(fromdb); //hard delate işlemi
+            dbContext.Admins.Remove(fromdb); //hard delate işlemi
             await dbContext.SaveChangesAsync(cancellationToken);
             return new ApiResponse();
         }

@@ -31,6 +31,8 @@ public class EmployeeQueryHandler :
         this.mapper = mapper;
     }
 
+    //Admin rolündeki çalışanlar için işlemler
+    //GetAllAdmin
     public async Task<ApiResponse<List<AdminResponse>>> Handle(GetAllAdminQuery request,
         CancellationToken cancellationToken)
     {
@@ -39,7 +41,7 @@ public class EmployeeQueryHandler :
         var mappedList = mapper.Map<List<Admin>, List<AdminResponse>>(list);
         return new ApiResponse<List<AdminResponse>>(mappedList);
     }
-
+    //GetAdminById
     public async Task<ApiResponse<AdminResponse>> Handle(GetAdminByIdQuery request,
         CancellationToken cancellationToken)
     {
@@ -54,7 +56,7 @@ public class EmployeeQueryHandler :
         var mapped = mapper.Map<Admin, AdminResponse>(entity);
         return new ApiResponse<AdminResponse>(mapped);
     }
-
+    //GetAdminByParameter
     public async Task<ApiResponse<List<AdminResponse>>> Handle(GetAdminByParameterQuery request,
         CancellationToken cancellationToken)
     {
@@ -78,6 +80,8 @@ public class EmployeeQueryHandler :
         return new ApiResponse<List<AdminResponse>>(mappedList);
     }
 
+    //Personall rolu için işlemler
+    //GetAllPersonal
     public async Task<ApiResponse<List<PersonalResponse>>> Handle(GetAllPersonalQuery request, CancellationToken cancellationToken)
     {
         var list = await dbContext.Set<Personal>().ToListAsync(cancellationToken);
@@ -86,6 +90,7 @@ public class EmployeeQueryHandler :
         return new ApiResponse<List<PersonalResponse>>(mappedList);
     }
 
+    //GetPersonalById
     public async Task<ApiResponse<PersonalResponse>> Handle(GetPersonalByIdQuery request, CancellationToken cancellationToken)
     {
         var entity = await dbContext.Set<Personal>()
@@ -99,6 +104,7 @@ public class EmployeeQueryHandler :
         return new ApiResponse<PersonalResponse>(mapped);
     }
 
+    //GetPersonalByParameter
     public async Task<ApiResponse<List<PersonalResponse>>> Handle(GetPersonalByParameterQuery request, CancellationToken cancellationToken)
     {
         var predicate = PredicateBuilder.New<Personal>(true);

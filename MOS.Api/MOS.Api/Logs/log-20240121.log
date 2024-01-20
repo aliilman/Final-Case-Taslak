@@ -1,0 +1,78 @@
+2024-01-21 00:00:55.291 [INF] [Request] Http GET - /api/Employee/GetAdminById/2
+2024-01-21 00:00:55.318 [INF] [Response] Http GET - /api/Employee/GetAdminById/2 - Responded 200 in 26,9522 ms.
+2024-01-21 00:00:55.320 [INF] HTTP GET /api/Employee/GetAdminById/2 responded 200 in 31.0585 ms
+2024-01-21 00:02:02.034 [INF] [Request] Http GET - /api/Employee/GetAdminParameter
+2024-01-21 00:02:02.083 [INF] [Response] Http GET - /api/Employee/GetAdminParameter - Responded 200 in 48,1684 ms.
+2024-01-21 00:02:02.084 [INF] HTTP GET /api/Employee/GetAdminParameter responded 200 in 49.8724 ms
+2024-01-21 00:04:45.224 [INF] [Request] Http POST - /api/Employee/CreateAdmin
+2024-01-21 00:04:45.282 [INF] [Response] Http POST - /api/Employee/CreateAdmin - Responded 200 in 58,259 ms.
+2024-01-21 00:04:45.283 [INF] HTTP POST /api/Employee/CreateAdmin responded 200 in 60.1475 ms
+2024-01-21 00:06:32.294 [INF] [Request] Http PUT - /api/Employee/UpdateAdmin/4
+2024-01-21 00:06:32.317 [INF] [Response] Http PUT - /api/Employee/UpdateAdmin/4 - Responded 200 in 22,8465 ms.
+2024-01-21 00:06:32.319 [INF] HTTP PUT /api/Employee/UpdateAdmin/4 responded 200 in 25.0283 ms
+2024-01-21 00:08:30.751 [WRN] Failed to determine the https port for redirect.
+2024-01-21 00:08:30.908 [INF] [Request] Http PUT - /api/Employee/UpdateAdmin/4
+2024-01-21 00:08:32.310 [INF] [Response] Http PUT - /api/Employee/UpdateAdmin/4 - Responded 200 in 1400,6939 ms.
+2024-01-21 00:08:32.314 [INF] HTTP PUT /api/Employee/UpdateAdmin/4 responded 200 in 1565.0840 ms
+2024-01-21 00:10:52.248 [INF] [Request] Http DELETE - /api/Employee/DeleteAdmin/4
+2024-01-21 00:10:52.312 [INF] [Response] Http DELETE - /api/Employee/DeleteAdmin/4 - Responded 200 in 64,3795 ms.
+2024-01-21 00:10:52.314 [INF] HTTP DELETE /api/Employee/DeleteAdmin/4 responded 200 in 70.8990 ms
+2024-01-21 00:11:40.607 [WRN] Failed to determine the https port for redirect.
+2024-01-21 00:11:40.734 [INF] [Request] Http DELETE - /api/Employee/DeleteAdmin/4
+2024-01-21 00:11:41.775 [INF] [Response] Http DELETE - /api/Employee/DeleteAdmin/4 - Responded 200 in 1040,3178 ms.
+2024-01-21 00:11:41.778 [INF] HTTP DELETE /api/Employee/DeleteAdmin/4 responded 200 in 1173.9433 ms
+2024-01-21 00:13:04.388 [INF] [Request] Http GET - /api/Employee/GetAllPersonal
+2024-01-21 00:13:04.477 [INF] [Response] Http GET - /api/Employee/GetAllPersonal - Responded 200 in 88,1825 ms.
+2024-01-21 00:13:04.479 [INF] HTTP GET /api/Employee/GetAllPersonal responded 200 in 95.8982 ms
+2024-01-21 00:13:58.592 [INF] [Request] Http GET - /api/Employee/GetPersonalById/6
+2024-01-21 00:13:58.633 [INF] [Response] Http GET - /api/Employee/GetPersonalById/6 - Responded 200 in 41,6299 ms.
+2024-01-21 00:13:58.635 [INF] HTTP GET /api/Employee/GetPersonalById/6 responded 200 in 45.6695 ms
+2024-01-21 00:15:01.834 [INF] [Request] Http GET - /api/Employee/GetPersonaByParameter
+2024-01-21 00:15:01.928 [INF] [Response] Http GET - /api/Employee/GetPersonaByParameter - Responded 200 in 93,4274 ms.
+2024-01-21 00:15:01.929 [INF] HTTP GET /api/Employee/GetPersonaByParameter responded 200 in 95.0443 ms
+2024-01-21 00:16:30.207 [INF] [Request] Http POST - /api/Employee/CreatePersonal
+2024-01-21 00:16:30.297 [INF] [Response] Http POST - /api/Employee/CreatePersonal - Responded 200 in 89,6729 ms.
+2024-01-21 00:16:30.298 [INF] HTTP POST /api/Employee/CreatePersonal responded 200 in 91.3376 ms
+2024-01-21 00:18:09.739 [INF] [Request] Http PUT - /api/Employee/UpdatePersonal/7
+2024-01-21 00:18:09.765 [INF] [Response] Http PUT - /api/Employee/UpdatePersonal/7 - Responded 200 in 25,4322 ms.
+2024-01-21 00:18:09.767 [INF] HTTP PUT /api/Employee/UpdatePersonal/7 responded 200 in 27.6226 ms
+2024-01-21 00:19:00.895 [INF] [Request] Http DELETE - /api/Employee/DeletePersonal/7
+2024-01-21 00:19:00.942 [INF] [Response] Http DELETE - /api/Employee/DeletePersonal/7 - Responded 200 in 46,1982 ms.
+2024-01-21 00:19:00.943 [INF] HTTP DELETE /api/Employee/DeletePersonal/7 responded 200 in 47.7173 ms
+2024-01-21 00:21:49.468 [INF] [Request] Http GET - /api/File/downloadByPath
+2024-01-21 00:21:49.502 [INF] [Response] Http GET - /api/File/downloadByPath - Responded 200 in 33,9477 ms.
+2024-01-21 00:21:49.504 [INF] HTTP GET /api/File/downloadByPath responded 200 in 36.8192 ms
+2024-01-21 00:38:04.417 [INF] [Request] Http GET - /api/Payment/GetAllPayment
+2024-01-21 00:38:04.473 [INF] [Response] Http GET - /api/Payment/GetAllPayment - Responded 200 in 55,9661 ms.
+2024-01-21 00:38:04.475 [INF] HTTP GET /api/Payment/GetAllPayment responded 200 in 58.2970 ms
+2024-01-21 00:38:24.008 [INF] [Request] Http GET - /api/Payment/GetPaymentById/3
+2024-01-21 00:38:24.030 [INF] [Response] Http GET - /api/Payment/GetPaymentById/3 - Responded 200 in 22,0448 ms.
+2024-01-21 00:38:24.033 [INF] HTTP GET /api/Payment/GetPaymentById/3 responded 200 in 26.1170 ms
+2024-01-21 00:38:45.147 [INF] [Request] Http GET - /api/Payment/GetPaymentById/4
+2024-01-21 00:38:45.153 [INF] [Response] Http GET - /api/Payment/GetPaymentById/4 - Responded 200 in 5,8129 ms.
+2024-01-21 00:38:45.155 [INF] HTTP GET /api/Payment/GetPaymentById/4 responded 200 in 7.9223 ms
+2024-01-21 00:39:23.788 [INF] [Request] Http GET - /api/Payment/GetPaymentByParameter
+2024-01-21 00:39:23.817 [INF] [Response] Http GET - /api/Payment/GetPaymentByParameter - Responded 200 in 29,4143 ms.
+2024-01-21 00:39:23.819 [INF] HTTP GET /api/Payment/GetPaymentByParameter responded 200 in 31.5671 ms
+2024-01-21 00:39:42.257 [INF] [Request] Http GET - /api/Payment/GetPaymentByParameter
+2024-01-21 00:39:42.281 [INF] [Response] Http GET - /api/Payment/GetPaymentByParameter - Responded 200 in 23,4825 ms.
+2024-01-21 00:39:42.282 [INF] HTTP GET /api/Payment/GetPaymentByParameter responded 200 in 24.7748 ms
+2024-01-21 00:39:51.181 [INF] [Request] Http GET - /api/Payment/GetPaymentByParameter
+2024-01-21 00:39:51.186 [INF] [Response] Http GET - /api/Payment/GetPaymentByParameter - Responded 200 in 5,1363 ms.
+2024-01-21 00:39:51.188 [INF] HTTP GET /api/Payment/GetPaymentByParameter responded 200 in 7.5598 ms
+2024-01-21 00:40:32.488 [INF] [Request] Http GET - /api/Payment/GetPaymentByParameter
+2024-01-21 00:40:32.494 [INF] [Response] Http GET - /api/Payment/GetPaymentByParameter - Responded 200 in 6,0577 ms.
+2024-01-21 00:40:32.495 [INF] HTTP GET /api/Payment/GetPaymentByParameter responded 200 in 7.7934 ms
+2024-01-21 00:40:42.859 [INF] [Request] Http GET - /api/Payment/GetPaymentByParameter
+2024-01-21 00:40:42.862 [INF] [Response] Http GET - /api/Payment/GetPaymentByParameter - Responded 200 in 2,7852 ms.
+2024-01-21 00:40:42.863 [INF] HTTP GET /api/Payment/GetPaymentByParameter responded 200 in 4.0676 ms
+2024-01-21 01:31:44.595 [WRN] Failed to determine the https port for redirect.
+2024-01-21 01:31:44.705 [INF] [Request] Http POST - /api/Payment/CreatePayment
+2024-01-21 01:31:45.819 [INF] [Response] Http POST - /api/Payment/CreatePayment - Responded 200 in 1113,3057 ms.
+2024-01-21 01:31:45.823 [INF] HTTP POST /api/Payment/CreatePayment responded 200 in 1231.5499 ms
+2024-01-21 01:33:09.432 [INF] [Request] Http PUT - /api/Payment/UpdatePayment/6
+2024-01-21 01:33:09.517 [INF] [Response] Http PUT - /api/Payment/UpdatePayment/6 - Responded 200 in 84,1621 ms.
+2024-01-21 01:33:09.518 [INF] HTTP PUT /api/Payment/UpdatePayment/6 responded 200 in 90.6080 ms
+2024-01-21 01:33:36.206 [INF] [Request] Http DELETE - /api/Payment/DeletePayment/6
+2024-01-21 01:33:36.238 [INF] [Response] Http DELETE - /api/Payment/DeletePayment/6 - Responded 200 in 31,5861 ms.
+2024-01-21 01:33:36.239 [INF] HTTP DELETE /api/Payment/DeletePayment/6 responded 200 in 36.0258 ms

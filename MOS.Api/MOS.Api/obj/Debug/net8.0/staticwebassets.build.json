@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BQDgkchVDw4avCG7Y8OenMD/uGJaLocLLCRhiVpFp0Q=",
+  "Hash": "KJSmICkIAg7bNOpkv8q73qGNeRYSlJkDaIxGyRLwpfU=",
   "Source": "MOS.Api",
   "BasePath": "_content/MOS.Api",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\88ff7d06-1be3-45d2-996d-6067c4938e67_300_Akbank_Odev-1_2241a85fb3444bc4bfafafd7def020fd.pdf"
+    },
+    {
+      "Identity": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\uploads\\a4abd3c2-3f1f-4d8e-899c-6f73a651a23f_ÖrnekFiş.jpg",
+      "SourceId": "MOS.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\",
+      "BasePath": "_content/MOS.Api",
+      "RelativePath": "uploads/a4abd3c2-3f1f-4d8e-899c-6f73a651a23f_ÖrnekFiş.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\a4abd3c2-3f1f-4d8e-899c-6f73a651a23f_ÖrnekFiş.jpg"
     }
   ]
 }

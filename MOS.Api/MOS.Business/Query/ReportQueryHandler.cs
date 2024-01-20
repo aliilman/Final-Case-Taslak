@@ -1,13 +1,8 @@
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using Dapper;
 using MediatR;
 using Microsoft.Extensions.Configuration;
-using Microsoft.VisualBasic;
 using MOS.Base.Response;
 using MOS.Business.Cqrs;
 using MOS.Data;
@@ -29,11 +24,11 @@ namespace MOS.Business.Query
             _configuration = configuration;
         }
 
+        // Burası Dapper kullanımı için tasarlanmıştır.
         public async Task<ApiResponse<ReportResponse>> Handle(GetReportQuery request, CancellationToken cancellationToken)
         {
             ReportResponse reportResponse = new ReportResponse
             {
-                // Diğer özellikleri başlatın
                 ReportEachPersonalList = new List<ReportEachPersonal>()
             };
 
@@ -48,12 +43,12 @@ namespace MOS.Business.Query
             {
                 EndExpenceDate = request.Model.EndExpenceDate;
             }
-
+            
             string connectionString = _configuration.GetValue<string>("ConnectionStrings:MsSqlConnection");
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                // Dapper'ı kullanarak sorguyu çalıştırma
+
                 if (request.Model.PersonalNumberList.Count == 0) // liste boş ise tüm çalışanları getir
                 {
                     request.Model.PersonalNumberList = connection.Query<int>("SELECT PersonalNumber FROM Personal").ToList();
@@ -63,14 +58,14 @@ namespace MOS.Business.Query
 
                     ReportEachPersonal reportEachPersonal = new ReportEachPersonal();
 
-                    //personal
+                    //İlgili Personal bilgilerinin getirilmesi
                     string personalquery = @"SELECT *
                         FROM dbo.Personal
                         WHERE PersonalNumber = @PersonalNumber";
                     Personal personal = connection.Query<Personal>(personalquery, new { PersonalNumber = PNumber }).FirstOrDefault();
                     reportEachPersonal.PersonalResponse = mapper.Map<Personal, PersonalResponse>(personal);
 
-                    //WaitingExpenseList
+                    //İlgili Personal için WaitingExpenseList sorgusu
                     string query = @"SELECT *
                         FROM dbo.Expense
                         WHERE PersonalNumber = @PersonalNumber
@@ -83,8 +78,7 @@ namespace MOS.Business.Query
                          PersonalNumber = PNumber,
                          StartExpenceDate = StartExpenceDate,
                          EndExpenceDate = EndExpenceDate,
-                         //  StartDecisionDate = StartDecisionDate,
-                         //  EndDecisionDate = EndDecisionDate
+
                      }).ToList();
                     reportEachPersonal.WaitingExpenseList = mapper.Map<List<Expense>, List<ExpenseResponse>>(WaitingExpenseList);
 
@@ -107,8 +101,7 @@ namespace MOS.Business.Query
                         PersonalNumber = PNumber,
                         StartExpenceDate = StartExpenceDate,
                         EndExpenceDate = EndExpenceDate,
-                        // StartDecisionDate = StartDecisionDate,
-                        // EndDecisionDate = EndDecisionDate
+
                     }).ToList();
                     reportEachPersonal.AproveedExpenseList = mapper.Map<List<Expense>, List<ExpenseResponse>>(AproveedExpenseList);
                     foreach (var item in AproveedExpenseList)
@@ -117,6 +110,7 @@ namespace MOS.Business.Query
                         reportResponse.TotalMoneySpentByPersonals += item.ExpenseAmount;
                         reportResponse.TotalApprovedSpentMoney += item.ExpenseAmount;
                     }
+                    
                     //RejecetExpenseList
                     query = @"SELECT *
                         FROM dbo.Expense
@@ -130,8 +124,6 @@ namespace MOS.Business.Query
                         PersonalNumber = PNumber,
                         StartExpenceDate = StartExpenceDate,
                         EndExpenceDate = EndExpenceDate,
-                        // StartDecisionDate = StartDecisionDate,
-                        // EndDecisionDate = EndDecisionDate
                     }).ToList();
                     reportEachPersonal.RejecetExpenseList = mapper.Map<List<Expense>, List<ExpenseResponse>>(RejecetExpenseList);
                     foreach (var item in RejecetExpenseList)
@@ -162,11 +154,11 @@ namespace MOS.Business.Query
                     reportEachPersonal.PaymentList = mapper.Map<List<Payment>, List<PaymentResponse>>(PaymentList);
 
                     // Personali Rapora ekle
-
                     reportResponse.ReportEachPersonalList.Add(reportEachPersonal);
                 }
 
             }
+            //Raporun özelliklerini belirleme
             reportResponse.ReportCrateDate = DateTime.Now;
             reportResponse.StartTheDate = (DateTime)StartExpenceDate;
             reportResponse.EndTheDate = (DateTime)EndExpenceDate;

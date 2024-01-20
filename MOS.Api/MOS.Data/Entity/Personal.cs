@@ -22,22 +22,18 @@ public class PersonalConfiguration : IEntityTypeConfiguration<Personal>
 {
     public void Configure(EntityTypeBuilder<Personal> builder)
     {
-        //builder.Property(x => x.UserId).ValueGeneratedNever();//patladı
 
-        //builder.Property(x => x.UserId).IsRequired(true);
         builder.Property(x => x.UserName).IsRequired(true).HasMaxLength(100);
         builder.Property(x => x.Password).IsRequired(true).HasMaxLength(50);
         builder.Property(x => x.FirstName).IsRequired(false).HasMaxLength(50);
         builder.Property(x => x.LastName).IsRequired(false).HasMaxLength(50);
         builder.Property(x => x.Email).IsRequired(false).HasMaxLength(100);
-        //builder.Property(x => x.Role).IsRequired(false).HasDefaultValue("Personal");
-        //builder.Property(x => x.IsActive).IsRequired(true).HasDefaultValue(true);
+
 
         builder.Property(x => x.PersonalNumber).IsRequired(true);
         builder.Property(x => x.IBAN).IsRequired(true).HasMaxLength(34);
 
         builder.HasIndex(x => x.PersonalNumber).IsUnique(true);
-        //builder.HasIndex(x => x.UserId).IsUnique(true);
         builder.HasKey(x => x.PersonalNumber);
 
         builder.HasMany(x => x.Expense)

@@ -59,7 +59,7 @@ namespace MOS.Data.Entity
 
 
             builder.HasIndex(x => x.PersonalNumber);
-            //builder.HasIndex(x => x.AdminNumber);
+
             builder.HasIndex(x => x.ExpenseId).IsUnique(true);
             builder.HasKey(x => x.ExpenseId);
 

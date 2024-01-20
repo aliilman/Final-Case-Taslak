@@ -18,7 +18,6 @@ namespace MOS.Schema
 
         // public ApprovalStatus ApprovalStatus { get; set; }
         // public DateTime ExpenseCreateDate { get; set; } // harcama zamanı
-
         public string ExpenseName { get; set; }
         public string ExpenseCategory { get; set; }
 
@@ -27,7 +26,8 @@ namespace MOS.Schema
         public string InvoiceImageFilePath { get; set; } //fiş veya fatura resmi yüklenmiş kabul edildi
         public string? Location { get; set; }
 
-        // public int? DeciderAdminNumber { get; set; }=null;
+        // Admin tarafından eklencek şeyler
+        // public int? DeciderAdminNumber { get; set; }
         // public virtual Admin Admin { get; set; }
         // public string? DecisionDescription { get; set; }
         // public DateTime? DecisionDate { get; set; }

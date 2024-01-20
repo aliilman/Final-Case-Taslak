@@ -30,6 +30,8 @@ public class ExpenseQueryHandler :
         this.dbContext = dbContext;
         this.mapper = mapper;
     }
+    // Personaller adına yürütülen Expence işlemleri
+    //GetAllOwnExpense
     public async Task<ApiResponse<List<ExpenseResponse>>> Handle(GetAllOwnExpenseQuery request,
         CancellationToken cancellationToken)
     {
@@ -45,6 +47,7 @@ public class ExpenseQueryHandler :
         return new ApiResponse<List<ExpenseResponse>>(mappedList);
     }
 
+    //GetOwnExpenseById
     public async Task<ApiResponse<ExpenseResponse>> Handle(GetOwnExpenseByIdQuery request,
         CancellationToken cancellationToken)
     {
@@ -59,8 +62,8 @@ public class ExpenseQueryHandler :
         var mapped = mapper.Map<Expense, ExpenseResponse>(entity);
         return new ApiResponse<ExpenseResponse>(mapped);
     }
-
-    
+    // Adminler adına yürütülen Expence işlemleri
+    //GetAllExpense
     public async Task<ApiResponse<List<ExpenseResponse>>> Handle(GetAllExpenseQuery request,
         CancellationToken cancellationToken)
     {
@@ -74,6 +77,8 @@ public class ExpenseQueryHandler :
         return new ApiResponse<List<ExpenseResponse>>(mappedList);
     }
 
+
+    //GetExpenseById
     public async Task<ApiResponse<ExpenseResponse>> Handle(GetExpenseByIdQuery request,
         CancellationToken cancellationToken)
     {
@@ -89,9 +94,11 @@ public class ExpenseQueryHandler :
         return new ApiResponse<ExpenseResponse>(mapped);
     }
 
+    // Expenseler için filtreleme işlerini burada yürütmekteyiz
     public async Task<ApiResponse<List<ExpenseResponse>>> Handle(GetExpenseByParameterQuery request,
         CancellationToken cancellationToken)
     {
+        // Kullanıcıdan gelen istelerin doğrulanması için ön koşular test edilmektedir.
         if (request.Min != null && request.Max != null && request.Min > request.Max)
         {
             return new ApiResponse<List<ExpenseResponse>>($" {request.Min} - {request.Max} range is invalid. Please check");
@@ -100,6 +107,7 @@ public class ExpenseQueryHandler :
         {
             return new ApiResponse<List<ExpenseResponse>>($" {request.afterdate} - {request.beforedate} range is invalid. Please check");
         }
+        // linqKit kullanarak kullanıcıdan gelen kriterlere göre db sorgumuzu düzenliyoruz.
         var predicate = PredicateBuilder.New<Expense>(true);
         if (!string.IsNullOrEmpty(request.ExpenseName))
             predicate.And(x => x.ExpenseName.ToUpper().Contains(request.ExpenseName.ToUpper()));
@@ -122,7 +130,6 @@ public class ExpenseQueryHandler :
         if (request.beforedate != null)
             predicate.And(x => x.ExpenseCreateDate < request.beforedate);
 
-
         var list = await dbContext.Set<Expense>()
             .Where(predicate).ToListAsync(cancellationToken);
 
@@ -134,7 +141,8 @@ public class ExpenseQueryHandler :
         var mappedList = mapper.Map<List<Expense>, List<ExpenseResponse>>(list);
         return new ApiResponse<List<ExpenseResponse>>(mappedList);
     }
-
+    // Kod tekrarının önüne geçmek açacıyla Bu işlevleri kapsayan başka fonsiyonu kullanıyoruz
+    // Varlığının bilinmesi için silinmemiştir.
     // public async Task<ApiResponse<List<ExpenseResponse>>> Handle(GetOwnExpenseByParameterQuery request,
     //     CancellationToken cancellationToken)
     // {
