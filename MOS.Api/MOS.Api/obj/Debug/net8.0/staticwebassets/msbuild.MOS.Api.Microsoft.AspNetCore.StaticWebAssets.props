@@ -1,5 +1,21 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\16d34852-16a4-4b86-9ba5-95dc769f13c8_a4abd3c2-3f1f-4d8e-899c-6f73a651a23f_ÖrnekFiş.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>MOS.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MOS.Api</BasePath>
+      <RelativePath>uploads/16d34852-16a4-4b86-9ba5-95dc769f13c8_a4abd3c2-3f1f-4d8e-899c-6f73a651a23f_ÖrnekFiş.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\16d34852-16a4-4b86-9ba5-95dc769f13c8_a4abd3c2-3f1f-4d8e-899c-6f73a651a23f_ÖrnekFiş.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\799f7b3d-7b46-4728-a756-3445f0ff97d1_fatura-av-asilcan-tuzcu.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>MOS.Api</SourceId>

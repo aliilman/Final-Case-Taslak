@@ -76,3 +76,34 @@
 2024-01-21 01:33:36.206 [INF] [Request] Http DELETE - /api/Payment/DeletePayment/6
 2024-01-21 01:33:36.238 [INF] [Response] Http DELETE - /api/Payment/DeletePayment/6 - Responded 200 in 31,5861 ms.
 2024-01-21 01:33:36.239 [INF] HTTP DELETE /api/Payment/DeletePayment/6 responded 200 in 36.0258 ms
+2024-01-21 18:16:10.252 [WRN] Failed to determine the https port for redirect.
+2024-01-21 18:16:10.349 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-21 18:16:11.798 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 1448,1549 ms.
+2024-01-21 18:16:11.801 [INF] HTTP POST /api/Token/TakeToken responded 200 in 1553.3109 ms
+2024-01-21 18:16:37.530 [INF] [Request] Http POST - /api/Token/TakeToken
+2024-01-21 18:16:37.610 [INF] [Response] Http POST - /api/Token/TakeToken - Responded 200 in 80,5039 ms.
+2024-01-21 18:16:37.612 [INF] HTTP POST /api/Token/TakeToken responded 200 in 85.1721 ms
+2024-01-21 18:36:11.796 [INF] [Request] Http POST - /api/File/UploadFile
+2024-01-21 18:36:11.850 [INF] [Response] Http POST - /api/File/UploadFile - Responded 200 in 54,0524 ms.
+2024-01-21 18:36:11.852 [INF] HTTP POST /api/File/UploadFile responded 200 in 106.8680 ms
+2024-01-21 18:36:20.829 [INF] [Request] Http POST - /api/PersonalPanel/CreateExpense
+2024-01-21 18:36:22.495 [INF] [Response] Http POST - /api/PersonalPanel/CreateExpense - Responded 200 in 1665,9017 ms.
+2024-01-21 18:36:22.497 [INF] HTTP POST /api/PersonalPanel/CreateExpense responded 200 in 1670.2225 ms
+2024-01-21 18:36:48.427 [INF] [Request] Http POST - /api/AdminPanel/ApproveWaitingExpense
+2024-01-21 18:36:48.545 [INF] [Response] Http POST - /api/AdminPanel/ApproveWaitingExpense - Responded 200 in 118,3414 ms.
+2024-01-21 18:36:48.547 [INF] HTTP POST /api/AdminPanel/ApproveWaitingExpense responded 200 in 125.0353 ms
+2024-01-21 18:37:13.823 [INF] [Request] Http POST - /api/AdminPanel/ApproveById/23
+2024-01-21 18:37:14.382 [INF] [Response] Http POST - /api/AdminPanel/ApproveById/23 - Responded 200 in 559,1116 ms.
+2024-01-21 18:37:14.384 [INF] HTTP POST /api/AdminPanel/ApproveById/23 responded 200 in 562.9338 ms
+2024-01-21 18:38:10.874 [INF] [Request] Http POST - /api/AdminPanel/RejectedById/7
+2024-01-21 18:38:11.063 [INF] [Response] Http POST - /api/AdminPanel/RejectedById/7 - Responded 200 in 189,205 ms.
+2024-01-21 18:38:11.068 [INF] HTTP POST /api/AdminPanel/RejectedById/7 responded 200 in 193.9063 ms
+2024-01-21 18:38:33.487 [INF] [Request] Http GET - /api/PersonalPanel/GetOwnExpenseParameter
+2024-01-21 18:38:33.530 [INF] [Response] Http GET - /api/PersonalPanel/GetOwnExpenseParameter - Responded 200 in 43,5347 ms.
+2024-01-21 18:38:33.536 [INF] HTTP GET /api/PersonalPanel/GetOwnExpenseParameter responded 200 in 50.5876 ms
+2024-01-21 18:38:43.342 [INF] [Request] Http GET - /api/PersonalPanel/GetOwnExpenseParameter
+2024-01-21 18:38:43.355 [INF] [Response] Http GET - /api/PersonalPanel/GetOwnExpenseParameter - Responded 200 in 12,9688 ms.
+2024-01-21 18:38:43.357 [INF] HTTP GET /api/PersonalPanel/GetOwnExpenseParameter responded 200 in 16.8110 ms
+2024-01-21 18:39:15.497 [INF] [Request] Http POST - /api/AdminPanel/Report
+2024-01-21 18:39:16.110 [INF] [Response] Http POST - /api/AdminPanel/Report - Responded 200 in 612,829 ms.
+2024-01-21 18:39:16.111 [INF] HTTP POST /api/AdminPanel/Report responded 200 in 614.6360 ms

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KJSmICkIAg7bNOpkv8q73qGNeRYSlJkDaIxGyRLwpfU=",
+  "Hash": "fOsof4279mo19u8+k/bgSyuQvNZtT+3tZLL+pcUS8/k=",
   "Source": "MOS.Api",
   "BasePath": "_content/MOS.Api",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\uploads\\16d34852-16a4-4b86-9ba5-95dc769f13c8_a4abd3c2-3f1f-4d8e-899c-6f73a651a23f_ÖrnekFiş.jpg",
+      "SourceId": "MOS.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\",
+      "BasePath": "_content/MOS.Api",
+      "RelativePath": "uploads/16d34852-16a4-4b86-9ba5-95dc769f13c8_a4abd3c2-3f1f-4d8e-899c-6f73a651a23f_ÖrnekFiş.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\16d34852-16a4-4b86-9ba5-95dc769f13c8_a4abd3c2-3f1f-4d8e-899c-6f73a651a23f_ÖrnekFiş.jpg"
+    },
     {
       "Identity": "c:\\Users\\Ali\\Desktop\\Final-Case-Taslak\\MOS.Api\\MOS.Api\\wwwroot\\uploads\\799f7b3d-7b46-4728-a756-3445f0ff97d1_fatura-av-asilcan-tuzcu.jpg",
       "SourceId": "MOS.Api",

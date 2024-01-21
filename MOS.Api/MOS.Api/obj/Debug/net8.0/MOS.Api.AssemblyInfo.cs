@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MOS.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f8d931af705eb5e1c0dc45b9e61a8c4dfe3f0e3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce85eaa9c6b5c0b83ad56962ed92c04687d0db30")]
 [assembly: System.Reflection.AssemblyProductAttribute("MOS.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MOS.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -19,7 +19,7 @@ namespace MOS.Data.Entity
 
         public string ExpenseName { get; set; }
         public string ExpenseCategory { get; set; }
-        public ApprovalStatus ApprovalStatus { get; set; }
+        public ApprovalStatus ApprovalStatus { get; set; } //Onaylanma durumu, saved =1, approve=2, rejecd = 3
         public DateTime ExpenseCreateDate { get; set; } // harcama zamanı
         public decimal ExpenseAmount { get; set; } //tutar
         public string ExpenseDescription { get; set; } // harcama Açıklaması
@@ -31,7 +31,7 @@ namespace MOS.Data.Entity
         public string? DecisionDescription { get; set; }
         public DateTime? DecisionDate { get; set; }
 
-        public Payment? Payment { get; set; }
+        public Payment? Payment { get; set; }//onaylanmış ise payment tanımlanır
     }
 
     public class ExpenseConfiguration : IEntityTypeConfiguration<Expense>
